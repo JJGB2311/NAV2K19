@@ -1,0 +1,51 @@
+C:\Users\gganp\Desktop\NAVE\NAVE\bin\Debug\NAVE.exe.config
+C:\Users\gganp\Desktop\NAVE\NAVE\bin\Debug\NAVE.exe
+C:\Users\gganp\Desktop\NAVE\NAVE\bin\Debug\NAVE.pdb
+C:\Users\gganp\Desktop\NAVE\NAVE\bin\Debug\CapaDeDiseno.dll
+C:\Users\gganp\Desktop\NAVE\NAVE\bin\Debug\CapaLogica.dll
+C:\Users\gganp\Desktop\NAVE\NAVE\bin\Debug\CapaDeDatos.dll
+C:\Users\gganp\Desktop\NAVE\NAVE\bin\Debug\CapaDeDiseno.pdb
+C:\Users\gganp\Desktop\NAVE\NAVE\bin\Debug\CapaLogica.pdb
+C:\Users\gganp\Desktop\NAVE\NAVE\bin\Debug\CapaDeDatos.pdb
+C:\Users\gganp\Desktop\NAVE\NAVE\obj\Debug\NAVE.csprojAssemblyReference.cache
+C:\Users\gganp\Desktop\NAVE\NAVE\obj\Debug\NAVE.Form1.resources
+C:\Users\gganp\Desktop\NAVE\NAVE\obj\Debug\NAVE.Properties.Resources.resources
+C:\Users\gganp\Desktop\NAVE\NAVE\obj\Debug\NAVE.csproj.GenerateResource.cache
+C:\Users\gganp\Desktop\NAVE\NAVE\obj\Debug\NAVE.csproj.CoreCompileInputs.cache
+C:\Users\gganp\Desktop\NAVE\NAVE\obj\Debug\NAVE.csproj.CopyComplete
+C:\Users\gganp\Desktop\NAVE\NAVE\obj\Debug\NAVE.exe
+C:\Users\gganp\Desktop\NAVE\NAVE\obj\Debug\NAVE.pdb
+C:\Users\gganp\Desktop\COMPONENTE\PROYECTO\NAVE\NAVE\bin\Debug\NAVE.exe.config
+C:\Users\gganp\Desktop\COMPONENTE\PROYECTO\NAVE\NAVE\bin\Debug\NAVE.exe
+C:\Users\gganp\Desktop\COMPONENTE\PROYECTO\NAVE\NAVE\bin\Debug\NAVE.pdb
+C:\Users\gganp\Desktop\COMPONENTE\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeDiseno.dll
+C:\Users\gganp\Desktop\COMPONENTE\PROYECTO\NAVE\NAVE\bin\Debug\CapaLogica.dll
+C:\Users\gganp\Desktop\COMPONENTE\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeDatos.dll
+C:\Users\gganp\Desktop\COMPONENTE\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeDiseno.pdb
+C:\Users\gganp\Desktop\COMPONENTE\PROYECTO\NAVE\NAVE\bin\Debug\CapaLogica.pdb
+C:\Users\gganp\Desktop\COMPONENTE\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeDatos.pdb
+C:\Users\gganp\Desktop\COMPONENTE\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.csprojAssemblyReference.cache
+C:\Users\gganp\Desktop\COMPONENTE\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.Form1.resources
+C:\Users\gganp\Desktop\COMPONENTE\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.Properties.Resources.resources
+C:\Users\gganp\Desktop\COMPONENTE\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.csproj.GenerateResource.cache
+C:\Users\gganp\Desktop\COMPONENTE\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.csproj.CoreCompileInputs.cache
+C:\Users\gganp\Desktop\COMPONENTE\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.csproj.CopyComplete
+C:\Users\gganp\Desktop\COMPONENTE\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.exe
+C:\Users\gganp\Desktop\COMPONENTE\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.pdb
+C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\PROYECTO\NAVE\NAVE\bin\Debug\NAVE.exe.config
+C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\PROYECTO\NAVE\NAVE\bin\Debug\NAVE.exe
+C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\PROYECTO\NAVE\NAVE\bin\Debug\NAVE.pdb
+C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeDiseno.dll
+C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\PROYECTO\NAVE\NAVE\bin\Debug\CapaLogica.dll
+C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeDatos.dll
+C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeDiseno.pdb
+C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\PROYECTO\NAVE\NAVE\bin\Debug\CapaLogica.pdb
+C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeDatos.pdb
+C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.csprojAssemblyReference.cache
+C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.Form1.resources
+C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.Properties.Resources.resources
+C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.csproj.GenerateResource.cache
+C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.csproj.CoreCompileInputs.cache
+C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.csproj.CopyComplete
+C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.exe
+C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.pdb

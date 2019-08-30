@@ -1,0 +1,79 @@
+h1 {
+  color: blue;
+  text-align: center;
+  height: 30px;
+
+}
+.h1 {
+  color: black;
+  text-align: justify;
+  font-size: 25px;
+}
+h2 {
+  color: blue;
+  text-align: center;
+  font-size: 30px;
+
+}
+.h2 {
+  color: black;
+  font-size: 25px;
+  font-style: initial;
+  margin: 10px;
+  text-align: justify;
+}
+
+footer {
+  padding: 8%;
+  background: url(../ing/creadores.PNG);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.lik a{
+color: blue;
+font-size: 25px;
+padding: 1p;
+
+}
+
+.gearder{
+	width:100%; /* Establecemos que el header abarque el 100% del documento */
+	overflow:hidden; /* Eliminamos errores de float */
+	background:white;
+	margin-bottom:10px;
+}
+ .centrado{
+ display: block;
+margin-left: auto;
+margin-right: auto;
+   height: 80px;
+        }
+.wrapper {
+	width:80%; /* Establecemos que el ancho sera del 90% */
+	max-width:10000px; /* Aqui le decimos que el ancho máximo sera de 1000px */
+	margin:auto; /* Centramos los elementos */
+	overflow:hidden; /* Eliminamos errores de float */
+}
+
+.gearder nav {
+	float:left;
+	line-height:80px; /*el ancho del header */
+}
+ 
+.gearder nav a {
+	display:inline-block;
+	color:rgba(34, 20, 230, 0.938);
+	text-decoration:none;
+	padding:10px 20px;
+	line-height:normal;
+	font-size:25px;
+	font-weight:bold;
+	-webkit-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition:all 500ms ease;
+}
+ 
+.gearder nav a:hover {
+	background: rgb(82, 154, 212);
+	border-radius:60px;
+}

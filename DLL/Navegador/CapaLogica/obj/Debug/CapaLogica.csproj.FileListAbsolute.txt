@@ -1,0 +1,36 @@
+C:\Users\Randy\source\repos\Navegador\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\Randy\source\repos\Navegador\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\Randy\source\repos\Navegador\CapaLogica\bin\Debug\CapaDeDatos.dll
+C:\Users\Randy\source\repos\Navegador\CapaLogica\bin\Debug\CapaDeDatos.pdb
+C:\Users\Randy\source\repos\Navegador\CapaLogica\obj\Debug\CapaLogica.csprojAssemblyReference.cache
+C:\Users\Randy\source\repos\Navegador\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
+C:\Users\Randy\source\repos\Navegador\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
+C:\Users\Randy\source\repos\Navegador\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\Randy\source\repos\Navegador\CapaLogica\obj\Debug\CapaLogica.pdb
+G:\Navegador\CapaLogica\bin\Debug\CapaLogica.dll
+G:\Navegador\CapaLogica\bin\Debug\CapaLogica.pdb
+G:\Navegador\CapaLogica\bin\Debug\CapaDeDatos.dll
+G:\Navegador\CapaLogica\bin\Debug\CapaDeDatos.pdb
+G:\Navegador\CapaLogica\obj\Debug\CapaLogica.csprojAssemblyReference.cache
+G:\Navegador\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
+G:\Navegador\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
+G:\Navegador\CapaLogica\obj\Debug\CapaLogica.dll
+G:\Navegador\CapaLogica\obj\Debug\CapaLogica.pdb
+C:\Users\gganp\Desktop\COMPONENTE\DLL\Navegador\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\gganp\Desktop\COMPONENTE\DLL\Navegador\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\gganp\Desktop\COMPONENTE\DLL\Navegador\CapaLogica\bin\Debug\CapaDeDatos.dll
+C:\Users\gganp\Desktop\COMPONENTE\DLL\Navegador\CapaLogica\bin\Debug\CapaDeDatos.pdb
+C:\Users\gganp\Desktop\COMPONENTE\DLL\Navegador\CapaLogica\obj\Debug\CapaLogica.csprojAssemblyReference.cache
+C:\Users\gganp\Desktop\COMPONENTE\DLL\Navegador\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
+C:\Users\gganp\Desktop\COMPONENTE\DLL\Navegador\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
+C:\Users\gganp\Desktop\COMPONENTE\DLL\Navegador\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\gganp\Desktop\COMPONENTE\DLL\Navegador\CapaLogica\obj\Debug\CapaLogica.pdb
+C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\DLL\Navegador\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\DLL\Navegador\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\DLL\Navegador\CapaLogica\bin\Debug\CapaDeDatos.dll
+C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\DLL\Navegador\CapaLogica\bin\Debug\CapaDeDatos.pdb
+C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\DLL\Navegador\CapaLogica\obj\Debug\CapaLogica.csprojAssemblyReference.cache
+C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\DLL\Navegador\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
+C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\DLL\Navegador\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
+C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\DLL\Navegador\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\DLL\Navegador\CapaLogica\obj\Debug\CapaLogica.pdb
