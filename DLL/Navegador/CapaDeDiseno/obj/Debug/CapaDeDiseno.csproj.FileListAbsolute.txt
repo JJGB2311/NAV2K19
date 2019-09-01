@@ -1,54 +1,28 @@
-C:\Users\Randy\source\repos\Navegador\CapaDeDiseno\bin\Debug\CapaDeDiseno.dll
-C:\Users\Randy\source\repos\Navegador\CapaDeDiseno\bin\Debug\CapaDeDiseno.pdb
-C:\Users\Randy\source\repos\Navegador\CapaDeDiseno\bin\Debug\CapaLogica.dll
-C:\Users\Randy\source\repos\Navegador\CapaDeDiseno\bin\Debug\CapaLogica.pdb
-C:\Users\Randy\source\repos\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csprojAssemblyReference.cache
-C:\Users\Randy\source\repos\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.Navegador.resources
-C:\Users\Randy\source\repos\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.Properties.Resources.resources
-C:\Users\Randy\source\repos\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csproj.GenerateResource.cache
-C:\Users\Randy\source\repos\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csproj.CoreCompileInputs.cache
-C:\Users\Randy\source\repos\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csproj.CopyComplete
-C:\Users\Randy\source\repos\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.dll
-C:\Users\Randy\source\repos\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.pdb
-G:\Navegador\CapaDeDiseno\bin\Debug\CapaDeDiseno.dll
-G:\Navegador\CapaDeDiseno\bin\Debug\CapaDeDiseno.pdb
-G:\Navegador\CapaDeDiseno\bin\Debug\CapaLogica.dll
-G:\Navegador\CapaDeDiseno\bin\Debug\CapaDeDatos.dll
-G:\Navegador\CapaDeDiseno\bin\Debug\CapaLogica.pdb
-G:\Navegador\CapaDeDiseno\bin\Debug\CapaDeDatos.pdb
-G:\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csprojAssemblyReference.cache
-G:\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.Navegador.resources
-G:\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.Properties.Resources.resources
-G:\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csproj.GenerateResource.cache
-G:\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csproj.CoreCompileInputs.cache
-G:\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csproj.CopyComplete
-G:\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.dll
-G:\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.pdb
-C:\Users\gganp\Desktop\COMPONENTE\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDiseno.dll
-C:\Users\gganp\Desktop\COMPONENTE\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDiseno.pdb
-C:\Users\gganp\Desktop\COMPONENTE\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaLogica.dll
-C:\Users\gganp\Desktop\COMPONENTE\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDatos.dll
-C:\Users\gganp\Desktop\COMPONENTE\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaLogica.pdb
-C:\Users\gganp\Desktop\COMPONENTE\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDatos.pdb
-C:\Users\gganp\Desktop\COMPONENTE\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csprojAssemblyReference.cache
-C:\Users\gganp\Desktop\COMPONENTE\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.Navegador.resources
-C:\Users\gganp\Desktop\COMPONENTE\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.Properties.Resources.resources
-C:\Users\gganp\Desktop\COMPONENTE\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csproj.GenerateResource.cache
-C:\Users\gganp\Desktop\COMPONENTE\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csproj.CoreCompileInputs.cache
-C:\Users\gganp\Desktop\COMPONENTE\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csproj.CopyComplete
-C:\Users\gganp\Desktop\COMPONENTE\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.dll
-C:\Users\gganp\Desktop\COMPONENTE\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.pdb
-C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDiseno.dll
-C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDiseno.pdb
-C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaLogica.dll
-C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDatos.dll
-C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaLogica.pdb
-C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDatos.pdb
-C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csprojAssemblyReference.cache
-C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.Navegador.resources
-C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.Properties.Resources.resources
-C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csproj.GenerateResource.cache
-C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csproj.CoreCompileInputs.cache
-C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csproj.CopyComplete
-C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.dll
-C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.pdb
+C:\Users\gganp\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDiseno.dll
+C:\Users\gganp\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDiseno.pdb
+C:\Users\gganp\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaLogica.dll
+C:\Users\gganp\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDatos.dll
+C:\Users\gganp\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaLogica.pdb
+C:\Users\gganp\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDatos.pdb
+C:\Users\gganp\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csprojAssemblyReference.cache
+C:\Users\gganp\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.Navegador.resources
+C:\Users\gganp\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.Properties.Resources.resources
+C:\Users\gganp\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csproj.GenerateResource.cache
+C:\Users\gganp\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csproj.CoreCompileInputs.cache
+C:\Users\gganp\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csproj.CopyComplete
+C:\Users\gganp\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.dll
+C:\Users\gganp\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.pdb
+C:\Users\Usuario\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDiseno.dll
+C:\Users\Usuario\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDiseno.pdb
+C:\Users\Usuario\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaLogica.dll
+C:\Users\Usuario\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDatos.dll
+C:\Users\Usuario\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaLogica.pdb
+C:\Users\Usuario\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDatos.pdb
+C:\Users\Usuario\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csprojAssemblyReference.cache
+C:\Users\Usuario\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.Navegador.resources
+C:\Users\Usuario\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.Properties.Resources.resources
+C:\Users\Usuario\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csproj.GenerateResource.cache
+C:\Users\Usuario\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csproj.CopyComplete
+C:\Users\Usuario\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.dll
+C:\Users\Usuario\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.pdb

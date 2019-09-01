@@ -16,7 +16,7 @@ namespace NAVE
         {
             InitializeComponent();
             navegador1.asignarTabla("peliculas");
-            navegador1.asignarayuda("menu.html");
+          
 
         }
 

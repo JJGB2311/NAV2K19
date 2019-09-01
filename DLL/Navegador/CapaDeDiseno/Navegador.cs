@@ -20,6 +20,7 @@ namespace CapaDeDiseno
         int noCampos = 1;
         int x = 30;
         int y = 30;
+        int activar = 0;    //Variable para reconocer que funcion realizara el boton de guardar (1. Ingresar, 2. Modificar, 3. Eliminar)
         string[] tipoCampo = new string[30];
         public Navegador()
         {
@@ -127,9 +128,64 @@ namespace CapaDeDiseno
             pos++;
         }
 
+        string crearDelete()// crea el query de delete
+        {
+            //Cambiar el estadoPelicula por estado
+            string query = "UPDATE " + tabla + " SET estadoPelicula=1";
+            string whereQuery = " WHERE  ";
+            int posCampo = 0;
+            string campos = "";
+ 
+            foreach (Control componente in Controls)
+            {
+                if (componente is TextBox || componente is DateTimePicker)
+                {
+                    if(posCampo==0)
+                    { 
+                        switch (tipoCampo[posCampo])
+                        {
+                            case "Text":
+                                whereQuery += componente.Name + " = '" + componente.Text;
+                                break;
+                            case "Num":
+                                whereQuery += componente.Name + " = " + componente.Text;
+                                break;
+                        }
+
+                    }
+                    posCampo++;
+                }
+
+            }
+            campos = campos.TrimEnd(' ');
+            campos = campos.TrimEnd(',');
+            //query += campos + whereQuery + ";";
+            query += whereQuery + ";";
+            Console.Write(query);
+            return query;
+        }
+
         private void Button5_Click(object sender, EventArgs e)
         {
-            
+            btn_Guardar.Enabled = true;
+            activar = 3;
+            int posCampo = 0;
+            foreach (Control componente in Controls)
+            {
+                if (componente is TextBox || componente is DateTimePicker)
+                {
+
+                    componente.Text = dataGridView1.CurrentRow.Cells[posCampo].Value.ToString();
+                    if (posCampo == 0)
+                    {
+                        componente.Enabled = false;
+                    }
+                    posCampo++;
+
+                }
+                  
+            }
+      
         }
 
         private void Btn_ingresar_Click(object sender, EventArgs e)
@@ -182,8 +238,18 @@ namespace CapaDeDiseno
         private void Btn_Guardar_Click(object sender, EventArgs e)
         {
             btn_Guardar.Enabled = false;
-            logic.nuevoQuery( crearUpdate());
-           
+            Console.Write(activar);
+            switch (activar)
+            {
+                case 2:
+                    logic.nuevoQuery(crearUpdate());
+                    break;
+                case 3:
+                    logic.nuevoQuery(crearDelete());
+                    break;
+                default:
+                    break;
+            }
 
             foreach (Control componente in Controls)
             {
@@ -250,6 +316,7 @@ namespace CapaDeDiseno
         {
             btn_Guardar.Enabled = true;
             int posCampo = 0;
+            activar = 2;
             foreach (Control componente in Controls)
             {
                 if (componente is TextBox || componente is DateTimePicker)
