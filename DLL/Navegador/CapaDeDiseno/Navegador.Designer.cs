@@ -56,13 +56,12 @@
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(28, 538);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(21, 437);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1511, 247);
+            this.dataGridView1.Size = new System.Drawing.Size(1133, 201);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
             // 
@@ -83,7 +82,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.142859F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.142859F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.142859F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Controls.Add(this.Btn_Salir, 13, 0);
             this.tableLayoutPanel2.Controls.Add(this.Btn_Ayuda, 12, 0);
             this.tableLayoutPanel2.Controls.Add(this.Btn_FlechaFin, 11, 0);
@@ -98,12 +97,11 @@
             this.tableLayoutPanel2.Controls.Add(this.Btn_Guardar, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.Btn_Modificar, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.Btn_Ingresar, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(20, 44);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(15, 36);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1523, 113);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1142, 92);
             this.tableLayoutPanel2.TabIndex = 8;
             // 
             // Btn_Salir
@@ -115,10 +113,10 @@
             this.Btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Salir.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Salir.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Salir.Image")));
-            this.Btn_Salir.Location = new System.Drawing.Point(1404, 0);
+            this.Btn_Salir.Location = new System.Drawing.Point(1053, 0);
             this.Btn_Salir.Margin = new System.Windows.Forms.Padding(0);
             this.Btn_Salir.Name = "Btn_Salir";
-            this.Btn_Salir.Size = new System.Drawing.Size(119, 113);
+            this.Btn_Salir.Size = new System.Drawing.Size(89, 92);
             this.Btn_Salir.TabIndex = 13;
             this.Btn_Salir.Text = "Salir";
             this.Btn_Salir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -134,10 +132,10 @@
             this.Btn_Ayuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Ayuda.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Ayuda.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda.Image")));
-            this.Btn_Ayuda.Location = new System.Drawing.Point(1296, 0);
+            this.Btn_Ayuda.Location = new System.Drawing.Point(972, 0);
             this.Btn_Ayuda.Margin = new System.Windows.Forms.Padding(0);
             this.Btn_Ayuda.Name = "Btn_Ayuda";
-            this.Btn_Ayuda.Size = new System.Drawing.Size(108, 113);
+            this.Btn_Ayuda.Size = new System.Drawing.Size(81, 92);
             this.Btn_Ayuda.TabIndex = 12;
             this.Btn_Ayuda.Text = "Ayuda";
             this.Btn_Ayuda.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -153,10 +151,10 @@
             this.Btn_FlechaFin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_FlechaFin.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_FlechaFin.Image = ((System.Drawing.Image)(resources.GetObject("Btn_FlechaFin.Image")));
-            this.Btn_FlechaFin.Location = new System.Drawing.Point(1188, 0);
+            this.Btn_FlechaFin.Location = new System.Drawing.Point(891, 0);
             this.Btn_FlechaFin.Margin = new System.Windows.Forms.Padding(0);
             this.Btn_FlechaFin.Name = "Btn_FlechaFin";
-            this.Btn_FlechaFin.Size = new System.Drawing.Size(108, 113);
+            this.Btn_FlechaFin.Size = new System.Drawing.Size(81, 92);
             this.Btn_FlechaFin.TabIndex = 11;
             this.Btn_FlechaFin.Text = "Fin";
             this.Btn_FlechaFin.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -172,10 +170,10 @@
             this.Btn_Siguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Siguiente.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Siguiente.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Siguiente.Image")));
-            this.Btn_Siguiente.Location = new System.Drawing.Point(1080, 0);
+            this.Btn_Siguiente.Location = new System.Drawing.Point(810, 0);
             this.Btn_Siguiente.Margin = new System.Windows.Forms.Padding(0);
             this.Btn_Siguiente.Name = "Btn_Siguiente";
-            this.Btn_Siguiente.Size = new System.Drawing.Size(108, 113);
+            this.Btn_Siguiente.Size = new System.Drawing.Size(81, 92);
             this.Btn_Siguiente.TabIndex = 10;
             this.Btn_Siguiente.Text = "Siguiente";
             this.Btn_Siguiente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -191,10 +189,10 @@
             this.Btn_Anterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Anterior.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Anterior.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Anterior.Image")));
-            this.Btn_Anterior.Location = new System.Drawing.Point(972, 0);
+            this.Btn_Anterior.Location = new System.Drawing.Point(729, 0);
             this.Btn_Anterior.Margin = new System.Windows.Forms.Padding(0);
             this.Btn_Anterior.Name = "Btn_Anterior";
-            this.Btn_Anterior.Size = new System.Drawing.Size(108, 113);
+            this.Btn_Anterior.Size = new System.Drawing.Size(81, 92);
             this.Btn_Anterior.TabIndex = 9;
             this.Btn_Anterior.Text = "Anterior";
             this.Btn_Anterior.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -210,10 +208,10 @@
             this.Btn_FlechaInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_FlechaInicio.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_FlechaInicio.Image = ((System.Drawing.Image)(resources.GetObject("Btn_FlechaInicio.Image")));
-            this.Btn_FlechaInicio.Location = new System.Drawing.Point(864, 0);
+            this.Btn_FlechaInicio.Location = new System.Drawing.Point(648, 0);
             this.Btn_FlechaInicio.Margin = new System.Windows.Forms.Padding(0);
             this.Btn_FlechaInicio.Name = "Btn_FlechaInicio";
-            this.Btn_FlechaInicio.Size = new System.Drawing.Size(108, 113);
+            this.Btn_FlechaInicio.Size = new System.Drawing.Size(81, 92);
             this.Btn_FlechaInicio.TabIndex = 8;
             this.Btn_FlechaInicio.Text = "Inicio";
             this.Btn_FlechaInicio.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -229,10 +227,10 @@
             this.Btn_Refrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Refrescar.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Refrescar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Refrescar.Image")));
-            this.Btn_Refrescar.Location = new System.Drawing.Point(756, 0);
+            this.Btn_Refrescar.Location = new System.Drawing.Point(567, 0);
             this.Btn_Refrescar.Margin = new System.Windows.Forms.Padding(0);
             this.Btn_Refrescar.Name = "Btn_Refrescar";
-            this.Btn_Refrescar.Size = new System.Drawing.Size(108, 113);
+            this.Btn_Refrescar.Size = new System.Drawing.Size(81, 92);
             this.Btn_Refrescar.TabIndex = 7;
             this.Btn_Refrescar.Text = "Refrescar";
             this.Btn_Refrescar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -248,10 +246,10 @@
             this.Btn_Imprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Imprimir.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Imprimir.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Imprimir.Image")));
-            this.Btn_Imprimir.Location = new System.Drawing.Point(648, 0);
+            this.Btn_Imprimir.Location = new System.Drawing.Point(486, 0);
             this.Btn_Imprimir.Margin = new System.Windows.Forms.Padding(0);
             this.Btn_Imprimir.Name = "Btn_Imprimir";
-            this.Btn_Imprimir.Size = new System.Drawing.Size(108, 113);
+            this.Btn_Imprimir.Size = new System.Drawing.Size(81, 92);
             this.Btn_Imprimir.TabIndex = 6;
             this.Btn_Imprimir.Text = "Imprimir";
             this.Btn_Imprimir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -267,10 +265,10 @@
             this.Btn_Consultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Consultar.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Consultar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Consultar.Image")));
-            this.Btn_Consultar.Location = new System.Drawing.Point(540, 0);
+            this.Btn_Consultar.Location = new System.Drawing.Point(405, 0);
             this.Btn_Consultar.Margin = new System.Windows.Forms.Padding(0);
             this.Btn_Consultar.Name = "Btn_Consultar";
-            this.Btn_Consultar.Size = new System.Drawing.Size(108, 113);
+            this.Btn_Consultar.Size = new System.Drawing.Size(81, 92);
             this.Btn_Consultar.TabIndex = 5;
             this.Btn_Consultar.Text = "Consultar";
             this.Btn_Consultar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -286,10 +284,10 @@
             this.Btn_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Eliminar.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Eliminar.Image")));
-            this.Btn_Eliminar.Location = new System.Drawing.Point(432, 0);
+            this.Btn_Eliminar.Location = new System.Drawing.Point(324, 0);
             this.Btn_Eliminar.Margin = new System.Windows.Forms.Padding(0);
             this.Btn_Eliminar.Name = "Btn_Eliminar";
-            this.Btn_Eliminar.Size = new System.Drawing.Size(108, 113);
+            this.Btn_Eliminar.Size = new System.Drawing.Size(81, 92);
             this.Btn_Eliminar.TabIndex = 4;
             this.Btn_Eliminar.Text = "Eliminar";
             this.Btn_Eliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -305,10 +303,10 @@
             this.Btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Cancelar.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Cancelar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Cancelar.Image")));
-            this.Btn_Cancelar.Location = new System.Drawing.Point(324, 0);
+            this.Btn_Cancelar.Location = new System.Drawing.Point(243, 0);
             this.Btn_Cancelar.Margin = new System.Windows.Forms.Padding(0);
             this.Btn_Cancelar.Name = "Btn_Cancelar";
-            this.Btn_Cancelar.Size = new System.Drawing.Size(108, 113);
+            this.Btn_Cancelar.Size = new System.Drawing.Size(81, 92);
             this.Btn_Cancelar.TabIndex = 3;
             this.Btn_Cancelar.Text = "Cancelar";
             this.Btn_Cancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -325,10 +323,10 @@
             this.Btn_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Guardar.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Guardar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Guardar.Image")));
-            this.Btn_Guardar.Location = new System.Drawing.Point(216, 0);
+            this.Btn_Guardar.Location = new System.Drawing.Point(162, 0);
             this.Btn_Guardar.Margin = new System.Windows.Forms.Padding(0);
             this.Btn_Guardar.Name = "Btn_Guardar";
-            this.Btn_Guardar.Size = new System.Drawing.Size(108, 113);
+            this.Btn_Guardar.Size = new System.Drawing.Size(81, 92);
             this.Btn_Guardar.TabIndex = 2;
             this.Btn_Guardar.Text = "Guardar";
             this.Btn_Guardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -344,10 +342,10 @@
             this.Btn_Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Modificar.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Modificar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Modificar.Image")));
-            this.Btn_Modificar.Location = new System.Drawing.Point(108, 0);
+            this.Btn_Modificar.Location = new System.Drawing.Point(81, 0);
             this.Btn_Modificar.Margin = new System.Windows.Forms.Padding(0);
             this.Btn_Modificar.Name = "Btn_Modificar";
-            this.Btn_Modificar.Size = new System.Drawing.Size(108, 113);
+            this.Btn_Modificar.Size = new System.Drawing.Size(81, 92);
             this.Btn_Modificar.TabIndex = 1;
             this.Btn_Modificar.Text = "Modificar";
             this.Btn_Modificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -366,7 +364,7 @@
             this.Btn_Ingresar.Location = new System.Drawing.Point(0, 0);
             this.Btn_Ingresar.Margin = new System.Windows.Forms.Padding(0);
             this.Btn_Ingresar.Name = "Btn_Ingresar";
-            this.Btn_Ingresar.Size = new System.Drawing.Size(108, 113);
+            this.Btn_Ingresar.Size = new System.Drawing.Size(81, 92);
             this.Btn_Ingresar.TabIndex = 0;
             this.Btn_Ingresar.Text = "Ingresar";
             this.Btn_Ingresar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -377,39 +375,37 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Controls.Add(this.contenido, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(23, 165);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(17, 134);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 95F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1516, 95);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 77F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1137, 77);
             this.tableLayoutPanel1.TabIndex = 9;
             // 
             // contenido
             // 
             this.contenido.AutoSize = true;
             this.contenido.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contenido.Location = new System.Drawing.Point(4, 0);
-            this.contenido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.contenido.Location = new System.Drawing.Point(3, 0);
             this.contenido.Name = "contenido";
-            this.contenido.Size = new System.Drawing.Size(1508, 95);
+            this.contenido.Size = new System.Drawing.Size(1131, 77);
             this.contenido.TabIndex = 0;
             this.contenido.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.contenido.Click += new System.EventHandler(this.Contenido_Click);
             // 
             // Navegador
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Navegador";
-            this.Size = new System.Drawing.Size(1571, 809);
+            this.Size = new System.Drawing.Size(1178, 657);
             this.Load += new System.EventHandler(this.Navegador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);

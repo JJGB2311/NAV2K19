@@ -34,10 +34,22 @@ namespace CapaDeDiseno
         {
             if (tabla != "def")
             {
+                int i=0;
                 DataTable dt = logic.consultaLogica(tabla);
                 dataGridView1.DataSource = dt;
                 CreaComponentes();
                 deshabilitarcampos_y_botones();
+                Btn_Modificar.Enabled = true;
+                Btn_Eliminar.Enabled = true;
+                foreach (Control componente in Controls)
+                {
+                    if (componente is TextBox || componente is DateTimePicker)
+                    {
+                        componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+                        i++;
+                    }
+
+                }
             }
 
         }
@@ -371,7 +383,7 @@ namespace CapaDeDiseno
 
         private void Btn_Ingresar_Click(object sender, EventArgs e)
         {
-
+            activar = 2;
             habilitarcampos_y_botones();
             logic.nuevoQuery(crearInsert());
             foreach (Control componente in Controls)
@@ -385,135 +397,63 @@ namespace CapaDeDiseno
                 }
 
                 Btn_Ingresar.Enabled = false;
-                Btn_Cancelar.Enabled = false;
+                Btn_Modificar.Enabled = false;
+                Btn_Eliminar.Enabled = false;
+                Btn_Cancelar.Enabled = true;
             }
         }
 
         private void Btn_Modificar_Click(object sender, EventArgs e)
         {
-            if (presionado == false)
+            habilitarcampos_y_botones();
+            activar = 1;
+            int i = 0;
+            foreach (Control componente in Controls)
             {
-                //Desahiblitarbtn();
-                Btn_Guardar.Enabled = false;
-                Btn_Modificar.Enabled = true;
-                Btn_Eliminar.Enabled = false;
-                Btn_Cancelar.Enabled = true;
-                Btn_Ingresar.Enabled = false;
+                if (componente is TextBox || componente is DateTimePicker)
+                {
+                    componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+                    i++;
+                }
 
-                presionado = true;
             }
-            else
-            {
-
-                int posCampo = 0;
-                activar = 2;
-                foreach (Control componente in Controls)
-                {
-                    if (componente is TextBox || componente is DateTimePicker)
-                    {
-
-                        componente.Text = dataGridView1.CurrentRow.Cells[posCampo].Value.ToString();
-                        if (posCampo == 0)
-                        {
-                            componente.Enabled = false;
-                        }
-                        posCampo++;
-
-                    }
-
-                }
-
-                Console.Write(activar);
-                switch (activar)
-                {
-                    case 2:
-                        logic.nuevoQuery(crearUpdate());
-                        break;
-                    case 3:
-                        logic.nuevoQuery(crearDelete());
-                        break;
-                    default:
-                        break;
-                }
-
-                foreach (Control componente in Controls)
-                {
-                    if (componente is TextBox || componente is DateTimePicker)
-                    {
-                        componente.Enabled = true;
-                        componente.Text = "";
-
-                    }
-
-                }
-                actualizardatagriew();
-                presionado = false;
-                Btn_Guardar.Enabled = false;
-                Btn_Eliminar.Enabled = false;
-                Btn_Cancelar.Enabled = true;
-                Btn_Ingresar.Enabled = false;
-            }
-           
+            Btn_Ingresar.Enabled = false;
+            Btn_Eliminar.Enabled = false;
+        
         }
 
         private void Btn_Cancelar_Click(object sender, EventArgs e)
         {
-            /*foreach (Control componente in Controls)
+            Btn_Modificar.Enabled = true;
+            Btn_Guardar.Enabled = false;
+            Btn_Cancelar.Enabled = false;
+            Btn_Ingresar.Enabled = true;
+            Btn_Eliminar.Enabled = true;
+            int i = 0;
+            foreach (Control componente in Controls)
             {
                 if (componente is TextBox || componente is DateTimePicker)
                 {
-                    componente.Enabled = true;
-                    componente.Text = "";
-
+                    componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+                    componente.Enabled = false;
+                    i++;
                 }
 
-            }*/
-            habilitarallbotones();
-            Btn_Ingresar.Enabled = false;
+            }
+            
+
+
         }
 
         private void Btn_Eliminar_Click(object sender, EventArgs e)
         {
-            if (presionado == false)
-            {
-                //Desahiblitarbtn();
-                Btn_Guardar.Enabled = false;
-                Btn_Modificar.Enabled = false;
-                Btn_Eliminar.Enabled = true;
-                Btn_Cancelar.Enabled = true;
-                Btn_Ingresar.Enabled = false;
-
-                presionado = true;
-            }
-            else
-            {
-                Btn_Guardar.Enabled = true;
-                activar = 3;
-                int posCampo = 0;
-                foreach (Control componente in Controls)
-                {
-                    if (componente is TextBox || componente is DateTimePicker)
-                    {
-
-                        componente.Text = dataGridView1.CurrentRow.Cells[posCampo].Value.ToString();
-                        if (posCampo == 0)
-                        {
-                            componente.Enabled = false;
-                        }
-                        posCampo++;
-
-                    }
-
-                }
+            logic.nuevoQuery(crearDelete());
                 actualizardatagriew();
                 presionado = false;
-                Btn_Modificar.Enabled = false;
+                Btn_Modificar.Enabled = true;
                 Btn_Guardar.Enabled = false;
-                Btn_Cancelar.Enabled = true;
-                Btn_Ingresar.Enabled = false;
-
-            }
-           
+                Btn_Cancelar.Enabled = false;
+                Btn_Ingresar.Enabled = true;
         }
 
         private void Btn_Consultar_Click(object sender, EventArgs e)
@@ -750,36 +690,36 @@ namespace CapaDeDiseno
 
         private void Btn_Guardar_Click(object sender, EventArgs e)
         {
-            if (presionado == false)
-            {
-                //Desahiblitarbtn();
-                Btn_Guardar.Enabled = true;
-                Btn_Modificar.Enabled = false;
-                Btn_Eliminar.Enabled = false;
-                Btn_Cancelar.Enabled = true;
 
-                presionado = true;
-            }
-            else
+            switch (activar)
             {
-                logic.nuevoQuery(crearInsert());
-                foreach (Control componente in Controls)
+                case 1:
+                    logic.nuevoQuery(crearUpdate());
+                    break;
+                case 2:
+                    logic.nuevoQuery(crearInsert());
+                    break;
+                default:
+                    break;
+            }
+            actualizardatagriew();
+            int i = 0;
+            foreach (Control componente in Controls)
+            {
+                if (componente is TextBox || componente is DateTimePicker)
                 {
-                    if (componente is TextBox || componente is DateTimePicker)
-                    {
-                        componente.Enabled = true;
-                        componente.Text = "";
-
-                    }
-
+                    componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+                    i++;
                 }
-                actualizardatagriew();
-                presionado = false;
-                Btn_Modificar.Enabled = false;
-                Btn_Eliminar.Enabled = false;
-                Btn_Cancelar.Enabled = true;
-                Btn_Ingresar.Enabled = false;
+
             }
+            deshabilitarcampos_y_botones();
+           
+            Btn_Guardar.Enabled = false;
+            Btn_Eliminar.Enabled = true;
+            Btn_Cancelar.Enabled = false;
+            Btn_Modificar.Enabled = true;
+            Btn_Ingresar.Enabled = true;
            
             
         }
@@ -796,6 +736,11 @@ namespace CapaDeDiseno
                 }
 
             }
+        }
+
+        private void Contenido_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
