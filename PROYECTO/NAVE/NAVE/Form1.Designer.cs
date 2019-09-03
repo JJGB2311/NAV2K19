@@ -33,19 +33,21 @@
             // 
             // navegador1
             // 
-            this.navegador1.BackColor = System.Drawing.Color.PowderBlue;
-            this.navegador1.Location = new System.Drawing.Point(12, 5);
+            this.navegador1.BackColor = System.Drawing.Color.LightSalmon;
+            this.navegador1.Location = new System.Drawing.Point(0, 4);
+            this.navegador1.Margin = new System.Windows.Forms.Padding(4);
             this.navegador1.Name = "navegador1";
-            this.navegador1.Size = new System.Drawing.Size(1178, 657);
+            this.navegador1.Size = new System.Drawing.Size(1571, 809);
             this.navegador1.TabIndex = 0;
-            this.navegador1.Load += new System.EventHandler(this.Navegador1_Load);
+            this.navegador1.Load += new System.EventHandler(this.Navegador1_Load_1);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1194, 674);
+            this.ClientSize = new System.Drawing.Size(1834, 830);
             this.Controls.Add(this.navegador1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
