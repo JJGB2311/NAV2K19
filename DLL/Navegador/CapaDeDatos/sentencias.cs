@@ -53,7 +53,22 @@ namespace CapaDeDatos
 
             return Campos;// devuelve un arreglo con los tipos
         }
+        public string[] obtenerLLave(string tabla)//metodo que obtiene la lista de los tipos de campos que requiere una tabla
+        {
+            string[] Campos = new string[30];
+            int i = 0;
+            OdbcCommand command = new OdbcCommand("DESCRIBE " + tabla + "", cn.probarConexion());
+            OdbcDataReader reader = command.ExecuteReader();
 
+            while (reader.Read())
+            {
+                Campos[i] = reader.GetValue(3).ToString();
+                i++;
+
+            }
+
+            return Campos;// devuelve un arreglo con los tipos
+        }
         string limpiarTipo(string cadena)// elimina los parentesis y tama;o de campo del tipo de campo
         {
             bool dim = false;

@@ -43,7 +43,7 @@ namespace CapaDeDiseno
                 Btn_Eliminar.Enabled = true;
                 foreach (Control componente in Controls)
                 {
-                    if (componente is TextBox || componente is DateTimePicker)
+                    if (componente is TextBox || componente is DateTimePicker || componente is ComboBox )
                     {
                         componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
                         i++;
@@ -69,6 +69,7 @@ namespace CapaDeDiseno
         {
             string[] Campos = logic.campos(tabla);
             string[] Tipos = logic.tipos(tabla);
+            string[] LLaves = logic.llaves(tabla);
             int i = 0;
             int fin = Campos.Length;
             while (i < fin)
@@ -92,20 +93,25 @@ namespace CapaDeDiseno
                 {
                     case "int":
                         tipoCampo[noCampos - 1] = "Num";
-                        crearTextBoxnumerico(Campos[i]);
+                        if (LLaves[i] != "MUL") { crearTextBoxnumerico(Campos[i]); } else { crearComboBox(Campos[i]); }
+                        
                         break;
                     case "varchar":
                         tipoCampo[noCampos - 1] = "Text";
-                        crearTextBoxvarchar(Campos[i]);
-                        break;
+
+                        if (LLaves[i] != "MUL")
+                        { crearTextBoxvarchar(Campos[i]);} else { crearComboBox(Campos[i]); }
+                break;
                     case "date":
                         tipoCampo[noCampos - 1] = "Text";
-                        crearDateTimePicker(Campos[i]);
+                        if (LLaves[i] != "MUL")
+                        {crearDateTimePicker(Campos[i]);} else { crearComboBox(Campos[i]); }
                         break;
                     case "text":
                         tipoCampo[noCampos - 1] = "Text";
-                        crearTextBoxtexto(Campos[i]);
-                        break;
+                        if (LLaves[i] != "MUL")
+                        {crearTextBoxtexto(Campos[i]);} else { crearComboBox(Campos[i]); }
+                break;
                 }
                 noCampos++;
 
@@ -196,7 +202,7 @@ namespace CapaDeDiseno
         {
             foreach (Control componente in Controls)
             {
-                if (componente is TextBox || componente is DateTimePicker)
+                if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
                 {
                     componente.Enabled = false; //De esta menera bloqueamos todos los textbox por si solo quiere ver los registros
 
@@ -214,7 +220,7 @@ namespace CapaDeDiseno
         {
             foreach (Control componente in Controls)
             {
-                if (componente is TextBox || componente is DateTimePicker)
+                if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
                 {
                     componente.Enabled = true; //De esta menera bloqueamos todos los textbox por si solo quiere ver los registros
 
@@ -244,7 +250,7 @@ namespace CapaDeDiseno
 
             foreach (Control componente in Controls)
             {
-                if (componente is TextBox || componente is DateTimePicker)
+                if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
                 {
                     if (posCampo == 0)
                     {
@@ -278,7 +284,7 @@ namespace CapaDeDiseno
             string campos = "";
             foreach (Control componente in Controls)
             {
-                if (componente is TextBox || componente is DateTimePicker)
+                if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
                 {
 
                     switch (tipoCampo[posCampo])
@@ -310,7 +316,7 @@ namespace CapaDeDiseno
             string campos = "";
             foreach (Control componente in Controls)
             {
-                if (componente is TextBox || componente is DateTimePicker)
+                if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
                 {
 
                     if (posCampo > 0)
@@ -355,7 +361,7 @@ namespace CapaDeDiseno
             logic.nuevoQuery(crearInsert());
             foreach (Control componente in Controls)
             {
-                if (componente is TextBox || componente is DateTimePicker)
+                if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
                 {
                     componente.Enabled = true;
                     componente.Text = "";
@@ -388,7 +394,7 @@ namespace CapaDeDiseno
             logic.nuevoQuery(crearInsert());
             foreach (Control componente in Controls)
             {
-                if (componente is TextBox || componente is DateTimePicker)
+                if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
                 {
                     componente.Enabled = true;
                     componente.Text = "";
@@ -410,7 +416,7 @@ namespace CapaDeDiseno
             int i = 0;
             foreach (Control componente in Controls)
             {
-                if (componente is TextBox || componente is DateTimePicker)
+                if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
                 {
                     componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
                     i++;
@@ -432,7 +438,7 @@ namespace CapaDeDiseno
             int i = 0;
             foreach (Control componente in Controls)
             {
-                if (componente is TextBox || componente is DateTimePicker)
+                if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
                 {
                     componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
                     componente.Enabled = false;
@@ -486,7 +492,7 @@ namespace CapaDeDiseno
                 {
                     foreach (Control componente in Controls)
                     {
-                        if (componente is TextBox || componente is DateTimePicker)
+                        if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
                         {
                            componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
                             i++;
@@ -510,7 +516,7 @@ namespace CapaDeDiseno
                     {
                         foreach (Control componente in Controls)
                         {
-                            if (componente is TextBox || componente is DateTimePicker)
+                            if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
                             {
                                 componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
                                 i++;
@@ -537,7 +543,7 @@ namespace CapaDeDiseno
                 {
                     foreach (Control componente in Controls)
                     {
-                        if (componente is TextBox || componente is DateTimePicker)
+                        if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
                         {
                             componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
                             i++;
@@ -565,7 +571,7 @@ namespace CapaDeDiseno
 
                     foreach (Control componente in Controls)
                     {
-                        if (componente is TextBox || componente is DateTimePicker)
+                        if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
                         {
                             componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
                             i++;
@@ -729,7 +735,7 @@ namespace CapaDeDiseno
             int i = 0;
             foreach (Control componente in Controls)
             {
-                if (componente is TextBox || componente is DateTimePicker)
+                if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
                 {
                     componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
                     i++;
