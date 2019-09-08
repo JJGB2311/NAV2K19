@@ -45,11 +45,10 @@
             this.Btn_Guardar = new System.Windows.Forms.Button();
             this.Btn_Modificar = new System.Windows.Forms.Button();
             this.Btn_Ingresar = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.contenido = new System.Windows.Forms.Label();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.colorDialog2 = new System.Windows.Forms.ColorDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -371,37 +370,15 @@
             this.Btn_Ingresar.UseVisualStyleBackColor = false;
             this.Btn_Ingresar.Click += new System.EventHandler(this.Btn_Ingresar_Click);
             // 
-            // tableLayoutPanel1
+            // colorDialog1
             // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.contenido, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(17, 134);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 77F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1137, 77);
-            this.tableLayoutPanel1.TabIndex = 9;
-            // 
-            // contenido
-            // 
-            this.contenido.AutoSize = true;
-            this.contenido.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contenido.Location = new System.Drawing.Point(3, 0);
-            this.contenido.Name = "contenido";
-            this.contenido.Size = new System.Drawing.Size(1131, 77);
-            this.contenido.TabIndex = 0;
-            this.contenido.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.contenido.Click += new System.EventHandler(this.Contenido_Click);
+            this.colorDialog1.Color = System.Drawing.Color.White;
             // 
             // Navegador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSalmon;
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Navegador";
@@ -409,8 +386,6 @@
             this.Load += new System.EventHandler(this.Navegador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -432,7 +407,7 @@
         private System.Windows.Forms.Button Btn_Guardar;
         private System.Windows.Forms.Button Btn_Modificar;
         private System.Windows.Forms.Button Btn_Ingresar;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label contenido;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.ColorDialog colorDialog2;
     }
 }

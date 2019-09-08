@@ -22,20 +22,27 @@ namespace CapaDeDiseno
         int x = 30;
         int y = 30;
         int activar = 0;    //Variable para reconocer que funcion realizara el boton de guardar (1. Ingresar, 2. Modificar, 3. Eliminar)
-        string[] tipoCampo = new string[30];
+        string[] tipoCampo = new string[30];//
         string[] tablaCombo = new string[30];
         string[] campoCombo = new string[30];
+        string[] listaItems = new string[30];
+        int posCombo = 0;
         int noCombo = 0;
         int noComboAux = 0;
+        Color nuevoColor = Color.White;
         public Navegador()
         {
             InitializeComponent();
+            limpiarListaItems();
+           
 
         }
-        bool presionado = false;
 
         private void Navegador_Load(object sender, EventArgs e)
         {
+            colorDialog1.Color = nuevoColor;
+            this.BackColor = colorDialog1.Color;
+
             if (tabla != "def")
             {
                 int i=0;
@@ -68,12 +75,69 @@ namespace CapaDeDiseno
             sitio = sitiob;
 
         }
-        public void asginarCombo(string tabla, string campo)
+        public void asginarComboConTabla(string tabla, string campo)
         {
             tablaCombo[noCombo] = tabla;
             campoCombo[noCombo] = campo;
             noCombo++;
 
+        }
+
+        public void asignarColor(Color nuevo)
+        {
+
+            nuevoColor = nuevo;
+        }
+
+        public void asginarComboConLista(int pos,string lista)
+        {
+            posCombo = pos-1;
+            limpiarLista(lista);
+            noCombo++;
+        }
+
+        void limpiarLista(string cadena)
+        {
+            limpiarListaItems();
+            int contadorCadena = 0;
+            int contadorArray = 0;
+            string palabra = "";
+            while (contadorCadena < cadena.Length)
+            {
+                if (cadena[contadorCadena] != '|')
+                {
+                    palabra += cadena[contadorCadena];
+                    contadorCadena++;
+                }
+                else
+                {
+
+                    listaItems[contadorArray] = palabra;
+                    palabra = "";
+                    contadorArray++;
+                    contadorCadena++;
+                }
+            }
+        }
+
+        bool verificarListaItems()
+        {
+            bool limpio = true;
+
+            for (int i=0; i<listaItems.Length;i++)
+            {
+                if (listaItems[i]!="") { limpio = false; }
+              
+            }
+            return limpio;
+        }
+
+        void limpiarListaItems()
+        {
+            for (int i =0; i< listaItems.Length;i++)
+            {
+                listaItems[i] = "";
+            }
         }
 
 
@@ -192,17 +256,26 @@ namespace CapaDeDiseno
         void crearComboBox(String nom)
         {
             string[] items;
-            if (tablaCombo[noComboAux] != null)
+            if ( noComboAux == posCombo)
             {
-                items = logic.items(tablaCombo[noComboAux], campoCombo[noComboAux]);
-                if (noCombo > noComboAux) { noComboAux++; }
-               
+                items = listaItems;
+                noComboAux++;
+             
             }
             else
             {
-                MessageBox.Show("NO " + noCombo.ToString());
-                items = logic.items("Peliculas", "idPelicula");
-                if (noCombo > noComboAux) { noComboAux++; }
+
+                if (tablaCombo[noComboAux] != null)
+                {
+                    items = logic.items(tablaCombo[noComboAux], campoCombo[noComboAux]);
+                    if (noCombo > noComboAux) { noComboAux++; }
+
+                }
+                else
+                {
+                    items = logic.items("Peliculas", "idPelicula");
+                    if (noCombo > noComboAux) { noComboAux++; }
+                }
             }
 
             ComboBox cb = new ComboBox();
@@ -211,12 +284,19 @@ namespace CapaDeDiseno
             cb.Name = nom;
             for (int i = 0; i < items.Length; i++)
             {
-                if (items[i] != null) { cb.Items.Add(items[i]); }
+                if (items[i] != null)
+                {
+                    if (items[i]!="")
+                    {
+                        cb.Items.Add(items[i]);
+                    }
+                }
 
             }
 
             this.Controls.Add(cb);
             pos++;
+            
         }
         void crearDateTimePicker(String nom)
         {
@@ -487,7 +567,6 @@ namespace CapaDeDiseno
         {
             logic.nuevoQuery(crearDelete());
                 actualizardatagriew();
-                presionado = false;
                 Btn_Modificar.Enabled = true;
                 Btn_Guardar.Enabled = false;
                 Btn_Cancelar.Enabled = false;

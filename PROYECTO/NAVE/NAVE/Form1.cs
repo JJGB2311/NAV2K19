@@ -15,9 +15,15 @@ namespace NAVE
         public Form1()
         {
             InitializeComponent();
-            navegador1.asginarCombo("Peliculas", "idPelicula");
-            navegador1.asginarCombo("Salas", "idSala");
-            navegador1.asginarCombo("Cines", "nombreCine");
+
+            
+           // navegador1.asginarComboConTabla("Salas", "idSala");
+           
+            navegador1.asginarComboConLista(1, "np|pp|");
+            navegador1.asignarColor(Color.SeaShell);
+            navegador1.asginarComboConTabla("Peliculas", "idPelicula");
+            navegador1.asginarComboConTabla("Cines", "nombreCine");
+
             navegador1.asignarTabla("Funciones");
          
         }
