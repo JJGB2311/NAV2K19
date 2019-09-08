@@ -41,6 +41,13 @@ namespace CapaLogica
 
             return LLaves;
         }
+
+        public string[] items(string tabla, string campo)
+        {
+            string[] Items = sn.obtenerItems(tabla, campo);
+
+            return Items;
+        }
         public void nuevoQuery(String query)//trasporta el query de la capa de disenio a Datos
         {
             sn.ejecutarQuery(query);

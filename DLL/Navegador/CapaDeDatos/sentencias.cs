@@ -14,7 +14,7 @@ namespace CapaDeDatos
 
         public OdbcDataAdapter llenaTbl(string tabla)// metodo  que obtinene el contenio de una tabla
         {
-
+          
             string sql = "SELECT * FROM " + tabla + ";";
             OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.probarConexion());
             return dataTable;
@@ -68,6 +68,28 @@ namespace CapaDeDatos
             }
 
             return Campos;// devuelve un arreglo con los tipos
+        }
+        public string[] obtenerItems(string tabla, string campo)//metodo que obtiene la lista de los tipos de campos que requiere una tabla
+        {
+            string[] items = new string[300];
+            int i = 0;
+
+
+            try {
+
+                OdbcCommand command = new OdbcCommand("select  " + campo + " FROM " + tabla, cn.probarConexion());
+                OdbcDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        items[i] = reader.GetValue(0).ToString();
+                        i++;
+
+                    }
+                } catch (Exception ex) { Console.WriteLine(ex.Message.ToString()+" \nError en asignarCombo, revise los parametros \n -"+tabla+"\n -"+campo ); }
+            
+
+            return items;// devuelve un arreglo con los tipos
         }
         string limpiarTipo(string cadena)// elimina los parentesis y tama;o de campo del tipo de campo
         {

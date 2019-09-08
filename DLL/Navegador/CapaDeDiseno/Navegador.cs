@@ -23,6 +23,10 @@ namespace CapaDeDiseno
         int y = 30;
         int activar = 0;    //Variable para reconocer que funcion realizara el boton de guardar (1. Ingresar, 2. Modificar, 3. Eliminar)
         string[] tipoCampo = new string[30];
+        string[] tablaCombo = new string[30];
+        string[] campoCombo = new string[30];
+        int noCombo = 0;
+        int noComboAux = 0;
         public Navegador()
         {
             InitializeComponent();
@@ -64,6 +68,14 @@ namespace CapaDeDiseno
             sitio = sitiob;
 
         }
+        public void asginarCombo(string tabla, string campo)
+        {
+            tablaCombo[noCombo] = tabla;
+            campoCombo[noCombo] = campo;
+            noCombo++;
+
+        }
+
 
         void CreaComponentes()
         {
@@ -179,10 +191,30 @@ namespace CapaDeDiseno
 
         void crearComboBox(String nom)
         {
+            string[] items;
+            if (tablaCombo[noComboAux] != null)
+            {
+                items = logic.items(tablaCombo[noComboAux], campoCombo[noComboAux]);
+                if (noCombo > noComboAux) { noComboAux++; }
+               
+            }
+            else
+            {
+                MessageBox.Show("NO " + noCombo.ToString());
+                items = logic.items("Peliculas", "idPelicula");
+                if (noCombo > noComboAux) { noComboAux++; }
+            }
+
             ComboBox cb = new ComboBox();
             Point p = new Point(x + 125 + pos, y * pos);
             cb.Location = p;
             cb.Name = nom;
+            for (int i = 0; i < items.Length; i++)
+            {
+                if (items[i] != null) { cb.Items.Add(items[i]); }
+
+            }
+
             this.Controls.Add(cb);
             pos++;
         }
