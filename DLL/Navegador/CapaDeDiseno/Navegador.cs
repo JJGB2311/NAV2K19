@@ -599,8 +599,7 @@ namespace CapaDeDiseno
             {
                 dataGridView1.Rows[fila - 1].Selected = true;
                 dataGridView1.CurrentCell = dataGridView1.Rows[fila - 1].Cells[0];
-                while (i < dataGridView1.ColumnCount)
-                {
+                
                     foreach (Control componente in Controls)
                     {
                         if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
@@ -609,7 +608,7 @@ namespace CapaDeDiseno
                             i++;
                         }
                     }
-                }
+                
             }
         }
 
@@ -623,8 +622,7 @@ namespace CapaDeDiseno
                 {
                     dataGridView1.Rows[fila + 1].Selected = true;
                     dataGridView1.CurrentCell = dataGridView1.Rows[fila + 1].Cells[0];
-                    while (i < dataGridView1.ColumnCount)
-                    {
+                    
                         foreach (Control componente in Controls)
                         {
                             if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
@@ -633,7 +631,7 @@ namespace CapaDeDiseno
                                 i++;
                             }
                         }
-                    }   
+                      
                  }
         }
 
@@ -650,8 +648,7 @@ namespace CapaDeDiseno
             {
                 dataGridView1.Rows[dataGridView1.Rows.Count - 2].Selected = true;
                 dataGridView1.CurrentCell = dataGridView1.Rows[dataGridView1.Rows.Count - 2].Cells[0];
-                while (i < dataGridView1.ColumnCount)
-                {
+                
                     foreach (Control componente in Controls)
                     {
                         if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
@@ -660,7 +657,7 @@ namespace CapaDeDiseno
                             i++;
                         }
                     }
-                }
+                
             }
         }
 
@@ -677,8 +674,7 @@ namespace CapaDeDiseno
             {
                 dataGridView1.Rows[0].Selected = true;
                 dataGridView1.CurrentCell = dataGridView1.Rows[0].Cells[0];
-                while (i < dataGridView1.ColumnCount)
-                {
+               
 
                     foreach (Control componente in Controls)
                     {
@@ -690,7 +686,7 @@ namespace CapaDeDiseno
 
                     }
 
-                }
+                
             }
 
         }
