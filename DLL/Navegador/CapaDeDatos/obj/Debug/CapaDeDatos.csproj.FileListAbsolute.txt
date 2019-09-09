@@ -15,3 +15,4 @@ C:\Users\gganp\Desktop\NAV2K19\DLL\Navegador\CapaDeDatos\bin\Debug\CapaDeDatos.p
 C:\Users\gganp\Desktop\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.CoreCompileInputs.cache
 C:\Users\gganp\Desktop\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.dll
 C:\Users\gganp\Desktop\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.pdb
+C:\Users\gganp\Desktop\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csprojAssemblyReference.cache
