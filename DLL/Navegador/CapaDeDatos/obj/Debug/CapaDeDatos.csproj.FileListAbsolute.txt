@@ -1,24 +1,17 @@
-C:\Users\Randy\source\repos\Navegador\CapaDeDatos\bin\Debug\CapaDeDatos.dll
-C:\Users\Randy\source\repos\Navegador\CapaDeDatos\bin\Debug\CapaDeDatos.pdb
-C:\Users\Randy\source\repos\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csprojAssemblyReference.cache
-C:\Users\Randy\source\repos\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.CoreCompileInputs.cache
-C:\Users\Randy\source\repos\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.dll
-C:\Users\Randy\source\repos\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.pdb
-G:\Navegador\CapaDeDatos\bin\Debug\CapaDeDatos.dll
-G:\Navegador\CapaDeDatos\bin\Debug\CapaDeDatos.pdb
-G:\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csprojAssemblyReference.cache
-G:\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.CoreCompileInputs.cache
-G:\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.dll
-G:\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.pdb
-C:\Users\gganp\Desktop\COMPONENTE\DLL\Navegador\CapaDeDatos\bin\Debug\CapaDeDatos.dll
-C:\Users\gganp\Desktop\COMPONENTE\DLL\Navegador\CapaDeDatos\bin\Debug\CapaDeDatos.pdb
-C:\Users\gganp\Desktop\COMPONENTE\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csprojAssemblyReference.cache
-C:\Users\gganp\Desktop\COMPONENTE\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.CoreCompileInputs.cache
-C:\Users\gganp\Desktop\COMPONENTE\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.dll
-C:\Users\gganp\Desktop\COMPONENTE\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.pdb
-C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\DLL\Navegador\CapaDeDatos\bin\Debug\CapaDeDatos.dll
-C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\DLL\Navegador\CapaDeDatos\bin\Debug\CapaDeDatos.pdb
-C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csprojAssemblyReference.cache
-C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.CoreCompileInputs.cache
-C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.dll
-C:\Users\juan_\Documents\GitHub\Personal HCS\ProyectoHSC\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.pdb
+C:\Users\gganp\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDatos\bin\Debug\CapaDeDatos.dll
+C:\Users\gganp\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDatos\bin\Debug\CapaDeDatos.pdb
+C:\Users\gganp\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.CoreCompileInputs.cache
+C:\Users\gganp\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.dll
+C:\Users\gganp\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.pdb
+C:\Users\gganp\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csprojAssemblyReference.cache
+C:\Users\Usuario\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDatos\bin\Debug\CapaDeDatos.dll
+C:\Users\Usuario\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDatos\bin\Debug\CapaDeDatos.pdb
+C:\Users\Usuario\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csprojAssemblyReference.cache
+C:\Users\Usuario\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.dll
+C:\Users\Usuario\Desktop\ProyectoHSC\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.pdb
+C:\Users\gganp\Desktop\NAV2K19\DLL\Navegador\CapaDeDatos\bin\Debug\CapaDeDatos.dll
+C:\Users\gganp\Desktop\NAV2K19\DLL\Navegador\CapaDeDatos\bin\Debug\CapaDeDatos.pdb
+C:\Users\gganp\Desktop\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.CoreCompileInputs.cache
+C:\Users\gganp\Desktop\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.dll
+C:\Users\gganp\Desktop\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.pdb
