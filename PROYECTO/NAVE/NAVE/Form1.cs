@@ -15,9 +15,17 @@ namespace NAVE
         public Form1()
         {
             InitializeComponent();
-            navegador1.asignarTabla("peliculas");
-            navegador1.asignarayuda("menu.html");
 
+            
+           // navegador1.asginarComboConTabla("Salas", "idSala");
+           
+            navegador1.asginarComboConLista(1, "np|pp|");
+            navegador1.asignarColor(Color.SeaShell);
+            navegador1.asginarComboConTabla("Peliculas", "idPelicula");
+            navegador1.asginarComboConTabla("Cines", "nombreCine");
+
+            navegador1.asignarTabla("Funciones");
+         
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -28,6 +36,11 @@ namespace NAVE
         private void Navegador1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Navegador1_Load_1(object sender, EventArgs e)
+        {
+     
         }
     }
 }
