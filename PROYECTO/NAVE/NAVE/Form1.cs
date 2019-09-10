@@ -23,7 +23,7 @@ namespace NAVE
             navegador1.asignarColor(Color.SeaShell);
             navegador1.asginarComboConTabla("Peliculas", "idPelicula");
             navegador1.asginarComboConTabla("Cines", "nombreCine");
-
+            navegador1.asignarayuda("Página web ayuda/ayuda.chm", "menu.html");
             navegador1.asignarTabla("Funciones");
          
         }

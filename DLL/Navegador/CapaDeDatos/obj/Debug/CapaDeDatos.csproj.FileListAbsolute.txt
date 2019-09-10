@@ -16,3 +16,9 @@ C:\Users\gganp\Desktop\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.c
 C:\Users\gganp\Desktop\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.dll
 C:\Users\gganp\Desktop\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.pdb
 C:\Users\gganp\Desktop\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csprojAssemblyReference.cache
+C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\DLL\Navegador\CapaDeDatos\bin\Debug\CapaDeDatos.dll
+C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\DLL\Navegador\CapaDeDatos\bin\Debug\CapaDeDatos.pdb
+C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csprojAssemblyReference.cache
+C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.CoreCompileInputs.cache
+C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.dll
+C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.pdb
