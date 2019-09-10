@@ -188,6 +188,11 @@ namespace CapaDeDiseno
                         if (LLaves[i] != "MUL")
                         {crearTextBoxtexto(Campos[i]);} else { crearComboBox(Campos[i]); }
                 break;
+                    case "time":
+                        tipoCampo[noCampos - 1] = "Text";
+                        if (LLaves[i] != "MUL")
+                         crearCampoHora(Campos[i]); 
+                        break;
                 }
                 noCampos++;
 
@@ -238,6 +243,17 @@ namespace CapaDeDiseno
             this.KeyPress += Paravalidartexto_KeyPress;          
             pos++;
 
+        }
+        void crearCampoHora(String nom)
+        {
+            DateTimePicker dtp = new DateTimePicker();
+            Point p = new Point(x + 125 + pos, y * pos);
+            dtp.Location = p;
+            dtp.Format = DateTimePickerFormat.Custom;
+            dtp.CustomFormat = "hh:mm:ss tt";
+            dtp.Name = nom;
+            this.Controls.Add(dtp);
+            pos++;
         }
 
         private void Paravalidarnumeros_KeyPress(object sender, KeyPressEventArgs e)

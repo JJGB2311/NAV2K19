@@ -54,3 +54,17 @@ C:\Users\gganp\Desktop\NAV2K19\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno
 C:\Users\gganp\Desktop\NAV2K19\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csproj.CopyComplete
 C:\Users\gganp\Desktop\NAV2K19\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.dll
 C:\Users\gganp\Desktop\NAV2K19\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.pdb
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\NAV2K19\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDiseno.dll
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\NAV2K19\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDiseno.pdb
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\NAV2K19\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaLogica.dll
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\NAV2K19\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDatos.dll
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\NAV2K19\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaLogica.pdb
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\NAV2K19\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDatos.pdb
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\NAV2K19\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csprojAssemblyReference.cache
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\NAV2K19\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.Navegador.resources
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\NAV2K19\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.Properties.Resources.resources
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\NAV2K19\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csproj.GenerateResource.cache
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\NAV2K19\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csproj.CoreCompileInputs.cache
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\NAV2K19\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csproj.CopyComplete
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\NAV2K19\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.dll
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\NAV2K19\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.pdb
