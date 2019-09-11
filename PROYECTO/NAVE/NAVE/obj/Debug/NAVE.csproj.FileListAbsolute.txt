@@ -83,3 +83,20 @@ C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\PROYECTO\NAVE\NAVE\obj\Debu
 C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.csproj.CopyComplete
 C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.exe
 C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.pdb
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\NAVE.exe.config
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\NAVE.exe
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\NAVE.pdb
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeDiseno.dll
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaLogica.dll
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeDatos.dll
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeDiseno.pdb
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaLogica.pdb
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeDatos.pdb
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\NAV2K19\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.csprojAssemblyReference.cache
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\NAV2K19\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.Form1.resources
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\NAV2K19\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.Properties.Resources.resources
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\NAV2K19\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.csproj.GenerateResource.cache
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\NAV2K19\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.csproj.CoreCompileInputs.cache
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\NAV2K19\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.csproj.CopyComplete
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\NAV2K19\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.exe
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\NAV2K19\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.pdb
