@@ -30,11 +30,12 @@ namespace CapaDeDiseno
         int noCombo = 0;
         int noComboAux = 0;
         Color nuevoColor = Color.White;
+        bool presionado = false;
         public Navegador()
         {
             InitializeComponent();
             limpiarListaItems();
-           
+
 
         }
 
@@ -45,7 +46,7 @@ namespace CapaDeDiseno
 
             if (tabla != "def")
             {
-                int i=0;
+                int i = 0;
                 DataTable dt = logic.consultaLogica(tabla);
                 dataGridView1.DataSource = dt;
                 CreaComponentes();
@@ -54,7 +55,7 @@ namespace CapaDeDiseno
                 Btn_Eliminar.Enabled = true;
                 foreach (Control componente in Controls)
                 {
-                    if (componente is TextBox || componente is DateTimePicker || componente is ComboBox )
+                    if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
                     {
                         componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
                         i++;
@@ -89,9 +90,9 @@ namespace CapaDeDiseno
             nuevoColor = nuevo;
         }
 
-        public void asginarComboConLista(int pos,string lista)
+        public void asginarComboConLista(int pos, string lista)
         {
-            posCombo = pos-1;
+            posCombo = pos - 1;
             limpiarLista(lista);
             noCombo++;
         }
@@ -124,17 +125,17 @@ namespace CapaDeDiseno
         {
             bool limpio = true;
 
-            for (int i=0; i<listaItems.Length;i++)
+            for (int i = 0; i < listaItems.Length; i++)
             {
-                if (listaItems[i]!="") { limpio = false; }
-              
+                if (listaItems[i] != "") { limpio = false; }
+
             }
             return limpio;
         }
 
         void limpiarListaItems()
         {
-            for (int i =0; i< listaItems.Length;i++)
+            for (int i = 0; i < listaItems.Length; i++)
             {
                 listaItems[i] = "";
             }
@@ -170,28 +171,28 @@ namespace CapaDeDiseno
                     case "int":
                         tipoCampo[noCampos - 1] = "Num";
                         if (LLaves[i] != "MUL") { crearTextBoxnumerico(Campos[i]); } else { crearComboBox(Campos[i]); }
-                        
+
                         break;
                     case "varchar":
                         tipoCampo[noCampos - 1] = "Text";
 
                         if (LLaves[i] != "MUL")
-                        { crearTextBoxvarchar(Campos[i]);} else { crearComboBox(Campos[i]); }
-                break;
+                        { crearTextBoxvarchar(Campos[i]); } else { crearComboBox(Campos[i]); }
+                        break;
                     case "date":
                         tipoCampo[noCampos - 1] = "Text";
                         if (LLaves[i] != "MUL")
-                        {crearDateTimePicker(Campos[i]);} else { crearComboBox(Campos[i]); }
+                        { crearDateTimePicker(Campos[i]); } else { crearComboBox(Campos[i]); }
                         break;
                     case "text":
                         tipoCampo[noCampos - 1] = "Text";
                         if (LLaves[i] != "MUL")
-                        {crearTextBoxtexto(Campos[i]);} else { crearComboBox(Campos[i]); }
-                break;
+                        { crearTextBoxtexto(Campos[i]); } else { crearComboBox(Campos[i]); }
+                        break;
                     case "time":
                         tipoCampo[noCampos - 1] = "Text";
                         if (LLaves[i] != "MUL")
-                         crearCampoHora(Campos[i]); 
+                            crearCampoHora(Campos[i]);
                         break;
                 }
                 noCampos++;
@@ -200,11 +201,11 @@ namespace CapaDeDiseno
             }
         }
 
-       
+
         void crearTextBoxnumerico(String nom)
         {
 
-          
+
             TextBox tb = new TextBox();
             Point p = new Point(x + 125 + pos, y * pos);
             tb.Location = p;
@@ -220,14 +221,14 @@ namespace CapaDeDiseno
         void crearTextBoxvarchar(String nom)
         {
 
-  
+
             TextBox tb = new TextBox();
             Point p = new Point(x + 125 + pos, y * pos);
             tb.Location = p;
             tb.Name = nom;
             this.Controls.Add(tb);
             tb.KeyPress += Paravalidarvarchar_KeyPress;
-            this.KeyPress += Paravalidarvarchar_KeyPress;      
+            this.KeyPress += Paravalidarvarchar_KeyPress;
             pos++;
 
         }
@@ -240,7 +241,7 @@ namespace CapaDeDiseno
             tb.Name = nom;
             this.Controls.Add(tb);
             tb.KeyPress += Paravalidartexto_KeyPress;
-            this.KeyPress += Paravalidartexto_KeyPress;          
+            this.KeyPress += Paravalidartexto_KeyPress;
             pos++;
 
         }
@@ -269,14 +270,21 @@ namespace CapaDeDiseno
             v.CamposLetras(e);
         }
 
+        private void Paravalidarcombobox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.Combobox(e);
+        }
+
+
+
         void crearComboBox(String nom)
         {
             string[] items;
-            if ( noComboAux == posCombo)
+            if (noComboAux == posCombo)
             {
                 items = listaItems;
                 noComboAux++;
-             
+
             }
             else
             {
@@ -302,7 +310,7 @@ namespace CapaDeDiseno
             {
                 if (items[i] != null)
                 {
-                    if (items[i]!="")
+                    if (items[i] != "")
                     {
                         cb.Items.Add(items[i]);
                     }
@@ -311,9 +319,14 @@ namespace CapaDeDiseno
             }
 
             this.Controls.Add(cb);
+            cb.KeyPress += Paravalidarcombobox_KeyPress;
+            this.KeyPress += Paravalidarcombobox_KeyPress;
             pos++;
-            
+
         }
+
+
+
         void crearDateTimePicker(String nom)
         {
             DateTimePicker dtp = new DateTimePicker();
@@ -526,7 +539,7 @@ namespace CapaDeDiseno
                 {
                     componente.Enabled = true;
                     componente.Text = "";
-                  
+
 
                 }
 
@@ -553,7 +566,7 @@ namespace CapaDeDiseno
             }
             Btn_Ingresar.Enabled = false;
             Btn_Eliminar.Enabled = false;
-        
+
         }
 
         private void Btn_Cancelar_Click(object sender, EventArgs e)
@@ -574,20 +587,35 @@ namespace CapaDeDiseno
                 }
 
             }
-            
+
 
 
         }
 
         private void Btn_Eliminar_Click(object sender, EventArgs e)
         {
-            logic.nuevoQuery(crearDelete());
+            if (presionado == false)
+            {
+                Btn_Guardar.Enabled = false;
+                Btn_Modificar.Enabled = false;
+                Btn_Eliminar.Enabled = true;
+                Btn_Cancelar.Enabled = true;
+                Btn_Ingresar.Enabled = false;
+                presionado = true;
+            }
+            else
+            {
+                logic.nuevoQuery(crearDelete());
                 actualizardatagriew();
                 Btn_Modificar.Enabled = true;
                 Btn_Guardar.Enabled = false;
                 Btn_Cancelar.Enabled = false;
                 Btn_Ingresar.Enabled = true;
+                presionado = false;
+            }
         }
+       
+
 
         private void Btn_Consultar_Click(object sender, EventArgs e)
         {
@@ -718,7 +746,7 @@ namespace CapaDeDiseno
 
         private void Btn_Salir_Click(object sender, EventArgs e)
         {
-            if (Btn_Guardar.Enabled == true && Btn_Modificar.Enabled == false && Btn_Eliminar.Enabled == false)
+            if (Btn_Guardar.Enabled == true && Btn_Cancelar.Enabled == true && Btn_Eliminar.Enabled == false && Btn_Modificar.Enabled ==false && Btn_Ingresar.Enabled == false && Btn_Eliminar.Enabled == false)
                 foreach (Control componente in Controls)
                 {
 
@@ -745,10 +773,10 @@ namespace CapaDeDiseno
                 }
 
    
-            //Opcion cuando esta modificando o eliminando y queiere salir sin finalizar //
-            if  (Btn_Modificar.Enabled == true  && Btn_Guardar.Enabled == false)
+            //Opcion cuando esta #modificando# o eliminando y queiere salir sin finalizar //
+            if  (Btn_Modificar.Enabled == true  && Btn_Guardar.Enabled == true && Btn_Cancelar.Enabled==true && Btn_Ingresar.Enabled ==false)    
             {
-                //|| Btn_Eliminar.Enabled == true && Btn_Cancelar.Enabled == true
+               
                 foreach (Control componente in Controls)
                 {
 
@@ -774,10 +802,10 @@ namespace CapaDeDiseno
         }
 
             //------------------------------------------------------------------------------------------------------//
-            //Opcion cuando esta modificando o eliminando y queiere salir sin finalizar //
-            if (Btn_Eliminar.Enabled == true && Btn_Guardar.Enabled == false)
+            //Opcion cuando esta modificando o #eliminando# y queiere salir sin finalizar //
+            if (Btn_Eliminar.Enabled==true && Btn_Cancelar.Enabled==true && Btn_Modificar.Enabled == false && Btn_Guardar.Enabled == false && Btn_Ingresar.Enabled==false)
             {
-                //|| Btn_Eliminar.Enabled == true && Btn_Cancelar.Enabled == true
+                
                 foreach (Control componente in Controls)
                 {
 

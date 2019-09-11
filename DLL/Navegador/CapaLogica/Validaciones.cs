@@ -97,5 +97,36 @@ namespace CapaLogica
 
             }
         }
+
+        public void Combobox(KeyPressEventArgs e)
+        {
+            try
+            {
+                if (Char.IsLetter(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+                else if (Char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else if (Char.IsSeparator(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else if (Char.IsNumber(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+                else
+                {
+                    e.Handled = true;
+                }
+            }
+            catch
+            {
+
+            }
+        }
     }
 }
