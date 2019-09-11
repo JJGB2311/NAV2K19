@@ -867,7 +867,7 @@ namespace CapaDeDiseno
             int i = 0;
             foreach (Control componente in Controls)
             {
-                if (componente is TextBox || componente is DateTimePicker)
+                if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
                 {
                     componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
                     i++;
