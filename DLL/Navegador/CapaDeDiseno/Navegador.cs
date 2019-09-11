@@ -16,7 +16,7 @@ namespace CapaDeDiseno
         Validaciones v = new Validaciones();
         logica logic = new logica();
         string tabla = "def";
-        string sitio;
+        string sitio, ruta;
         int pos = 8;
         int noCampos = 1;
         int x = 30;
@@ -70,11 +70,14 @@ namespace CapaDeDiseno
         {
             tabla = table;
         }
-        public void asignarayuda(string sitiob)
+        public void asignarayuda(string rutaob, string sitiob)
         {
             sitio = sitiob;
+            ruta = rutaob;
+
 
         }
+
         public void asginarComboConTabla(string tabla, string campo)
         {
             tablaCombo[noCombo] = tabla;
@@ -693,7 +696,8 @@ namespace CapaDeDiseno
 
         private void Btn_Ayuda_Click(object sender, EventArgs e)
         {
-            Help.ShowHelp(this, " Página web ayuda/ayuda.chm", sitio);//Abre el menu de ayuda HTML
+          Help.ShowHelp(this, ruta, sitio);//Abre el menu de ayuda HTML
+
         }
 
         private void Btn_Salir_Click(object sender, EventArgs e)
