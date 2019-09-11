@@ -46,8 +46,8 @@ namespace CapaLogica
             {
                 if (Char.IsNumber(e.KeyChar))
                 {
-                    e.Handled = true;
-                    //esto lo cambio de true a false
+                    e.Handled = false;
+                    
                 }
                 else if (Char.IsControl(e.KeyChar))
                 {
@@ -78,11 +78,15 @@ namespace CapaLogica
             {
                 if (Char.IsNumber(e.KeyChar))
                 {
-                    e.Handled = false;
+                    e.Handled = true;
                 }
                 else if (Char.IsControl(e.KeyChar))
                 {
                     e.Handled = false;
+                }
+                else if (Char.IsLetter(e.KeyChar))
+                {
+                    e.Handled = true;
                 }
                 else if (Char.IsSeparator(e.KeyChar))
                 {

@@ -30,6 +30,7 @@ namespace CapaDeDiseno
         int noCombo = 0;
         int noComboAux = 0;
         Color nuevoColor = Color.White;
+        bool presionado = false;
         public Navegador()
         {
             InitializeComponent();
@@ -191,6 +192,10 @@ namespace CapaDeDiseno
                         if (LLaves[i] != "MUL")
                         {crearTextBoxtexto(Campos[i]);} else { crearComboBox(Campos[i]); }
                 break;
+                    case "time":
+                        tipoCampo[noCampos - 1] = "Text";
+                        crearTextBoxvarchar(Campos[i]);       
+                        break;
                 }
                 noCampos++;
 
@@ -255,6 +260,10 @@ namespace CapaDeDiseno
         {
             v.CamposLetras(e);
         }
+        private void Paravalidacombo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.Combobox(e);
+        }
 
         void crearComboBox(String nom)
         {
@@ -298,9 +307,14 @@ namespace CapaDeDiseno
             }
 
             this.Controls.Add(cb);
+            cb.KeyPress += Paravalidacombo_KeyPress;
+            this.KeyPress += Paravalidacombo_KeyPress;
             pos++;
             
         }
+
+       
+
         void crearDateTimePicker(String nom)
         {
             DateTimePicker dtp = new DateTimePicker();
@@ -568,12 +582,25 @@ namespace CapaDeDiseno
 
         private void Btn_Eliminar_Click(object sender, EventArgs e)
         {
-            logic.nuevoQuery(crearDelete());
+            if (presionado == false)
+            {
+                Btn_Guardar.Enabled = false;
+                Btn_Modificar.Enabled = false;
+                Btn_Eliminar.Enabled = true;
+                Btn_Cancelar.Enabled = true;
+                Btn_Ingresar.Enabled = false;
+                presionado = true;
+            }
+            else
+            {
+                logic.nuevoQuery(crearDelete());
                 actualizardatagriew();
                 Btn_Modificar.Enabled = true;
                 Btn_Guardar.Enabled = false;
                 Btn_Cancelar.Enabled = false;
                 Btn_Ingresar.Enabled = true;
+                presionado = false;
+            }
         }
 
         private void Btn_Consultar_Click(object sender, EventArgs e)
@@ -702,7 +729,7 @@ namespace CapaDeDiseno
 
         private void Btn_Salir_Click(object sender, EventArgs e)
         {
-            if (Btn_Guardar.Enabled == true && Btn_Modificar.Enabled == false && Btn_Eliminar.Enabled == false)
+            if (Btn_Guardar.Enabled == true && Btn_Cancelar.Enabled == true && Btn_Eliminar.Enabled == false && Btn_Modificar.Enabled == false && Btn_Ingresar.Enabled == false && Btn_Eliminar.Enabled == false)
                 foreach (Control componente in Controls)
                 {
 
@@ -728,11 +755,11 @@ namespace CapaDeDiseno
                     }
                 }
 
-   
-            //Opcion cuando esta modificando o eliminando y queiere salir sin finalizar //
-            if  (Btn_Modificar.Enabled == true  && Btn_Guardar.Enabled == false)
+
+            //Opcion cuando esta #modificando# o eliminando y queiere salir sin finalizar //
+            if (Btn_Modificar.Enabled == true && Btn_Guardar.Enabled == true && Btn_Cancelar.Enabled == true && Btn_Ingresar.Enabled == false)
             {
-                //|| Btn_Eliminar.Enabled == true && Btn_Cancelar.Enabled == true
+
                 foreach (Control componente in Controls)
                 {
 
@@ -755,13 +782,13 @@ namespace CapaDeDiseno
                         }
                     }
                 }
-        }
+            }
 
             //------------------------------------------------------------------------------------------------------//
-            //Opcion cuando esta modificando o eliminando y queiere salir sin finalizar //
-            if (Btn_Eliminar.Enabled == true && Btn_Guardar.Enabled == false)
+            //Opcion cuando esta modificando o #eliminando# y queiere salir sin finalizar //
+            if (Btn_Eliminar.Enabled == true && Btn_Cancelar.Enabled == true && Btn_Modificar.Enabled == false && Btn_Guardar.Enabled == false && Btn_Ingresar.Enabled == false)
             {
-                //|| Btn_Eliminar.Enabled == true && Btn_Cancelar.Enabled == true
+
                 foreach (Control componente in Controls)
                 {
 
