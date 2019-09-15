@@ -34,7 +34,7 @@ namespace CapaDeDiseno
         {
             InitializeComponent();
             limpiarListaItems();
-           
+ 
 
         }
 

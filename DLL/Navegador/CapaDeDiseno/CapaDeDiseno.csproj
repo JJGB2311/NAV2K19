@@ -66,9 +66,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CapaLogica\CapaLogica.csproj">
+    <ProjectReference Include="..\CapaLogica\CapaLogicaNav.csproj">
       <Project>{2698a30b-cd74-4ebe-b96c-960e900811a9}</Project>
-      <Name>CapaLogica</Name>
+      <Name>CapaLogicaNav</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

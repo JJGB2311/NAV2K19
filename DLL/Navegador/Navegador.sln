@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29123.88
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDeDatos", "CapaDeDatos\CapaDeDatos.csproj", "{823191D2-AAC4-4748-8ACA-4E7993A693AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaLogica", "CapaLogica\CapaLogica.csproj", "{2698A30B-CD74-4EBE-B96C-960E900811A9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaLogicaNav", "CapaLogica\CapaLogicaNav.csproj", "{2698A30B-CD74-4EBE-B96C-960E900811A9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDeDiseno", "CapaDeDiseno\CapaDeDiseno.csproj", "{8E0068C9-E289-4CF6-ACD5-E6B10DAE7569}"
 EndProject
