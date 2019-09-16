@@ -1,0 +1,9 @@
+C:\Users\Edson Juarez\Desktop\UMG\Octavo Semestre\Análisis de Sistemas II\Repositorio navegador\NAV2K19\DLL\Navegador\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\Edson Juarez\Desktop\UMG\Octavo Semestre\Análisis de Sistemas II\Repositorio navegador\NAV2K19\DLL\Navegador\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\Edson Juarez\Desktop\UMG\Octavo Semestre\Análisis de Sistemas II\Repositorio navegador\NAV2K19\DLL\Navegador\CapaLogica\bin\Debug\CapaDeDatos.dll
+C:\Users\Edson Juarez\Desktop\UMG\Octavo Semestre\Análisis de Sistemas II\Repositorio navegador\NAV2K19\DLL\Navegador\CapaLogica\bin\Debug\CapaDeDatos.pdb
+C:\Users\Edson Juarez\Desktop\UMG\Octavo Semestre\Análisis de Sistemas II\Repositorio navegador\NAV2K19\DLL\Navegador\CapaLogica\obj\Debug\CapaLogicaNav.csprojAssemblyReference.cache
+C:\Users\Edson Juarez\Desktop\UMG\Octavo Semestre\Análisis de Sistemas II\Repositorio navegador\NAV2K19\DLL\Navegador\CapaLogica\obj\Debug\CapaLogicaNav.csproj.CoreCompileInputs.cache
+C:\Users\Edson Juarez\Desktop\UMG\Octavo Semestre\Análisis de Sistemas II\Repositorio navegador\NAV2K19\DLL\Navegador\CapaLogica\obj\Debug\CapaLogicaNav.csproj.CopyComplete
+C:\Users\Edson Juarez\Desktop\UMG\Octavo Semestre\Análisis de Sistemas II\Repositorio navegador\NAV2K19\DLL\Navegador\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\Edson Juarez\Desktop\UMG\Octavo Semestre\Análisis de Sistemas II\Repositorio navegador\NAV2K19\DLL\Navegador\CapaLogica\obj\Debug\CapaLogica.pdb

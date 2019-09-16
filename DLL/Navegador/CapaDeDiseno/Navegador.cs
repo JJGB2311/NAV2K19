@@ -7,14 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CapaLogica;
+using CapaDeLogica;
+using CapaDatos;
 
 namespace CapaDeDiseno
 {
     public partial class Navegador : UserControl
     {
         Validaciones v = new Validaciones();
-        logica logic = new logica();
+        logicaNav logic = new logicaNav();
         string tabla = "def";
         string sitio, ruta;
         int pos = 8;
@@ -31,6 +32,9 @@ namespace CapaDeDiseno
         int noComboAux = 0;
         Color nuevoColor = Color.White;
         bool presionado = false;
+        sentencia sn = new sentencia(); //objeto del componente de seguridad para obtener el método de la bitácora
+        string idUsuario = "";
+        Font fuente = new Font("Century Gothic", 14.0f, FontStyle.Regular, GraphicsUnit.Pixel); //objeto para definir el tipo y tamaño de fuente de los labels
         public Navegador()
         {
             InitializeComponent();
@@ -67,6 +71,12 @@ namespace CapaDeDiseno
         }
 
         //-----------------------------------------------Funciones-----------------------------------------------//
+        public void ObtenerIdUsuario(string idUsuario)
+        {
+            this.idUsuario = idUsuario;
+        }
+
+
         public void asignarTabla(string table)
         {
             tabla = table;
@@ -166,6 +176,7 @@ namespace CapaDeDiseno
                 Point p = new Point(x + pos, y * pos);
                 lb.Location = p;
                 lb.Name = "lb_" + Campos[i];
+                lb.Font = fuente;
                 this.Controls.Add(lb);
 
 
@@ -372,7 +383,7 @@ namespace CapaDeDiseno
         string crearDelete()// crea el query de delete
         {
             //Cambiar el estadoPelicula por estado
-            string query = "UPDATE " + tabla + " SET estadoPelicula=1";
+            string query = "UPDATE " + tabla + " SET estado=1";
             string whereQuery = " WHERE  ";
             int posCampo = 0;
             string campos = "";
@@ -403,6 +414,7 @@ namespace CapaDeDiseno
             //query += campos + whereQuery + ";";
             query += whereQuery + ";";
             Console.Write(query);
+            sn.insertarBitacora(idUsuario, "Se eliminó un registro", tabla);
             return query;
         }
 
@@ -433,6 +445,7 @@ namespace CapaDeDiseno
             campos = campos.TrimEnd(' ');
             campos = campos.TrimEnd(',');
             query += campos + ");";
+            sn.insertarBitacora(idUsuario, "Se creó un nuevo registro", tabla);
             return query;
         }
 
@@ -482,6 +495,7 @@ namespace CapaDeDiseno
             campos = campos.TrimEnd(',');
             query += campos + whereQuery + ";";
             //contenido.Text = query;
+            sn.insertarBitacora(idUsuario, "Se actualizó un registro", tabla);
             return query;
         }
 

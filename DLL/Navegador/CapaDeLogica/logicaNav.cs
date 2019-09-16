@@ -7,10 +7,10 @@ using CapaDeDatos;
 using System.Data;
 using System.Data.Odbc;
 
-namespace CapaLogica
+namespace CapaDeLogica
 {
   
-    public class logica
+    public class logicaNav
     {
         sentencias sn = new sentencias();
         public DataTable consultaLogica(string tabla)  //obtener datos de la consulta

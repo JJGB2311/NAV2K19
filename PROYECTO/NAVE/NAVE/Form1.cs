@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaDiseno;
 
 namespace NAVE
 {
@@ -30,7 +31,9 @@ namespace NAVE
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            frm_login login = new frm_login();
+            login.ShowDialog();
+            navegador1.ObtenerIdUsuario(login.obtenerNombreUsuario());
         }
 
         private void Navegador1_Load(object sender, EventArgs e)

@@ -7,8 +7,8 @@
     <ProjectGuid>{2698A30B-CD74-4EBE-B96C-960E900811A9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CapaLogica</RootNamespace>
-    <AssemblyName>CapaLogica</AssemblyName>
+    <RootNamespace>CapaDeLogica</RootNamespace>
+    <AssemblyName>CapaDeLogica</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="logica.cs" />
+    <Compile Include="logicaNav.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Validaciones.cs" />
   </ItemGroup>
