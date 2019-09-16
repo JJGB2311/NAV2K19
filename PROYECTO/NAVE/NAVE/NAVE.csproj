@@ -36,6 +36,9 @@
     <Reference Include="CapaDeDiseno">
       <HintPath>..\..\..\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDiseno.dll</HintPath>
     </Reference>
+    <Reference Include="CapaDiseno">
+      <HintPath>..\..\..\Seguridad\CapaDiseno\bin\Debug\CapaDiseno.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
