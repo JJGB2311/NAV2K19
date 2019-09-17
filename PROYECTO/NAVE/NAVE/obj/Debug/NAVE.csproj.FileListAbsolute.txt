@@ -123,3 +123,8 @@ C:\Users\Edson Juarez\Desktop\UMG\Octavo Semestre\Análisis de Sistemas II\Repos
 C:\Users\Edson Juarez\Desktop\UMG\Octavo Semestre\Análisis de Sistemas II\Repositorio navegador\NAV2K19\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.pdb
 C:\Users\Edson Juarez\Desktop\UMG\Octavo Semestre\Análisis de Sistemas II\Repositorio navegador\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeLogica.dll
 C:\Users\Edson Juarez\Desktop\UMG\Octavo Semestre\Análisis de Sistemas II\Repositorio navegador\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeLogica.pdb
+C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeLogica.dll
+C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDatos.dll
+C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDiseno.pdb
+C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeLogica.pdb
+C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDatos.pdb

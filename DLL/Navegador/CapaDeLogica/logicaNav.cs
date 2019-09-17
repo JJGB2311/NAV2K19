@@ -21,6 +21,22 @@ namespace CapaDeLogica
             return table;
         }
 
+
+
+        public string MIndice(string Indice1)
+        {
+            string indice = sn.modIndice(Indice1);
+
+            return indice;
+        }
+
+        public string MRuta(string Ruta1)
+        {
+            string ruta = sn.modRuta(Ruta1);
+
+            return ruta;
+        }
+
         public string[] campos(string tabla)
         {
             string[] Campos = sn.obtenerCampos(tabla);
