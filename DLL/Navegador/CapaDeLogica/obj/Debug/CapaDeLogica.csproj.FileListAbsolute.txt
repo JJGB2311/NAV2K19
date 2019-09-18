@@ -16,3 +16,12 @@ C:\Users\Angel Solares\Desktop\Copia-Navegador\DLL\Navegador\CapaDeLogica\obj\De
 C:\Users\Angel Solares\Desktop\Copia-Navegador\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.csproj.CopyComplete
 C:\Users\Angel Solares\Desktop\Copia-Navegador\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.dll
 C:\Users\Angel Solares\Desktop\Copia-Navegador\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.pdb
+C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeLogica\bin\Debug\CapaDeLogica.dll
+C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeLogica\bin\Debug\CapaDeLogica.pdb
+C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeLogica\bin\Debug\CapaDeDatos.dll
+C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeLogica\bin\Debug\CapaDeDatos.pdb
+C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.csprojAssemblyReference.cache
+C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.csproj.CoreCompileInputs.cache
+C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.csproj.CopyComplete
+C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.dll
+C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.pdb

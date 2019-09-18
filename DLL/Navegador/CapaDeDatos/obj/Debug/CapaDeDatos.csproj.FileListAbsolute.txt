@@ -40,3 +40,9 @@ C:\Users\Angel Solares\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDatos\obj\Deb
 C:\Users\Angel Solares\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.CoreCompileInputs.cache
 C:\Users\Angel Solares\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.dll
 C:\Users\Angel Solares\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.pdb
+C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeDatos\bin\Debug\CapaDeDatos.dll
+C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeDatos\bin\Debug\CapaDeDatos.pdb
+C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csprojAssemblyReference.cache
+C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.CoreCompileInputs.cache
+C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.dll
+C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.pdb
