@@ -14,51 +14,11 @@ namespace CapaDeDatos
 
         public OdbcDataAdapter llenaTbl(string tabla)// metodo  que obtinene el contenio de una tabla
         {
-          
-            string sql = "SELECT * FROM " + tabla + ";";
+            string whereQuery = " WHERE estado=0";
+            string sql = "SELECT * FROM " + tabla + whereQuery + ";";
             OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.probarConexion());
             return dataTable;
         }
-
-
-
-
-        public string modRuta(string idindice)// metodo  que obtinene el contenio de una tabla
-        {
-
-
-            string indice2 = " ";
-            OdbcCommand command = new OdbcCommand("SELECT * FROM ayuda WHERE id_ayuda = " + idindice + ";", cn.probarConexion());
-            OdbcDataReader reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-                indice2 = reader.GetValue(1).ToString();
-
-            }
-            return indice2;// devuelve un arrgeglo con los campos
-
-
-        }
-        public string modIndice(string idindice)// metodo  que obtinene el contenio de una tabla
-        {
-
-
-            string indice = " ";
-            OdbcCommand command = new OdbcCommand("SELECT * FROM ayuda WHERE id_ayuda = " + idindice + ";", cn.probarConexion());
-            OdbcDataReader reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-                indice = reader.GetValue(2).ToString();
-            }
-
-
-            return indice;// devuelve un arrgeglo con los campos
-
-
-        }
-
-
-
 
         public string[] obtenerCampos(string tabla)//metodo que obtiene la lista de los campos que requiere una tabla
         {
@@ -74,7 +34,7 @@ namespace CapaDeDatos
 
             }
 
-            return Campos;// devuelve un arrgeglo con los campos
+            return Campos;// devuelve un arreglo con los campos
         }
 
         public string[] obtenerTipo(string tabla)//metodo que obtiene la lista de los tipos de campos que requiere una tabla

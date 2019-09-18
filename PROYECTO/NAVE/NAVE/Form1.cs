@@ -16,17 +16,17 @@ namespace NAVE
         public Form1()
         {
             InitializeComponent();
-
-
             // navegador1.asginarComboConTabla("Salas", "idSala");
-            navegador1.asignarcolorf(Color.DarkRed);
+            string[] alias = { "Cod Funcion", "Cod Pelicula", "Cod Sala", "Cine", "Horario", "Estado" };
+            navegador1.asignarAlias(alias);
             navegador1.asginarComboConLista(1, "np|pp|");
             navegador1.asignarColor(Color.SeaShell);
             navegador1.asginarComboConTabla("Peliculas", "idPelicula");
             navegador1.asginarComboConTabla("Cines", "nombreCine");
+            navegador1.asignarayuda("Página web ayuda/ayuda.chm", "menu.html");
             navegador1.asignarTabla("Funciones");
-            navegador1.asignarA("1");
-
+            
+         
         }
 
         private void Form1_Load(object sender, EventArgs e)
