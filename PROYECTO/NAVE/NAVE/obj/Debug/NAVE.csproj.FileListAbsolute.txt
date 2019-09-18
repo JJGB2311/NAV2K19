@@ -145,3 +145,30 @@ C:\Users\Angel Solares\Desktop\Copia-Navegador\PROYECTO\NAVE\NAVE\obj\Debug\NAVE
 C:\Users\Angel Solares\Desktop\Copia-Navegador\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.csproj.CopyComplete
 C:\Users\Angel Solares\Desktop\Copia-Navegador\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.exe
 C:\Users\Angel Solares\Desktop\Copia-Navegador\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.pdb
+C:\Users\gganp\Desktop\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeLogica.dll
+C:\Users\gganp\Desktop\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDatos.dll
+C:\Users\gganp\Desktop\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDiseno.pdb
+C:\Users\gganp\Desktop\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeLogica.pdb
+C:\Users\gganp\Desktop\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDatos.pdb
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\NAVE.exe.config
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\NAVE.exe
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\NAVE.pdb
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeDiseno.dll
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeLogica.dll
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDatos.dll
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaLogica.dll
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeDatos.dll
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeDiseno.pdb
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDiseno.pdb
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeLogica.pdb
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDatos.pdb
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaLogica.pdb
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeDatos.pdb
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.csprojAssemblyReference.cache
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.Form1.resources
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.Properties.Resources.resources
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.csproj.GenerateResource.cache
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.csproj.CoreCompileInputs.cache
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.csproj.CopyComplete
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.exe
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.pdb
