@@ -31,6 +31,7 @@ namespace CapaDeDiseno
         int posCombo = 0;
         int noCombo = 0;
         int noComboAux = 0;
+        int estado = 0;
         Color nuevoColor = Color.White;
         bool presionado = false;
         sentencia sn = new sentencia(); //objeto del componente de seguridad para obtener el método de la bitácora
@@ -60,13 +61,28 @@ namespace CapaDeDiseno
                 Btn_Eliminar.Enabled = true;
                 foreach (Control componente in Controls)
                 {
-                    if (componente is TextBox || componente is DateTimePicker || componente is ComboBox )
+                    if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
                     {
                         componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
                         i++;
                     }
+                    if (componente is Button)
+                    {
+                        string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+                        if (var1 == "1")
+                        {
+                            componente.Text = "Desactivado";
+                            componente.BackColor = Color.Red;
+                        }
+                        if (var1 == "0")
+                        {
+                            componente.Text = "Activado";
+                            componente.BackColor = Color.Green;
+                        }
+                    }
 
                 }
+
             }
 
         }
@@ -212,14 +228,57 @@ namespace CapaDeDiseno
                         tipoCampo[noCampos - 1] = "Text";
                         crearTextBoxvarchar(Campos[i]);       
                         break;
+
+                    case "tinyint":
+                        tipoCampo[noCampos - 1] = "Num";
+                        if (LLaves[i] != "MUL")
+                        {
+                            crearBotonEstado(Campos[i]);
+                        }
+
+                        break;
                 }
                 noCampos++;
 
                 i++;
             }
         }
+        void func_click(object sender, EventArgs e)
+        {
+            foreach (Control componente in Controls)
+            {
+                if (componente is Button)
+                {
+                    if (estado == 1)
+                    {
+                        componente.Text = "Activado";
+                        componente.BackColor = Color.Green;
+                        //estado++;
+                        estado = 0;
+                    }
+                    else
+                    {
+                        componente.Text = "Desactivado";
+                        componente.BackColor = Color.Red;
+                        //estado--;
+                        estado = 1;
+                    }
 
-       
+                }
+            }
+        }
+        void crearBotonEstado(String nom)
+        {
+            Button btn = new Button();
+            Point p = new Point(x + 125 + pos, y * pos);
+            btn.Location = p;
+            btn.Text = "Activado";
+            // btn.BackColor = Color.Green;
+            btn.Click += new EventHandler(func_click);
+            btn.Name = nom;
+            this.Controls.Add(btn);
+            pos++;
+        }
         void crearTextBoxnumerico(String nom)
         {
 

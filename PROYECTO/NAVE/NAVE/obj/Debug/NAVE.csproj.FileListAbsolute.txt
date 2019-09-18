@@ -145,3 +145,8 @@ C:\Users\Angel Solares\Desktop\Copia-Navegador\PROYECTO\NAVE\NAVE\obj\Debug\NAVE
 C:\Users\Angel Solares\Desktop\Copia-Navegador\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.csproj.CopyComplete
 C:\Users\Angel Solares\Desktop\Copia-Navegador\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.exe
 C:\Users\Angel Solares\Desktop\Copia-Navegador\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.pdb
+C:\Users\gganp\Desktop\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeLogica.dll
+C:\Users\gganp\Desktop\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDatos.dll
+C:\Users\gganp\Desktop\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDiseno.pdb
+C:\Users\gganp\Desktop\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeLogica.pdb
+C:\Users\gganp\Desktop\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDatos.pdb

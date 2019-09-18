@@ -15,7 +15,7 @@ namespace CapaDeDatos
         public OdbcDataAdapter llenaTbl(string tabla)// metodo  que obtinene el contenio de una tabla
         {
 
-            string sql = "SELECT * FROM " + tabla + ";";
+            string sql = "SELECT * FROM " + tabla + " where estado=0;";
             OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.probarConexion());
             return dataTable;
         }
