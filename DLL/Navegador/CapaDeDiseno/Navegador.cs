@@ -28,7 +28,7 @@ namespace CapaDeDiseno
         string[] tablaCombo = new string[30];
         string[] campoCombo = new string[30];
         string[] listaItems = new string[30];
-        int posCombo = 0;
+        int posCombo = 10;
         int noCombo = 0;
         int noComboAux = 0;
         int estado = 0;
@@ -343,7 +343,7 @@ namespace CapaDeDiseno
         void crearComboBox(String nom)
         {
             string[] items;
-            if ( noComboAux == posCombo)
+            if (noComboAux == posCombo)
             {
                 items = listaItems;
                 noComboAux++;
