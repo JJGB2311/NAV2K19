@@ -69,6 +69,20 @@ namespace CapaDeDiseno
                         componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
                         i++;
                     }
+                    if (componente is Button)
+                    {
+                        string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+                        if (var1 == "1")
+                        {
+                            componente.Text = "Desactivado";
+                            componente.BackColor = Color.Red;
+                        }
+                        if (var1 == "0")
+                        {
+                            componente.Text = "Activado";
+                            componente.BackColor = Color.Green;
+                        }
+                    }
 
                 }
             }
@@ -726,7 +740,21 @@ namespace CapaDeDiseno
                            componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
                             i++;
                         }
+                    if (componente is Button)
+                    {
+                        string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+                        if (var1 == "1")
+                        {
+                            componente.Text = "Desactivado";
+                            componente.BackColor = Color.Red;
+                        }
+                        if (var1 == "0")
+                        {
+                            componente.Text = "Activado";
+                            componente.BackColor = Color.Green;
+                        }
                     }
+                }
                 
             }
         }
@@ -749,7 +777,21 @@ namespace CapaDeDiseno
                                 componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
                                 i++;
                             }
+                    if (componente is Button)
+                    {
+                        string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+                        if (var1 == "1")
+                        {
+                            componente.Text = "Desactivado";
+                            componente.BackColor = Color.Red;
                         }
+                        if (var1 == "0")
+                        {
+                            componente.Text = "Activado";
+                            componente.BackColor = Color.Green;
+                        }
+                    }
+                }
                       
                  }
         }
@@ -775,7 +817,21 @@ namespace CapaDeDiseno
                             componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
                             i++;
                         }
+                    if (componente is Button)
+                    {
+                        string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+                        if (var1 == "1")
+                        {
+                            componente.Text = "Desactivado";
+                            componente.BackColor = Color.Red;
+                        }
+                        if (var1 == "0")
+                        {
+                            componente.Text = "Activado";
+                            componente.BackColor = Color.Green;
+                        }
                     }
+                }
                 
             }
         }
@@ -802,8 +858,22 @@ namespace CapaDeDiseno
                             componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
                             i++;
                         }
-
+                    if (componente is Button)
+                    {
+                        string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+                        if (var1 == "1")
+                        {
+                            componente.Text = "Desactivado";
+                            componente.BackColor = Color.Red;
+                        }
+                        if (var1 == "0")
+                        {
+                            componente.Text = "Activado";
+                            componente.BackColor = Color.Green;
+                        }
                     }
+
+                }
 
                 
             }
