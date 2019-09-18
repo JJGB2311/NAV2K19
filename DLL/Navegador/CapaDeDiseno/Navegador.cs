@@ -79,6 +79,7 @@ namespace CapaDeDiseno
                             componente.Text = "Activado";
                             componente.BackColor = Color.Green;
                         }
+                        componente.Enabled = false;
                     }
 
                 }
@@ -235,7 +236,6 @@ namespace CapaDeDiseno
                         {
                             crearBotonEstado(Campos[i]);
                         }
-
                         break;
                 }
                 noCampos++;
@@ -273,7 +273,7 @@ namespace CapaDeDiseno
             Point p = new Point(x + 125 + pos, y * pos);
             btn.Location = p;
             btn.Text = "Activado";
-            // btn.BackColor = Color.Green;
+            btn.BackColor = Color.Green;
             btn.Click += new EventHandler(func_click);
             btn.Name = nom;
             this.Controls.Add(btn);
@@ -388,8 +388,7 @@ namespace CapaDeDiseno
             
         }
 
-       
-
+  
         void crearDateTimePicker(String nom)
         {
             DateTimePicker dtp = new DateTimePicker();
@@ -489,7 +488,7 @@ namespace CapaDeDiseno
             string campos = "";
             foreach (Control componente in Controls)
             {
-                if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
+                if (componente is TextBox || componente is DateTimePicker || componente is ComboBox )
                 {
 
                     switch (tipoCampo[posCampo])
@@ -503,6 +502,18 @@ namespace CapaDeDiseno
                     }
                     posCampo++;
 
+                }
+                if (componente is Button)
+                {
+                    switch (tipoCampo[posCampo])
+                    {
+                        case "Num":
+                            campos += "'" + estado + "' , ";
+                           // campos += "' 0 ' , ";
+                            break;
+                          
+                    }
+                    posCampo++;
                 }
 
             }
@@ -608,6 +619,10 @@ namespace CapaDeDiseno
                   
 
                 }
+                if(componente is Button)
+                {
+                    componente.Enabled = true;
+                }
 
                 Btn_Ingresar.Enabled = false;
                 Btn_Modificar.Enabled = false;
@@ -642,6 +657,7 @@ namespace CapaDeDiseno
             Btn_Cancelar.Enabled = false;
             Btn_Ingresar.Enabled = true;
             Btn_Eliminar.Enabled = true;
+            
             int i = 0;
             foreach (Control componente in Controls)
             {
@@ -650,6 +666,10 @@ namespace CapaDeDiseno
                     componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
                     componente.Enabled = false;
                     i++;
+                }
+                if (componente is Button)
+                {
+                    componente.Enabled = false;
                 }
 
             }
@@ -715,7 +735,21 @@ namespace CapaDeDiseno
                            componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
                             i++;
                         }
+                    if (componente is Button)
+                    {
+                        string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+                        if (var1 == "1")
+                        {
+                            componente.Text = "Desactivado";
+                            componente.BackColor = Color.Red;
+                        }
+                        if (var1 == "0")
+                        {
+                            componente.Text = "Activado";
+                            componente.BackColor = Color.Green;
+                        }
                     }
+                }
                 
             }
         }
@@ -738,7 +772,21 @@ namespace CapaDeDiseno
                                 componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
                                 i++;
                             }
+                    if (componente is Button)
+                    {
+                        string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+                        if (var1 == "1")
+                        {
+                            componente.Text = "Desactivado";
+                            componente.BackColor = Color.Red;
                         }
+                        if (var1 == "0")
+                        {
+                            componente.Text = "Activado";
+                            componente.BackColor = Color.Green;
+                        }
+                    }
+                }
                       
                  }
         }
@@ -764,7 +812,21 @@ namespace CapaDeDiseno
                             componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
                             i++;
                         }
+                    if (componente is Button)
+                    {
+                        string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+                        if (var1 == "1")
+                        {
+                            componente.Text = "Desactivado";
+                            componente.BackColor = Color.Red;
+                        }
+                        if (var1 == "0")
+                        {
+                            componente.Text = "Activado";
+                            componente.BackColor = Color.Green;
+                        }
                     }
+                }
                 
             }
         }
@@ -791,8 +853,22 @@ namespace CapaDeDiseno
                             componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
                             i++;
                         }
-
+                    if (componente is Button)
+                    {
+                        string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+                        if (var1 == "1")
+                        {
+                            componente.Text = "Desactivado";
+                            componente.BackColor = Color.Red;
+                        }
+                        if (var1 == "0")
+                        {
+                            componente.Text = "Activado";
+                            componente.BackColor = Color.Green;
+                        }
                     }
+
+                }
 
                 
             }
@@ -928,11 +1004,13 @@ namespace CapaDeDiseno
             int i = 0;
             foreach (Control componente in Controls)
             {
-                if (componente is TextBox || componente is DateTimePicker)
+                if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
                 {
                     componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
                     i++;
                 }
+               
+                
 
             }
             deshabilitarcampos_y_botones();
@@ -955,6 +1033,20 @@ namespace CapaDeDiseno
                 {
                     componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
                     i++;
+                }
+                if (componente is Button)
+                {
+                    string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+                    if (var1 == "1")
+                    {
+                        componente.Text = "Desactivado";
+                        componente.BackColor = Color.Red;
+                    }
+                    if (var1 == "0")
+                    {
+                        componente.Text = "Activado";
+                        componente.BackColor = Color.Green;
+                    }
                 }
 
             }

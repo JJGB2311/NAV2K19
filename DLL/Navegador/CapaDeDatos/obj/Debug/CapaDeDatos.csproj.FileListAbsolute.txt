@@ -46,3 +46,9 @@ C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\Capa
 C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.CoreCompileInputs.cache
 C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.dll
 C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.pdb
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\DLL\Navegador\CapaDeDatos\bin\Debug\CapaDeDatos.dll
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\DLL\Navegador\CapaDeDatos\bin\Debug\CapaDeDatos.pdb
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csprojAssemblyReference.cache
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.CoreCompileInputs.cache
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.dll
+C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.pdb
