@@ -248,14 +248,14 @@ namespace CapaDeDiseno
                     if (estado == 1)
                     {
                         componente.Text = "Activado";
-                        // componente.BackColor = Color.Green;
+                         componente.BackColor = Color.Green;
                         //estado++;
                         estado = 0;
                     }
                     else
                     {
                         componente.Text = "Desactivado";
-                        // componente.BackColor = Color.Red;
+                         componente.BackColor = Color.Red;
                         //estado--;
                         estado = 1;
                     }
@@ -973,12 +973,12 @@ namespace CapaDeDiseno
                     if (var1 == "1")
                     {
                         componente.Text = "Desactivado";
-                        // componente.BackColor = Color.Red;
+                         componente.BackColor = Color.Red;
                     }
                     if (var1 == "0")
                     {
                         componente.Text = "Activado";
-                        // componente.BackColor = Color.Green;
+                         componente.BackColor = Color.Green;
                     }
                 }
 
