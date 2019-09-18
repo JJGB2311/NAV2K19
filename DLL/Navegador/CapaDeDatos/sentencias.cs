@@ -14,66 +14,30 @@ namespace CapaDeDatos
 
         public OdbcDataAdapter llenaTbl(string tabla)// metodo  que obtinene el contenio de una tabla
         {
-          
+
             string sql = "SELECT * FROM " + tabla + ";";
             OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.probarConexion());
             return dataTable;
         }
 
-
-
-
-        public string modRuta(string idindice)// metodo  que obtinene el contenio de una tabla
-        {
-
-
-            string indice2 = " ";
-            OdbcCommand command = new OdbcCommand("SELECT * FROM ayuda WHERE id_ayuda = " + idindice + ";", cn.probarConexion());
-            OdbcDataReader reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-                indice2 = reader.GetValue(1).ToString();
-
-            }
-            return indice2;// devuelve un arrgeglo con los campos
-
-
-        }
-        public string modIndice(string idindice)// metodo  que obtinene el contenio de una tabla
-        {
-
-
-            string indice = " ";
-            OdbcCommand command = new OdbcCommand("SELECT * FROM ayuda WHERE id_ayuda = " + idindice + ";", cn.probarConexion());
-            OdbcDataReader reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-                indice = reader.GetValue(2).ToString();
-            }
-
-
-            return indice;// devuelve un arrgeglo con los campos
-
-
-        }
-
-
-
-
         public string[] obtenerCampos(string tabla)//metodo que obtiene la lista de los campos que requiere una tabla
         {
             string[] Campos = new string[30];
             int i = 0;
-            OdbcCommand command = new OdbcCommand("DESCRIBE " + tabla + "", cn.probarConexion());
-            OdbcDataReader reader = command.ExecuteReader();
-
-            while (reader.Read())
+            try
             {
-               Campos[i] = reader.GetValue(0).ToString();
-                i++;
+                OdbcCommand command = new OdbcCommand("DESCRIBE " + tabla + "", cn.probarConexion());
+                OdbcDataReader reader = command.ExecuteReader();
 
+                while (reader.Read())
+                {
+                    Campos[i] = reader.GetValue(0).ToString();
+                    i++;
+
+                }
             }
 
+            catch (Exception ex) { Console.WriteLine(ex.Message.ToString() + " \nError en asignarCombo, revise los parametros \n -" + tabla); }
             return Campos;// devuelve un arrgeglo con los campos
         }
 
@@ -81,31 +45,38 @@ namespace CapaDeDatos
         {
             string[] Campos = new string[30];
             int i = 0;
-            OdbcCommand command = new OdbcCommand("DESCRIBE " + tabla + "", cn.probarConexion());
-            OdbcDataReader reader = command.ExecuteReader();
-
-            while (reader.Read())
+            try
             {
-                Campos[i] = limpiarTipo(reader.GetValue(1).ToString());
-                i++;
+                OdbcCommand command = new OdbcCommand("DESCRIBE " + tabla + "", cn.probarConexion());
+                OdbcDataReader reader = command.ExecuteReader();
 
+                while (reader.Read())
+                {
+                    Campos[i] = limpiarTipo(reader.GetValue(1).ToString());
+                    i++;
+
+                }
             }
-
+            catch (Exception ex) { Console.WriteLine(ex.Message.ToString() + " \nError en obtenerTipo, revise los parametros de la tabla  \n -" + tabla + "\n -"); }
             return Campos;// devuelve un arreglo con los tipos
         }
         public string[] obtenerLLave(string tabla)//metodo que obtiene la lista de los tipos de campos que requiere una tabla
         {
             string[] Campos = new string[30];
             int i = 0;
-            OdbcCommand command = new OdbcCommand("DESCRIBE " + tabla + "", cn.probarConexion());
-            OdbcDataReader reader = command.ExecuteReader();
-
-            while (reader.Read())
+            try
             {
-                Campos[i] = reader.GetValue(3).ToString();
-                i++;
+                OdbcCommand command = new OdbcCommand("DESCRIBE " + tabla + "", cn.probarConexion());
+                OdbcDataReader reader = command.ExecuteReader();
 
+                while (reader.Read())
+                {
+                    Campos[i] = reader.GetValue(3).ToString();
+                    i++;
+
+                }
             }
+            catch (Exception ex) { Console.WriteLine(ex.Message.ToString() + " \nError en obtenerTipo, revise los parametros de la tabla  \n -" + tabla + "\n -"); }
 
             return Campos;// devuelve un arreglo con los tipos
         }
@@ -115,19 +86,21 @@ namespace CapaDeDatos
             int i = 0;
 
 
-            try {
+            try
+            {
 
                 OdbcCommand command = new OdbcCommand("select  " + campo + " FROM " + tabla, cn.probarConexion());
                 OdbcDataReader reader = command.ExecuteReader();
 
-                    while (reader.Read())
-                    {
-                        items[i] = reader.GetValue(0).ToString();
-                        i++;
+                while (reader.Read())
+                {
+                    items[i] = reader.GetValue(0).ToString();
+                    i++;
 
-                    }
-                } catch (Exception ex) { Console.WriteLine(ex.Message.ToString()+" \nError en asignarCombo, revise los parametros \n -"+tabla+"\n -"+campo ); }
-            
+                }
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message.ToString() + " \nError en asignarCombo, revise los parametros \n -" + tabla + "\n -" + campo); }
+
 
             return items;// devuelve un arreglo con los tipos
         }
@@ -135,6 +108,8 @@ namespace CapaDeDatos
         {
             bool dim = false;
             string nuevaCadena = "";
+
+
             for (int j = 0; j < cadena.Length; j++)
             {
                 if (cadena[j] == '(') { dim = true; }
@@ -169,7 +144,7 @@ namespace CapaDeDatos
                 consulta.ExecuteNonQuery();
             }
             catch (OdbcException ex) { Console.WriteLine(ex.ToString()); }
-           
+
         }
     }
 }

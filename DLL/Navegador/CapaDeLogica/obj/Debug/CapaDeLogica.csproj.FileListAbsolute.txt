@@ -7,21 +7,21 @@ C:\Users\Edson Juarez\Desktop\UMG\Octavo Semestre\Análisis de Sistemas II\Repos
 C:\Users\Edson Juarez\Desktop\UMG\Octavo Semestre\Análisis de Sistemas II\Repositorio navegador\NAV2K19\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.csproj.CopyComplete
 C:\Users\Edson Juarez\Desktop\UMG\Octavo Semestre\Análisis de Sistemas II\Repositorio navegador\NAV2K19\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.dll
 C:\Users\Edson Juarez\Desktop\UMG\Octavo Semestre\Análisis de Sistemas II\Repositorio navegador\NAV2K19\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.pdb
-C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\DLL\Navegador\CapaDeLogica\bin\Debug\CapaDeLogica.dll
-C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\DLL\Navegador\CapaDeLogica\bin\Debug\CapaDeLogica.pdb
-C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\DLL\Navegador\CapaDeLogica\bin\Debug\CapaDeDatos.dll
-C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\DLL\Navegador\CapaDeLogica\bin\Debug\CapaDeDatos.pdb
-C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.csprojAssemblyReference.cache
-C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.csproj.CoreCompileInputs.cache
-C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.csproj.CopyComplete
-C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.dll
-C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.pdb
-C:\Users\Usuario\Desktop\NAV2K19\DLL\Navegador\CapaDeLogica\bin\Debug\CapaDeLogica.dll
-C:\Users\Usuario\Desktop\NAV2K19\DLL\Navegador\CapaDeLogica\bin\Debug\CapaDeLogica.pdb
-C:\Users\Usuario\Desktop\NAV2K19\DLL\Navegador\CapaDeLogica\bin\Debug\CapaDeDatos.dll
-C:\Users\Usuario\Desktop\NAV2K19\DLL\Navegador\CapaDeLogica\bin\Debug\CapaDeDatos.pdb
-C:\Users\Usuario\Desktop\NAV2K19\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.csprojAssemblyReference.cache
-C:\Users\Usuario\Desktop\NAV2K19\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.csproj.CoreCompileInputs.cache
-C:\Users\Usuario\Desktop\NAV2K19\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.csproj.CopyComplete
-C:\Users\Usuario\Desktop\NAV2K19\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.dll
-C:\Users\Usuario\Desktop\NAV2K19\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.pdb
+C:\Users\Angel Solares\Desktop\Copia-Navegador\DLL\Navegador\CapaDeLogica\bin\Debug\CapaDeLogica.dll
+C:\Users\Angel Solares\Desktop\Copia-Navegador\DLL\Navegador\CapaDeLogica\bin\Debug\CapaDeLogica.pdb
+C:\Users\Angel Solares\Desktop\Copia-Navegador\DLL\Navegador\CapaDeLogica\bin\Debug\CapaDeDatos.dll
+C:\Users\Angel Solares\Desktop\Copia-Navegador\DLL\Navegador\CapaDeLogica\bin\Debug\CapaDeDatos.pdb
+C:\Users\Angel Solares\Desktop\Copia-Navegador\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.csprojAssemblyReference.cache
+C:\Users\Angel Solares\Desktop\Copia-Navegador\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.csproj.CoreCompileInputs.cache
+C:\Users\Angel Solares\Desktop\Copia-Navegador\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.csproj.CopyComplete
+C:\Users\Angel Solares\Desktop\Copia-Navegador\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.dll
+C:\Users\Angel Solares\Desktop\Copia-Navegador\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.pdb
+C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeLogica\bin\Debug\CapaDeLogica.dll
+C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeLogica\bin\Debug\CapaDeLogica.pdb
+C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeLogica\bin\Debug\CapaDeDatos.dll
+C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeLogica\bin\Debug\CapaDeDatos.pdb
+C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.csprojAssemblyReference.cache
+C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.csproj.CoreCompileInputs.cache
+C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.csproj.CopyComplete
+C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.dll
+C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.pdb
