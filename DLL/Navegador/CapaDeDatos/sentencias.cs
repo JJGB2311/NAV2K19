@@ -21,6 +21,39 @@ namespace CapaDeDatos
             OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.probarConexion());
             return dataTable;
         }
+        public string modRuta(string idindice)// metodo  que obtinene el contenio de una tabla
+        {
+
+
+            string indice2 = " ";
+            OdbcCommand command = new OdbcCommand("SELECT * FROM ayuda WHERE id_ayuda = " + idindice + ";", cn.probarConexion());
+            OdbcDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                indice2 = reader.GetValue(1).ToString();
+
+            }
+            return indice2;// devuelve un arrgeglo con los campos
+
+
+        }
+        public string modIndice(string idindice)// metodo  que obtinene el contenio de una tabla
+        {
+
+
+            string indice = " ";
+            OdbcCommand command = new OdbcCommand("SELECT * FROM ayuda WHERE id_ayuda = " + idindice + ";", cn.probarConexion());
+            OdbcDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                indice = reader.GetValue(2).ToString();
+            }
+
+
+            return indice;// devuelve un arrgeglo con los campos
+
+
+        }
 
         public string[] obtenerCampos(string tabla)//metodo que obtiene la lista de los campos que requiere una tabla
         {

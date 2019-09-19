@@ -36,6 +36,9 @@ namespace CapaDeDiseno
         bool presionado = false;
         sentencia sn = new sentencia(); //objeto del componente de seguridad para obtener el método de la bitácora
         string idUsuario = "";
+        string idyuda;
+        string AsRuta;
+        string AsIndice;
         Font fuente = new Font("Century Gothic", 14.0f, FontStyle.Regular, GraphicsUnit.Pixel); //objeto para definir el tipo y tamaño de fuente de los labels
         public Navegador()
         {
@@ -99,6 +102,12 @@ namespace CapaDeDiseno
             alias.CopyTo(aliasC, 0);   
         }
 
+        public void asignarA(string ayudar)
+        {
+            idyuda = ayudar;
+            AsRuta = logic.MRuta(idyuda);
+            AsIndice = logic.MIndice(idyuda);
+        }
         public void asignarTabla(string table)
         {
             tabla = table;
@@ -877,7 +886,8 @@ namespace CapaDeDiseno
 
         private void Btn_Ayuda_Click(object sender, EventArgs e)
         {
-          Help.ShowHelp(this, ruta, sitio);//Abre el menu de ayuda HTML
+
+            Help.ShowHelp(this, AsRuta, AsIndice);//Abre el menu de ayuda HTML
 
         }
 
