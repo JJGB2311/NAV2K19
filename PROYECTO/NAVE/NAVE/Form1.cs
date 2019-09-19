@@ -24,7 +24,7 @@ namespace NAVE
            navegador1.asginarComboConTabla("Peliculas", "idPelicula");
             navegador1.asginarComboConTabla("Salas", "idSala");
             navegador1.asginarComboConTabla("Cines", "nombreCine");
-            navegador1.asignarayuda("Página web ayuda/ayuda.chm", "menu.html");
+            navegador1.asignarA("1");
             navegador1.asignarTabla("Funciones");
             
          
