@@ -42,6 +42,8 @@ namespace CapaDeDiseno
         string idyuda;
         string AsRuta;
         string AsIndice;
+        string Asayuda;
+        string rutaa;
         Font fuente = new Font("Century Gothic", 13.0f, FontStyle.Regular, GraphicsUnit.Pixel); //objeto para definir el tipo y tamaño de fuente de los labels
         public Navegador()
         {
@@ -207,6 +209,12 @@ namespace CapaDeDiseno
                     correcto = 1;
                 }
             }
+        }
+        public void tablaverificacion(string ayudar2)
+        {
+            rutaa = ayudar2;
+
+            Asayuda = logic.verificacion(rutaa);
         }
         public void asignarSalida(Form salida)
         {
@@ -1013,7 +1021,16 @@ namespace CapaDeDiseno
         private void Btn_Ayuda_Click(object sender, EventArgs e)
         {
 
-            Help.ShowHelp(this, AsRuta, AsIndice);//Abre el menu de ayuda HTML
+            if (Asayuda == "0")
+            {
+                MessageBox.Show("No se encontro ninguin reguisto");
+            }
+            else
+            {
+
+                Help.ShowHelp(this, AsRuta, AsIndice);//Abre el menu de ayuda HTML
+            }
+
 
         }
 

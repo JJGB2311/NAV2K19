@@ -34,6 +34,14 @@ namespace CapaDeLogica
             return ruta;
         }
 
+        public string verificacion(string valor)
+        {
+            string indice2 = sn.VerificacionR(valor);
+
+            return indice2;
+        }
+
+
         public string TestTabla(string tabla)
         {
             return sn.ProbarTabla(tabla);

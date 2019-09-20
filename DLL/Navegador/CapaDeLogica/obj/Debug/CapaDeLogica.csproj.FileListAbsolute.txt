@@ -43,3 +43,12 @@ C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fi
 C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.csproj.CopyComplete
 C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.dll
 C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.pdb
+C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\DLL\Navegador\CapaDeLogica\bin\Debug\CapaDeLogica.dll
+C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\DLL\Navegador\CapaDeLogica\bin\Debug\CapaDeLogica.pdb
+C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\DLL\Navegador\CapaDeLogica\bin\Debug\CapaDeDatos.dll
+C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\DLL\Navegador\CapaDeLogica\bin\Debug\CapaDeDatos.pdb
+C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.csprojAssemblyReference.cache
+C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.csproj.CoreCompileInputs.cache
+C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.csproj.CopyComplete
+C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.dll
+C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.pdb

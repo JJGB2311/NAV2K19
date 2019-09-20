@@ -55,6 +55,27 @@ namespace CapaDeDatos
 
         }
 
+
+        public string VerificacionR(string idindice)// metodo  que obtinene el contenio de una tabla
+        {
+
+            /*ayuda*/
+            string indice = " ";
+
+            OdbcCommand command = new OdbcCommand("SELECT COUNT(*) FROM ayuda WHERE Id_ayuda=1", cn.probarConexion());
+            OdbcDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                indice = reader.GetValue(0).ToString();
+            }
+
+
+            return indice;// devuelve un arrgeglo con los campos
+
+
+        }
+
+
         public string ProbarTabla(string tabla)
         {
             string error = "";

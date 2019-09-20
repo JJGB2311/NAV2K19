@@ -172,3 +172,8 @@ C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fi
 C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.csproj.CopyComplete
 C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.exe
 C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.pdb
+C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeLogica.dll
+C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDatos.dll
+C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDiseno.pdb
+C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeLogica.pdb
+C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDatos.pdb
