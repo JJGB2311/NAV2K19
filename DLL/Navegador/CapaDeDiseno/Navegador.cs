@@ -16,8 +16,9 @@ namespace CapaDeDiseno
     {
         Validaciones v = new Validaciones();
         logicaNav logic = new logicaNav();
+        Form cerrar;
         string tabla = "def";
-        string sitio, ruta;
+        string nomForm;
         int pos = 8;
         int noCampos = 1;
         int x = 30;
@@ -32,6 +33,7 @@ namespace CapaDeDiseno
         int noCombo = 0;
         int noComboAux = 0;
         int estado = 0;
+        Color Cfuente = Color.White;
         Color nuevoColor = Color.White;
         bool presionado = false;
         sentencia sn = new sentencia(); //objeto del componente de seguridad para obtener el método de la bitácora
@@ -39,7 +41,7 @@ namespace CapaDeDiseno
         string idyuda;
         string AsRuta;
         string AsIndice;
-        Font fuente = new Font("Century Gothic", 14.0f, FontStyle.Regular, GraphicsUnit.Pixel); //objeto para definir el tipo y tamaño de fuente de los labels
+        Font fuente = new Font("Century Gothic", 13.0f, FontStyle.Regular, GraphicsUnit.Pixel); //objeto para definir el tipo y tamaño de fuente de los labels
         public Navegador()
         {
             InitializeComponent();
@@ -97,30 +99,62 @@ namespace CapaDeDiseno
             this.idUsuario = idUsuario;
         }
 
+        public string obtenerDatoTabla(int pos)
+        {
+            pos=pos - 1;
+          return  dataGridView1.CurrentRow.Cells[pos].Value.ToString();
+        }
+
+        public string obtenerDatoCampos(int pos)
+        {
+
+            int i = 0;
+            pos = pos - 1;
+            string dato = "";
+            foreach (Control componente in Controls)
+            {
+                if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
+                {
+                    if (i==pos)
+                    {
+                        dato = componente.Text;
+                    }
+                    i++;
+                }
+            }
+                return dato;
+        }
         public void asignarAlias(string[] alias)
         {
             alias.CopyTo(aliasC, 0);   
         }
 
-        public void asignarA(string ayudar)
+        public void asignarAyuda(string ayudar)
         {
             idyuda = ayudar;
             AsRuta = logic.MRuta(idyuda);
             AsIndice = logic.MIndice(idyuda);
         }
+        public void asignarSalida(Form salida)
+        {
+            cerrar = salida;
+        }
+        public void asignarColorFuente(Color FuenteC)
+        {
+
+            Cfuente = FuenteC;
+        }
         public void asignarTabla(string table)
         {
             tabla = table;
         }
-        public void asignarayuda(string rutaob, string sitiob)
+        public void asignarNombreForm(string nom)
         {
-            sitio = sitiob;
-            ruta = rutaob;
-
-
+            nomForm = nom;
+            lblTabla.Text = nomForm;
         }
 
-        public void asginarComboConTabla(string tabla, string campo)
+        public void asignarComboConTabla(string tabla, string campo)
         {
             tablaCombo[noCombo] = tabla;
             campoCombo[noCombo] = campo;
@@ -128,13 +162,13 @@ namespace CapaDeDiseno
 
         }
 
-        public void asignarColor(Color nuevo)
+        public void asignarColorFondo(Color nuevo)
         {
 
             nuevoColor = nuevo;
         }
 
-        public void asginarComboConLista(int pos,string lista)
+        public void asignarComboConLista(int pos,string lista)
         {
             posCombo = pos-1;
             limpiarLista(lista);
@@ -208,6 +242,7 @@ namespace CapaDeDiseno
                 lb.Location = p;
                 lb.Name = "lb_" + Campos[i];
                 lb.Font = fuente;
+                lb.ForeColor = Cfuente;
                 this.Controls.Add(lb);
 
 
@@ -901,14 +936,14 @@ namespace CapaDeDiseno
                     {
                         //Opcion cuando esta guardando y queiere salir sin finalizar //
                         DialogResult Respuestagua;
-                        Respuestagua = MessageBox.Show("Se ha detectado una operacion de guardado ¿Desea Guardar los datos? ", "Usted se enuentra abandonando el formulario " + tabla + "", MessageBoxButtons.YesNoCancel);
+                        Respuestagua = MessageBox.Show("Se ha detectado una operacion de guardado ¿Desea Guardar los datos? ", "Usted se enuentra abandonando el formulario " + nomForm + "", MessageBoxButtons.YesNoCancel);
                         if (Respuestagua == DialogResult.Yes)
                         {
                             guardadoforsozo();
                         }
                         else if (Respuestagua == DialogResult.No)
                         {
-                            Application.Exit();
+                            cerrar.Visible = false;
                         }
                         else if (Respuestagua == DialogResult.Cancel)
                         {
