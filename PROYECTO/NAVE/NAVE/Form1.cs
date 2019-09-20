@@ -22,16 +22,13 @@ namespace NAVE
 
             //navegador1.asginarComboConLista(4, "np|pp|");// ComboBox con Lista de items
             navegador1.asignarColorFondo(Color.LightBlue); // color de fondo del navegador
-            
             navegador1.asignarColorFuente(Color.Black); // Color de letra del navegador
-           navegador1.asignarComboConTabla("Peliculas", "idPelicula"); // LLenado de ComboBox
+            navegador1.asignarComboConTabla("Peliculas", "idPelicula"); // LLenado de ComboBox
             navegador1.asignarComboConTabla("Salas", "idSala");
             navegador1.asignarComboConTabla("Cines", "nombreCine");
             navegador1.asignarAyuda("1");// Asignacion de ayuda con tabla
             navegador1.asignarTabla("Funciones");// Asignar tabla de trabajo al nav
             navegador1.asignarNombreForm("Funciones");// asignar el titulo del nav
-            
-         
         }
 
         private void Form1_Load(object sender, EventArgs e)

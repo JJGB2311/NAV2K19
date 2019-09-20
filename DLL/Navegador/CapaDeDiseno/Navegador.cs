@@ -17,6 +17,7 @@ namespace CapaDeDiseno
         Validaciones v = new Validaciones();
         logicaNav logic = new logicaNav();
         Form cerrar;
+        int correcto = 0;
         string tabla = "def";
         string nomForm;
         int pos = 8;
@@ -41,6 +42,8 @@ namespace CapaDeDiseno
         string idyuda;
         string AsRuta;
         string AsIndice;
+        string Asayuda;
+        string rutaa;
         Font fuente = new Font("Century Gothic", 13.0f, FontStyle.Regular, GraphicsUnit.Pixel); //objeto para definir el tipo y tamaño de fuente de los labels
         public Navegador()
         {
@@ -57,36 +60,85 @@ namespace CapaDeDiseno
 
             if (tabla != "def")
             {
-                int i=0;
-                DataTable dt = logic.consultaLogica(tabla);
-                dataGridView1.DataSource = dt;
-                CreaComponentes();
-                deshabilitarcampos_y_botones();
-                Btn_Modificar.Enabled = true;
-                Btn_Eliminar.Enabled = true;
-                foreach (Control componente in Controls)
+                string TablaOK = logic.TestTabla(tabla);
+                if (TablaOK=="" && correcto ==0)
                 {
-                    if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
+                    string EstadoOK = logic.TestEstado(tabla);
+                    if (EstadoOK == "" && correcto == 0)
                     {
-                        componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
-                        i++;
+                        Asayuda = logic.verificacion("");
+                        if (Asayuda == "0")
+                        {
+                            MessageBox.Show("No se encontró ningún registro en la tabla Ayuda");
+                            Application.Exit();
+                        }
+                        else
+                        {
+                            int i = 0;
+                            DataTable dt = logic.consultaLogica(tabla);
+                            dataGridView1.DataSource = dt;
+                            CreaComponentes();
+                            deshabilitarcampos_y_botones();
+                            Btn_Modificar.Enabled = true;
+                            Btn_Eliminar.Enabled = true;
+                            if (logic.TestRegistros(tabla) > 0)
+                            {
+                                foreach (Control componente in Controls)
+                                {
+                                    if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
+                                    {
+                                        componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+                                        i++;
+                                    }
+                                    if (componente is Button)
+                                    {
+                                        string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+                                        if (var1 == "1")
+                                        {
+                                            componente.Text = "Desactivado";
+                                            componente.BackColor = Color.Red;
+                                        }
+                                        if (var1 == "0")
+                                        {
+                                            componente.Text = "Activado";
+                                            componente.BackColor = Color.Green;
+                                        }
+                                        componente.Enabled = false;
+                                    }
+
+                                }
+                            }
+                            else
+                            {
+                                Btn_Anterior.Enabled = false;
+                                Btn_Siguiente.Enabled = false;
+                                Btn_FlechaInicio.Enabled = false;
+                                Btn_FlechaFin.Enabled = false;
+                                Btn_Modificar.Enabled = false;
+                                Btn_Eliminar.Enabled = false;
+                            }
+                        }
+                       
+                       
+                       
                     }
-                    if (componente is Button)
+                    else
                     {
-                        string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
-                        if (var1 == "1")
+                        DialogResult validacion = MessageBox.Show(EstadoOK + "\n Solucione este error para continuar...", "Verificación de requisitos", MessageBoxButtons.OK);
+                        if (validacion == DialogResult.OK)
                         {
-                            componente.Text = "Desactivado";
-                            componente.BackColor = Color.Red;
+                            Application.Exit();
                         }
-                        if (var1 == "0")
-                        {
-                            componente.Text = "Activado";
-                            componente.BackColor = Color.Green;
-                        }
-                        componente.Enabled = false;
                     }
 
+                }
+                else
+                {
+                    DialogResult validacion = MessageBox.Show(TablaOK + "\n Solucione este error para continuar...", "Verificación de requisitos" , MessageBoxButtons.OK);
+                    if (validacion == DialogResult.OK)
+                    {
+                        Application.Exit();
+                    }
                 }
 
             }
@@ -97,6 +149,28 @@ namespace CapaDeDiseno
         public void ObtenerIdUsuario(string idUsuario)
         {
             this.idUsuario = idUsuario;
+        }
+
+        private void registros()
+        {
+            if (logic.TestRegistros(tabla)<=0)
+            {
+                Btn_Anterior.Enabled = false;
+                Btn_Siguiente.Enabled = false;
+                Btn_FlechaInicio.Enabled = false;
+                Btn_FlechaFin.Enabled = false;
+                Btn_Modificar.Enabled = false;
+                Btn_Eliminar.Enabled = false;
+            }
+            else
+            {
+                Btn_Anterior.Enabled = true;
+                Btn_Siguiente.Enabled = true;
+                Btn_FlechaInicio.Enabled = true;
+                Btn_FlechaFin.Enabled = true;
+                Btn_Modificar.Enabled = true;
+                Btn_Eliminar.Enabled = true;
+            }
         }
 
         public string obtenerDatoTabla(int pos)
@@ -131,10 +205,23 @@ namespace CapaDeDiseno
 
         public void asignarAyuda(string ayudar)
         {
-            idyuda = ayudar;
-            AsRuta = logic.MRuta(idyuda);
-            AsIndice = logic.MIndice(idyuda);
+            string AyudaOK = logic.TestTabla("ayuda");
+            if (AyudaOK == "")
+            {
+                idyuda = ayudar;
+                AsRuta = logic.MRuta(idyuda);
+                AsIndice = logic.MIndice(idyuda);
+            }
+            else
+            {
+                DialogResult validacion = MessageBox.Show(AyudaOK + ", Por favor incluyala", "Verificación de requisitos", MessageBoxButtons.OK);
+                if (validacion == DialogResult.OK)
+                {
+                    correcto = 1;
+                }
+            }
         }
+ 
         public void asignarSalida(Form salida)
         {
             cerrar = salida;
@@ -156,9 +243,22 @@ namespace CapaDeDiseno
 
         public void asignarComboConTabla(string tabla, string campo)
         {
-            tablaCombo[noCombo] = tabla;
-            campoCombo[noCombo] = campo;
-            noCombo++;
+            string TablaOK = logic.TestTabla(tabla);
+            if (TablaOK == "")
+            {
+                tablaCombo[noCombo] = tabla;
+                campoCombo[noCombo] = campo;
+                noCombo++;
+            }
+            else
+            {
+                DialogResult validacion = MessageBox.Show(TablaOK +", o el campo seleccionado\n para el ComboBox es incorrecto", "Verificación de requisitos", MessageBoxButtons.OK);
+                if (validacion == DialogResult.OK)
+                {
+                    correcto = 1;
+                }
+            }
+           
 
         }
 
@@ -653,7 +753,6 @@ namespace CapaDeDiseno
         {
             activar = 2;
             habilitarcampos_y_botones();
-            logic.nuevoQuery(crearInsert());
             foreach (Control componente in Controls)
             {
                 if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
@@ -701,24 +800,28 @@ namespace CapaDeDiseno
             Btn_Cancelar.Enabled = false;
             Btn_Ingresar.Enabled = true;
             Btn_Eliminar.Enabled = true;
-            
-            int i = 0;
-            foreach (Control componente in Controls)
-            {
-                if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
-                {
-                    componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
-                    componente.Enabled = false;
-                    i++;
-                }
-                if (componente is Button)
-                {
-                    componente.Enabled = false;
-                }
 
+            actualizardatagriew();
+            registros();
+            if (logic.TestRegistros(tabla)>0)
+            {
+                int i = 0;
+                foreach (Control componente in Controls)
+                {
+                    if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
+                    {
+                        componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+                        componente.Enabled = false;
+                        i++;
+                    }
+                    if (componente is Button)
+                    {
+                        componente.Enabled = false;
+                    }
+
+                }
             }
             
-
 
         }
 
@@ -743,6 +846,7 @@ namespace CapaDeDiseno
                 Btn_Ingresar.Enabled = true;
                 presionado = false;
             }
+            registros();
         }
 
         private void Btn_Consultar_Click(object sender, EventArgs e)
@@ -757,8 +861,9 @@ namespace CapaDeDiseno
 
         private void Btn_Refrescar_Click(object sender, EventArgs e)
         {
-
+           
             actualizardatagriew();
+            registros();
         }
 
         private void Btn_Anterior_Click(object sender, EventArgs e)
@@ -922,7 +1027,12 @@ namespace CapaDeDiseno
         private void Btn_Ayuda_Click(object sender, EventArgs e)
         {
 
-            Help.ShowHelp(this, AsRuta, AsIndice);//Abre el menu de ayuda HTML
+          
+          
+
+                Help.ShowHelp(this, AsRuta, AsIndice);//Abre el menu de ayuda HTML
+            
+
 
         }
 
@@ -1041,23 +1151,30 @@ namespace CapaDeDiseno
                     break;
                 case 2:
                     logic.nuevoQuery(crearInsert());
+                    Btn_Anterior.Enabled = true;
+                    Btn_Siguiente.Enabled = true;
+                    Btn_FlechaInicio.Enabled = true;
+                    Btn_FlechaFin.Enabled = true;
+                    Btn_Modificar.Enabled = true;
                     break;
                 default:
                     break;
             }
             actualizardatagriew();
-            int i = 0;
-            foreach (Control componente in Controls)
+            registros();
+            if (logic.TestRegistros(tabla)>0)
             {
-                if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
+                int i = 0;
+                foreach (Control componente in Controls)
                 {
-                    componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
-                    i++;
+                    if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
+                    {
+                        componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+                        i++;
+                    }
                 }
-               
-                
-
             }
+           
             deshabilitarcampos_y_botones();
            
             Btn_Guardar.Enabled = false;
@@ -1065,8 +1182,8 @@ namespace CapaDeDiseno
             Btn_Cancelar.Enabled = false;
             Btn_Modificar.Enabled = true;
             Btn_Ingresar.Enabled = true;
-           
-            
+
+            registros();
         }
 
         private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
