@@ -66,49 +66,60 @@ namespace CapaDeDiseno
                     string EstadoOK = logic.TestEstado(tabla);
                     if (EstadoOK == "" && correcto == 0)
                     {
-                        int i = 0;
-                        DataTable dt = logic.consultaLogica(tabla);
-                        dataGridView1.DataSource = dt;
-                        CreaComponentes();
-                        deshabilitarcampos_y_botones();
-                        Btn_Modificar.Enabled = true;
-                        Btn_Eliminar.Enabled = true;
-                        if (logic.TestRegistros(tabla) > 0)
+                        Asayuda = logic.verificacion("");
+                        if (Asayuda == "0")
                         {
-                            foreach (Control componente in Controls)
-                            {
-                                if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
-                                {
-                                    componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
-                                    i++;
-                                }
-                                if (componente is Button)
-                                {
-                                    string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
-                                    if (var1 == "1")
-                                    {
-                                        componente.Text = "Desactivado";
-                                        componente.BackColor = Color.Red;
-                                    }
-                                    if (var1 == "0")
-                                    {
-                                        componente.Text = "Activado";
-                                        componente.BackColor = Color.Green;
-                                    }
-                                    componente.Enabled = false;
-                                }
-
-                            }
+                            MessageBox.Show("No se encontró ningún registro en la tabla Ayuda");
+                            Application.Exit();
                         }
                         else
                         {
-                            Btn_Anterior.Enabled = false;
-                            Btn_Siguiente.Enabled = false;
-                            Btn_FlechaInicio.Enabled = false;
-                            Btn_FlechaFin.Enabled = false;
-                            Btn_Modificar.Enabled = false;
-                            Btn_Eliminar.Enabled = false;
+                            int i = 0;
+                            DataTable dt = logic.consultaLogica(tabla);
+                            dataGridView1.DataSource = dt;
+                            CreaComponentes();
+                            deshabilitarcampos_y_botones();
+                            Btn_Modificar.Enabled = true;
+                            Btn_Eliminar.Enabled = true;
+                            if (logic.TestRegistros(tabla) > 0)
+                            {
+                                foreach (Control componente in Controls)
+                                {
+                                    if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
+                                    {
+                                        componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+                                        i++;
+                                    }
+                                    if (componente is Button)
+                                    {
+                                        string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+                                        if (var1 == "1")
+                                        {
+                                            componente.Text = "Desactivado";
+                                            componente.BackColor = Color.Red;
+                                        }
+                                        if (var1 == "0")
+                                        {
+                                            componente.Text = "Activado";
+                                            componente.BackColor = Color.Green;
+                                        }
+                                        componente.Enabled = false;
+                                    }
+
+                                }
+                            }
+                            else
+                            {
+                                Btn_Anterior.Enabled = false;
+                                Btn_Siguiente.Enabled = false;
+                                Btn_FlechaInicio.Enabled = false;
+                                Btn_FlechaFin.Enabled = false;
+                                Btn_Modificar.Enabled = false;
+                                Btn_Eliminar.Enabled = false;
+                            }
                         }
+                       
+                       
                        
                     }
                     else
@@ -210,12 +221,7 @@ namespace CapaDeDiseno
                 }
             }
         }
-        public void tablaverificacion(string ayudar2)
-        {
-            rutaa = ayudar2;
-
-            Asayuda = logic.verificacion(rutaa);
-        }
+ 
         public void asignarSalida(Form salida)
         {
             cerrar = salida;
@@ -1021,15 +1027,11 @@ namespace CapaDeDiseno
         private void Btn_Ayuda_Click(object sender, EventArgs e)
         {
 
-            if (Asayuda == "0")
-            {
-                MessageBox.Show("No se encontro ninguin reguisto");
-            }
-            else
-            {
+          
+          
 
                 Help.ShowHelp(this, AsRuta, AsIndice);//Abre el menu de ayuda HTML
-            }
+            
 
 
         }
