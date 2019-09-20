@@ -55,6 +55,63 @@ namespace CapaDeDatos
 
         }
 
+        public string ProbarTabla(string tabla)
+        {
+            string error = "";
+            try
+            {
+                OdbcCommand command = new OdbcCommand("SELECT * FROM " + tabla + ";", cn.probarConexion());
+                OdbcDataReader reader = command.ExecuteReader();
+                reader.Read();
+            }
+            catch (Exception err)
+            {
+
+                error = "La tabla " + tabla + " no exisite";
+            }
+
+
+
+            return error;
+        }
+
+        public string ProbarEstado(string tabla)
+        {
+            string error = "";
+            try
+            {
+                OdbcCommand command = new OdbcCommand("SELECT estado FROM " + tabla + ";", cn.probarConexion());
+                OdbcDataReader reader = command.ExecuteReader();
+                reader.Read();
+            }
+            catch (Exception err)
+            {
+
+                error = "La tabla " + tabla + " no contiene el campo de estado";
+            }
+
+            return error;
+        }
+        public int ProbarRegistros(string tabla)
+        {
+            int registros =0;
+            try
+            {
+                OdbcCommand command = new OdbcCommand("SELECT * FROM " + tabla + " where estado=0;", cn.probarConexion());
+                OdbcDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    registros++;
+                }
+            }
+            catch (Exception err)
+            {
+
+            }
+
+            return registros;
+        }
+
         public string[] obtenerCampos(string tabla)//metodo que obtiene la lista de los campos que requiere una tabla
         {
             string[] Campos = new string[30];

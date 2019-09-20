@@ -24,7 +24,7 @@ namespace NAVE
             navegador1.asignarColorFondo(Color.LightBlue); // color de fondo del navegador
             
             navegador1.asignarColorFuente(Color.Black); // Color de letra del navegador
-           navegador1.asignarComboConTabla("Peliculas", "idPelicula"); // LLenado de ComboBox
+            navegador1.asignarComboConTabla("Peliculas", "idPelicula"); // LLenado de ComboBox
             navegador1.asignarComboConTabla("Salas", "idSala");
             navegador1.asignarComboConTabla("Cines", "nombreCine");
             navegador1.asignarAyuda("1");// Asignacion de ayuda con tabla

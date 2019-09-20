@@ -33,6 +33,19 @@ namespace CapaDeLogica
 
             return ruta;
         }
+
+        public string TestTabla(string tabla)
+        {
+            return sn.ProbarTabla(tabla);
+        }
+        public string TestEstado(string tabla)
+        {
+            return sn.ProbarEstado(tabla);
+        }
+        public int TestRegistros(string tabla)
+        {
+            return sn.ProbarRegistros(tabla);
+        }
         public string[] campos(string tabla)
         {
             string[] Campos = sn.obtenerCampos(tabla);
