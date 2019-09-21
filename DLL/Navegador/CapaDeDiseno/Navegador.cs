@@ -43,7 +43,7 @@ namespace CapaDeDiseno
         string AsRuta;
         string AsIndice;
         string Asayuda;
-        string rutaa;
+       // string rutaa;
         Font fuente = new Font("Century Gothic", 13.0f, FontStyle.Regular, GraphicsUnit.Pixel); //objeto para definir el tipo y tamaño de fuente de los labels
         public Navegador()
         {
@@ -371,8 +371,25 @@ namespace CapaDeDiseno
                 break;
                     case "time":
                         tipoCampo[noCampos - 1] = "Text";
-                        crearTextBoxvarchar(Campos[i]);       
+                        crearcampohora(Campos[i]);
                         break;
+
+                    case "float":
+                        tipoCampo[noCampos - 1] = "Text";
+                        crearcampodecimales(Campos[i]);
+                        break;
+
+                    case "decimal":
+                        tipoCampo[noCampos - 1] = "Text";
+                        crearcampodecimales(Campos[i]);
+                        break;
+
+                    case "double":
+                        tipoCampo[noCampos - 1] = "Text";
+                        crearcampodecimales(Campos[i]);
+                        break;
+
+
 
                     case "tinyint":
                         tipoCampo[noCampos - 1] = "Num";
@@ -467,10 +484,50 @@ namespace CapaDeDiseno
 
         }
 
+        void crearcampohora(String nom)
+        {
+            TextBox tb = new TextBox();
+            Point p = new Point(x + 125 + pos, y * pos);
+            tb.Location = p;
+            tb.Name = nom;
+            this.Controls.Add(tb);
+            tb.KeyPress += Paravalidarhora_KeyPress;
+            this.KeyPress += Paravalidarhora_KeyPress;
+            //+= new System.Windows.Forms.KeyPressEventHandler(this.Txt_telefono_KeyPress);
+            pos++;
+        }
+
+       
+        void crearcampodecimales(String nom)
+        {
+            TextBox tb = new TextBox();
+            Point p = new Point(x + 125 + pos, y * pos);
+            tb.Location = p;
+            tb.Name = nom;
+            this.Controls.Add(tb);
+            tb.KeyPress += Paravalidardecimales_KeyPress;
+            this.KeyPress += Paravalidardecimales_KeyPress;
+            //+= new System.Windows.Forms.KeyPressEventHandler(this.Txt_telefono_KeyPress);
+            pos++;
+
+
+        }
+
+        private void Paravalidardecimales_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.Camposdecimales(e);
+        }
+
         private void Paravalidarnumeros_KeyPress(object sender, KeyPressEventArgs e)
         {
             v.CamposNumericos(e);
         }
+
+        private void Paravalidarhora_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.CamposHora(e);
+        }
+
         private void Paravalidarvarchar_KeyPress(object sender, KeyPressEventArgs e)
         {
             v.CamposNumerosYLetras(e);
