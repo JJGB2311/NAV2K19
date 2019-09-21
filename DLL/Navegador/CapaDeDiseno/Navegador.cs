@@ -43,13 +43,13 @@ namespace CapaDeDiseno
         string AsRuta;
         string AsIndice;
         string Asayuda;
-       // string rutaa;
+        // string rutaa;
         Font fuente = new Font("Century Gothic", 13.0f, FontStyle.Regular, GraphicsUnit.Pixel); //objeto para definir el tipo y tamaño de fuente de los labels
         public Navegador()
         {
             InitializeComponent();
             limpiarListaItems();
-           
+
 
         }
 
@@ -61,7 +61,7 @@ namespace CapaDeDiseno
             if (tabla != "def")
             {
                 string TablaOK = logic.TestTabla(tabla);
-                if (TablaOK=="" && correcto ==0)
+                if (TablaOK == "" && correcto == 0)
                 {
                     string EstadoOK = logic.TestEstado(tabla);
                     if (EstadoOK == "" && correcto == 0)
@@ -74,53 +74,80 @@ namespace CapaDeDiseno
                         }
                         else
                         {
-                            int i = 0;
-                            DataTable dt = logic.consultaLogica(tabla);
-                            dataGridView1.DataSource = dt;
-                            CreaComponentes();
-                            deshabilitarcampos_y_botones();
-                            Btn_Modificar.Enabled = true;
-                            Btn_Eliminar.Enabled = true;
-                            if (logic.TestRegistros(tabla) > 0)
+                            if (numeroAlias()== logic.contarCampos(tabla))
                             {
-                                foreach (Control componente in Controls)
+                                int i = 0;
+                                DataTable dt = logic.consultaLogica(tabla);
+                                dataGridView1.DataSource = dt;
+                                CreaComponentes();
+                                deshabilitarcampos_y_botones();
+                                Btn_Modificar.Enabled = true;
+                                Btn_Eliminar.Enabled = true;
+                                if (logic.TestRegistros(tabla) > 0)
                                 {
-                                    if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
+                                    foreach (Control componente in Controls)
                                     {
-                                        componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
-                                        i++;
-                                    }
-                                    if (componente is Button)
-                                    {
-                                        string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
-                                        if (var1 == "1")
+                                        if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
                                         {
-                                            componente.Text = "Desactivado";
-                                            componente.BackColor = Color.Red;
+                                            componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+                                            i++;
                                         }
-                                        if (var1 == "0")
+                                        if (componente is Button)
                                         {
-                                            componente.Text = "Activado";
-                                            componente.BackColor = Color.Green;
+                                            string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+                                            if (var1 == "1")
+                                            {
+                                                componente.Text = "Desactivado";
+                                                componente.BackColor = Color.Red;
+                                            }
+                                            if (var1 == "0")
+                                            {
+                                                componente.Text = "Activado";
+                                                componente.BackColor = Color.Green;
+                                            }
+                                            componente.Enabled = false;
                                         }
-                                        componente.Enabled = false;
-                                    }
 
+                                    }
+                                }
+                                else
+                                {
+                                    Btn_Anterior.Enabled = false;
+                                    Btn_Siguiente.Enabled = false;
+                                    Btn_FlechaInicio.Enabled = false;
+                                    Btn_FlechaFin.Enabled = false;
+                                    Btn_Modificar.Enabled = false;
+                                    Btn_Eliminar.Enabled = false;
                                 }
                             }
                             else
                             {
-                                Btn_Anterior.Enabled = false;
-                                Btn_Siguiente.Enabled = false;
-                                Btn_FlechaInicio.Enabled = false;
-                                Btn_FlechaFin.Enabled = false;
-                                Btn_Modificar.Enabled = false;
-                                Btn_Eliminar.Enabled = false;
-                            }
+                                if (numeroAlias() < logic.contarCampos(tabla))
+                                {
+                                    DialogResult validacion = MessageBox.Show(EstadoOK + "El numero de Alias asignados es menor que el requerido \n Solucione este error para continuar...", "Verificación de requisitos", MessageBoxButtons.OK);
+                                    if (validacion == DialogResult.OK)
+                                    {
+                                        Application.Exit();
+                                    }
+                                }
+                                else
+                                {
+                                    if (numeroAlias() > logic.contarCampos(tabla))
+                                    {
+                                        DialogResult validacion = MessageBox.Show(EstadoOK + "El numero de Alias asignados es mayor que el requerido \n Solucione este error para continuar...", "Verificación de requisitos", MessageBoxButtons.OK);
+                                        if (validacion == DialogResult.OK)
+                                        {
+                                            Application.Exit();
+                                        }
+                                    }
+                                }
+                             }
+                           
+                           
                         }
-                       
-                       
-                       
+
+
+
                     }
                     else
                     {
@@ -134,7 +161,7 @@ namespace CapaDeDiseno
                 }
                 else
                 {
-                    DialogResult validacion = MessageBox.Show(TablaOK + "\n Solucione este error para continuar...", "Verificación de requisitos" , MessageBoxButtons.OK);
+                    DialogResult validacion = MessageBox.Show(TablaOK + "\n Solucione este error para continuar...", "Verificación de requisitos", MessageBoxButtons.OK);
                     if (validacion == DialogResult.OK)
                     {
                         Application.Exit();
@@ -151,6 +178,18 @@ namespace CapaDeDiseno
             this.idUsuario = idUsuario;
         }
 
+        private int numeroAlias()
+            {
+            int i = 0;
+            foreach (string cad  in aliasC)
+            {
+                if (cad!=null && cad!="")
+                {
+                    i++;
+                } 
+            }
+            return i;
+            }
         private void registros()
         {
             if (logic.TestRegistros(tabla)<=0)
@@ -208,9 +247,29 @@ namespace CapaDeDiseno
             string AyudaOK = logic.TestTabla("ayuda");
             if (AyudaOK == "")
             {
-                idyuda = ayudar;
-                AsRuta = logic.MRuta(idyuda);
-                AsIndice = logic.MIndice(idyuda);
+                if (logic.contarRegAyuda(ayudar)>0)
+                {
+                    idyuda = ayudar;
+                    AsRuta = logic.MRuta(idyuda);
+                    AsIndice = logic.MIndice(idyuda);
+                    if (AsRuta=="" || AsIndice=="" || AsRuta == null || AsIndice == null)
+                    {
+                        DialogResult validacion = MessageBox.Show("La Ruta o indece de la ayuda es vacía", "Verificación de requisitos", MessageBoxButtons.OK);
+                        if (validacion == DialogResult.OK)
+                        {
+                            correcto = 1;
+                        }
+                    }
+                }
+                else
+                {
+                    DialogResult validacion = MessageBox.Show("Por favor verifique el id de Ayuda asignado", "Verificación de requisitos", MessageBoxButtons.OK);
+                    if (validacion == DialogResult.OK)
+                    {
+                        correcto = 1;
+                    }
+                }
+               
             }
             else
             {
@@ -299,18 +358,6 @@ namespace CapaDeDiseno
             }
         }
 
-        bool verificarListaItems()
-        {
-            bool limpio = true;
-
-            for (int i=0; i<listaItems.Length;i++)
-            {
-                if (listaItems[i]!="") { limpio = false; }
-              
-            }
-            return limpio;
-        }
-
         void limpiarListaItems()
         {
             for (int i =0; i< listaItems.Length;i++)
@@ -344,7 +391,10 @@ namespace CapaDeDiseno
                 lb.Font = fuente;
                 lb.ForeColor = Cfuente;
                 this.Controls.Add(lb);
-
+                if (LLaves[i]=="PRI" && i!=0)
+                {
+                    LLaves[i] = "MUL";
+                }
 
                 switch (Tipos[i])
                 {
@@ -363,6 +413,12 @@ namespace CapaDeDiseno
                         tipoCampo[noCampos - 1] = "Text";
                         if (LLaves[i] != "MUL")
                         {crearDateTimePicker(Campos[i]);} else { crearComboBox(Campos[i]); }
+                        break;
+                    case "datetime":
+                        tipoCampo[noCampos - 1] = "Text";
+                        if (LLaves[i] != "MUL")
+                        { crearDateTimePicker(Campos[i]); }
+                        else { crearComboBox(Campos[i]); }
                         break;
                     case "text":
                         tipoCampo[noCampos - 1] = "Text";
@@ -397,6 +453,19 @@ namespace CapaDeDiseno
                         {
                             crearBotonEstado(Campos[i]);
                         }
+                        break;
+
+                    default:
+
+                        if (Tipos[i]!=null && Tipos[i] != "")
+                        {
+                            DialogResult validacion = MessageBox.Show("La tabla "+tabla+" posee un campo "+Tipos[i]+ ", este tipo de dato no es reconocido por el navegador\n Solucione este problema...", "Verificación de requisitos", MessageBoxButtons.OK);
+                            if (validacion == DialogResult.OK)
+                            {
+                                Application.Exit();
+                            }
+                        }
+                        
                         break;
                 }
                 noCampos++;
@@ -570,6 +639,7 @@ namespace CapaDeDiseno
             Point p = new Point(x + 125 + pos, y * pos);
             cb.Location = p;
             cb.Name = nom;
+            cb.Sorted = true;
             for (int i = 0; i < items.Length; i++)
             {
                 if (items[i] != null)
