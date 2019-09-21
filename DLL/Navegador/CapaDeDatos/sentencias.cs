@@ -56,7 +56,35 @@ namespace CapaDeDatos
             catch (Exception ex) { Console.WriteLine(ex.Message.ToString() + " \nError en obtenerTipo, revise los parametros de la tabla  \n -" + idindice + "\n -"); }
             return Campos;// devuelve un arreglo con los tiposlos campos
         }
+        public string primerCampo(string tabla)// metodo  que obtinene el contenio de una tabla
+        {
+            string Campos ="";
 
+            try
+            {
+                OdbcCommand command = new OdbcCommand("DESCRIBE " + tabla + "", cn.probarConexion());
+                OdbcDataReader reader = command.ExecuteReader();
+
+                reader.Read();
+
+                    Campos = reader.GetValue(0).ToString();
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message.ToString() + " \nError en obtenerTipo, revise los parametros de la tabla  \n -" + tabla + "\n -"); }
+            return Campos;// devuelve un arreglo con los tiposlos campos
+        }
+        public int maxId(string tabla)// metodo  que obtinene el contenio de una tabla
+        {
+            int Campos = 0;
+            try
+            {
+                OdbcCommand command = new OdbcCommand("SELECT * FROM " + tabla + " ORDER BY "+primerCampo(tabla)+" DESC;", cn.probarConexion());
+                OdbcDataReader reader = command.ExecuteReader();
+                reader.Read();
+                Campos = Convert.ToInt32(reader.GetValue(0));
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message.ToString() + " \nError en obtener Maximo Id, revise los parametros de la tabla "); }
+            return Campos;
+        }
         public string modRuta(string idindice)// metodo  que obtinene el contenio de una tabla
         {
 

@@ -36,6 +36,7 @@ namespace NAVE
             frm_login login = new frm_login();
             login.ShowDialog();
             navegador1.ObtenerIdUsuario(login.obtenerNombreUsuario());
+            navegador1.ObtenerIdAplicacion("1");
             // navegador1.ObtenerIdUsuario("MiUsuario");
         }
 

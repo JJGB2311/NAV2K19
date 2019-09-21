@@ -46,6 +46,7 @@ namespace CapaDeLogica
         {
             return sn.ProbarTabla(tabla);
         }
+
         public string TestEstado(string tabla)
         {
             return sn.ProbarEstado(tabla);
@@ -53,6 +54,11 @@ namespace CapaDeLogica
         public int TestRegistros(string tabla)
         {
             return sn.ProbarRegistros(tabla);
+        }
+
+        public int obtenerMaxId(string tabla)
+        {
+            return sn.maxId(tabla);
         }
         public int contarCampos(string tabla)
         {

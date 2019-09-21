@@ -39,6 +39,7 @@ namespace CapaDeDiseno
         bool presionado = false;
         sentencia sn = new sentencia(); //objeto del componente de seguridad para obtener el método de la bitácora
         string idUsuario = "";
+        string idAplicacion = "";
         string idyuda;
         string AsRuta;
         string AsIndice;
@@ -176,6 +177,16 @@ namespace CapaDeDiseno
         public void ObtenerIdUsuario(string idUsuario)
         {
             this.idUsuario = idUsuario;
+        }
+        public void ObtenerIdAplicacion(string idAplicacion)
+        {
+            this.idAplicacion = idAplicacion;
+        }
+
+        private void permisos()
+        {
+          //  sentencia s = new sentencia();
+          //  bool permiso = s.consultarPermisos(IdUsuario,idAplicacion,5);
         }
 
         private int numeroAlias()
@@ -878,6 +889,8 @@ namespace CapaDeDiseno
 
         private void Btn_Ingresar_Click(object sender, EventArgs e)
         {
+            string[] Tipos = logic.tipos(tabla);
+            
             activar = 2;
             habilitarcampos_y_botones();
             foreach (Control componente in Controls)
@@ -898,6 +911,27 @@ namespace CapaDeDiseno
                 Btn_Modificar.Enabled = false;
                 Btn_Eliminar.Enabled = false;
                 Btn_Cancelar.Enabled = true;
+            }
+            if (Tipos[0] == "int")
+            {
+                int j = 0;
+                foreach (Control componente in Controls)
+                {
+                    if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
+                    {
+
+                        if (j == 0)
+                        {
+                            componente.Enabled = false;
+                            componente.Text = (logic.obtenerMaxId(tabla)+1).ToString();
+                        }
+
+                        j++;
+
+
+                    }
+                }
+
             }
         }
 
