@@ -54,6 +54,15 @@ namespace CapaDeLogica
         {
             return sn.ProbarRegistros(tabla);
         }
+        public int contarCampos(string tabla)
+        {
+            return sn.contarAlias(tabla);
+        }
+
+        public int contarRegAyuda(string tabla)
+        {
+            return sn.contarReg(tabla);
+        }
         public string[] campos(string tabla)
         {
             string[] Campos = sn.obtenerCampos(tabla);

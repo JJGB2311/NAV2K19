@@ -21,6 +21,42 @@ namespace CapaDeDatos
             OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.probarConexion());
             return dataTable;
         }
+        public int contarAlias(string tabla)// metodo  que obtinene el contenio de una tabla
+        {
+           int Campos = 0;
+            
+            try
+            {
+                OdbcCommand command = new OdbcCommand("DESCRIBE " + tabla + "", cn.probarConexion());
+                OdbcDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Campos++;
+
+                }
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message.ToString() + " \nError en obtenerTipo, revise los parametros de la tabla  \n -" + tabla + "\n -"); }
+            return Campos;// devuelve un arreglo con los tiposlos campos
+        }
+        public int contarReg(string idindice)// metodo  que obtinene el contenio de una tabla
+        {
+            int Campos = 0;
+            try
+            {
+                OdbcCommand command = new OdbcCommand("SELECT * FROM ayuda WHERE id_ayuda = " + idindice + ";", cn.probarConexion());
+                OdbcDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Campos++;
+
+                }
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message.ToString() + " \nError en obtenerTipo, revise los parametros de la tabla  \n -" + idindice + "\n -"); }
+            return Campos;// devuelve un arreglo con los tiposlos campos
+        }
+
         public string modRuta(string idindice)// metodo  que obtinene el contenio de una tabla
         {
 

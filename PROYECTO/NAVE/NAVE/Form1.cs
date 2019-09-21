@@ -16,7 +16,7 @@ namespace NAVE
         public Form1()
         {
             InitializeComponent();
-            
+
             string[] alias = { "Cod Funcion", "Cod Pelicula", "Cod Sala", "Cine", "Horario", "Estado" };
             navegador1.asignarAlias(alias); // asignar labels
 
