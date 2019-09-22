@@ -36,7 +36,7 @@ namespace CapaDeDatos
 
                 }
             }
-            catch (Exception ex) { Console.WriteLine(ex.Message.ToString() + " \nError en obtenerTipo, revise los parametros de la tabla  \n -" + tabla + "\n -"); }
+            catch (Exception ex) { Console.WriteLine(ex.Message.ToString() + " \nError en obtenerTipo, revise los parámetros de la tabla  \n -" + tabla.ToUpper() + "\n -"); }
             return Campos;// devuelve un arreglo con los tiposlos campos
         }
         public int contarReg(string idindice)// metodo  que obtinene el contenio de una tabla
@@ -53,10 +53,38 @@ namespace CapaDeDatos
 
                 }
             }
-            catch (Exception ex) { Console.WriteLine(ex.Message.ToString() + " \nError en obtenerTipo, revise los parametros de la tabla  \n -" + idindice + "\n -"); }
+            catch (Exception ex) { Console.WriteLine(ex.Message.ToString() + " \nError en obtenerTipo, revise los parámetros de la tabla  \n -" + idindice.ToUpper() + "\n -"); }
             return Campos;// devuelve un arreglo con los tiposlos campos
         }
+        public string primerCampo(string tabla)// metodo  que obtinene el contenio de una tabla
+        {
+            string Campos ="";
 
+            try
+            {
+                OdbcCommand command = new OdbcCommand("DESCRIBE " + tabla + "", cn.probarConexion());
+                OdbcDataReader reader = command.ExecuteReader();
+
+                reader.Read();
+
+                    Campos = reader.GetValue(0).ToString();
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message.ToString() + " \nError en obtenerTipo, revise los parámetros de la tabla  \n -" + tabla.ToUpper() + "\n -"); }
+            return Campos;// devuelve un arreglo con los tiposlos campos
+        }
+        public int maxId(string tabla)// metodo  que obtinene el contenio de una tabla
+        {
+            int Campos = 0;
+            try
+            {
+                OdbcCommand command = new OdbcCommand("SELECT * FROM " + tabla + " ORDER BY "+primerCampo(tabla)+" DESC;", cn.probarConexion());
+                OdbcDataReader reader = command.ExecuteReader();
+                reader.Read();
+                Campos = Convert.ToInt32(reader.GetValue(0));
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message.ToString() + " \nError en obtener Maximo Id, revise los parámetros de la tabla "); }
+            return Campos;
+        }
         public string modRuta(string idindice)// metodo  que obtinene el contenio de una tabla
         {
 
@@ -124,7 +152,7 @@ namespace CapaDeDatos
             catch (Exception err)
             {
 
-                error = "La tabla " + tabla + " no exisite";
+                error = "La tabla " + tabla.ToUpper() + " no exisite";
             }
 
 
@@ -144,7 +172,7 @@ namespace CapaDeDatos
             catch (Exception err)
             {
 
-                error = "La tabla " + tabla + " no contiene el campo de estado";
+                error = "La tabla " + tabla.ToUpper() + " no contiene el campo de ESTADO";
             }
 
             return error;
@@ -186,7 +214,7 @@ namespace CapaDeDatos
                 }
             }
 
-            catch (Exception ex) { Console.WriteLine(ex.Message.ToString() + " \nError en asignarCombo, revise los parametros \n -" + tabla); }
+            catch (Exception ex) { Console.WriteLine(ex.Message.ToString() + " \nError en asignarCombo, revise los parámetros \n -" + tabla); }
             return Campos;// devuelve un arrgeglo con los campos
         }
 
@@ -206,7 +234,7 @@ namespace CapaDeDatos
 
                 }
             }
-            catch (Exception ex) { Console.WriteLine(ex.Message.ToString() + " \nError en obtenerTipo, revise los parametros de la tabla  \n -" + tabla + "\n -"); }
+            catch (Exception ex) { Console.WriteLine(ex.Message.ToString() + " \nError en obtenerTipo, revise los parametros de la tabla  \n -" + tabla.ToUpper() + "\n -"); }
             return Campos;// devuelve un arreglo con los tipos
         }
         public string[] obtenerLLave(string tabla)//metodo que obtiene la lista de los tipos de campos que requiere una tabla

@@ -31,8 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CapaDatos">
-      <HintPath>..\..\..\Seguridad\CapaDatos\bin\Debug\CapaDatos.dll</HintPath>
+    <Reference Include="CapaDatos, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Seguridad\Capas\CapaDatos.dll</HintPath>
     </Reference>
     <Reference Include="CapaDeLogica">
       <HintPath>..\CapaDeLogica\bin\Debug\CapaDeLogica.dll</HintPath>

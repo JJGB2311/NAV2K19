@@ -39,6 +39,10 @@ namespace CapaDeDiseno
         bool presionado = false;
         sentencia sn = new sentencia(); //objeto del componente de seguridad para obtener el método de la bitácora
         string idUsuario = "";
+        string idAplicacion = "";
+        //las siguientes dos variables son para el método botonesYPermisos();
+        string userActivo = ""; //1
+        string aplActivo = "";  //2
         string idyuda;
         string AsRuta;
         string AsIndice;
@@ -49,8 +53,6 @@ namespace CapaDeDiseno
         {
             InitializeComponent();
             limpiarListaItems();
-
-
         }
 
         private void Navegador_Load(object sender, EventArgs e)
@@ -81,8 +83,11 @@ namespace CapaDeDiseno
                                 dataGridView1.DataSource = dt;
                                 CreaComponentes();
                                 deshabilitarcampos_y_botones();
+                                
                                 Btn_Modificar.Enabled = true;
                                 Btn_Eliminar.Enabled = true;
+                                //habilitar y deshabilitar según Usuario FUNCION SOLO PARA INICIO                                                                                               
+                                botonesYPermisosInicial(userActivo, aplActivo);   
                                 if (logic.TestRegistros(tabla) > 0)
                                 {
                                     foreach (Control componente in Controls)
@@ -107,7 +112,6 @@ namespace CapaDeDiseno
                                             }
                                             componente.Enabled = false;
                                         }
-
                                     }
                                 }
                                 else
@@ -141,13 +145,8 @@ namespace CapaDeDiseno
                                         }
                                     }
                                 }
-                             }
-                           
-                           
+                             }                                                      
                         }
-
-
-
                     }
                     else
                     {
@@ -157,7 +156,6 @@ namespace CapaDeDiseno
                             Application.Exit();
                         }
                     }
-
                 }
                 else
                 {
@@ -167,16 +165,27 @@ namespace CapaDeDiseno
                         Application.Exit();
                     }
                 }
-
             }
-
         }
 
         //-----------------------------------------------Funciones-----------------------------------------------//
+        
+
         public void ObtenerIdUsuario(string idUsuario)
         {
-            this.idUsuario = idUsuario;
+            this.idUsuario = idUsuario;            
         }
+        
+        public void ObtenerIdAplicacion(string idAplicacion)
+        {
+            this.idAplicacion = idAplicacion;            
+        }
+        /*
+        private void permisos()
+        {
+          sentencia s = new sentencia();
+          bool permiso = s.consultarPermisos(IdUsuario,idAplicacion,5);
+        } */
 
         private int numeroAlias()
             {
@@ -254,7 +263,7 @@ namespace CapaDeDiseno
                     AsIndice = logic.MIndice(idyuda);
                     if (AsRuta=="" || AsIndice=="" || AsRuta == null || AsIndice == null)
                     {
-                        DialogResult validacion = MessageBox.Show("La Ruta o indece de la ayuda es vacía", "Verificación de requisitos", MessageBoxButtons.OK);
+                        DialogResult validacion = MessageBox.Show("La Ruta o índice de la ayuda está vacía", "Verificación de requisitos", MessageBoxButtons.OK);
                         if (validacion == DialogResult.OK)
                         {
                             correcto = 1;
@@ -263,7 +272,7 @@ namespace CapaDeDiseno
                 }
                 else
                 {
-                    DialogResult validacion = MessageBox.Show("Por favor verifique el id de Ayuda asignado", "Verificación de requisitos", MessageBoxButtons.OK);
+                    DialogResult validacion = MessageBox.Show("Por favor verifique el id de Ayuda asignado al form", "Verificación de requisitos", MessageBoxButtons.OK);
                     if (validacion == DialogResult.OK)
                     {
                         correcto = 1;
@@ -273,7 +282,7 @@ namespace CapaDeDiseno
             }
             else
             {
-                DialogResult validacion = MessageBox.Show(AyudaOK + ", Por favor incluyala", "Verificación de requisitos", MessageBoxButtons.OK);
+                DialogResult validacion = MessageBox.Show(AyudaOK + ", Por favor incluirla", "Verificación de requisitos", MessageBoxButtons.OK);
                 if (validacion == DialogResult.OK)
                 {
                     correcto = 1;
@@ -323,7 +332,6 @@ namespace CapaDeDiseno
 
         public void asignarColorFondo(Color nuevo)
         {
-
             nuevoColor = nuevo;
         }
 
@@ -423,8 +431,9 @@ namespace CapaDeDiseno
                     case "text":
                         tipoCampo[noCampos - 1] = "Text";
                         if (LLaves[i] != "MUL")
-                        {crearTextBoxtexto(Campos[i]);} else { crearComboBox(Campos[i]); }
-                break;
+                        { crearTextBoxvarchar(Campos[i]); }
+                        else { crearComboBox(Campos[i]); }
+                        break;
                     case "time":
                         tipoCampo[noCampos - 1] = "Text";
                         crearcampohora(Campos[i]);
@@ -878,6 +887,7 @@ namespace CapaDeDiseno
 
         private void Btn_Ingresar_Click(object sender, EventArgs e)
         {
+            string[] Tipos = logic.tipos(tabla);            
             activar = 2;
             habilitarcampos_y_botones();
             foreach (Control componente in Controls)
@@ -897,8 +907,35 @@ namespace CapaDeDiseno
                 Btn_Ingresar.Enabled = false;
                 Btn_Modificar.Enabled = false;
                 Btn_Eliminar.Enabled = false;
-                Btn_Cancelar.Enabled = true;
+                Btn_Cancelar.Enabled = true;                
             }
+            if (Tipos[0] == "int")
+            {
+                int j = 0;
+                foreach (Control componente in Controls)
+                {
+                    if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
+                    {
+
+                        if (j == 0)
+                        {
+                            componente.Enabled = false;
+                            componente.Text = (logic.obtenerMaxId(tabla)+1).ToString();
+                        }
+                        j++;
+                    }
+                }
+            }
+            
+            //habilitar y deshabilitar según Usuario
+            botonesYPermisos();
+            Btn_Ingresar.Enabled = false;
+            Btn_Modificar.Enabled = false;
+            Btn_Eliminar.Enabled = false;
+            Btn_Cancelar.Enabled = true;
+            Btn_Consultar.Enabled = false;
+            Btn_Imprimir.Enabled = false;
+            Btn_Refrescar.Enabled = false;
         }
 
         private void Btn_Modificar_Click(object sender, EventArgs e)
@@ -915,9 +952,16 @@ namespace CapaDeDiseno
                 }
 
             }
+                        
+            //habilitar y deshabilitar según Usuario
+            botonesYPermisos();
+
             Btn_Ingresar.Enabled = false;
             Btn_Eliminar.Enabled = false;
-        
+            Btn_Modificar.Enabled = false;
+            Btn_Consultar.Enabled = false;
+            Btn_Imprimir.Enabled = false;
+            Btn_Refrescar.Enabled = false;
         }
 
         private void Btn_Cancelar_Click(object sender, EventArgs e)
@@ -927,6 +971,7 @@ namespace CapaDeDiseno
             Btn_Cancelar.Enabled = false;
             Btn_Ingresar.Enabled = true;
             Btn_Eliminar.Enabled = true;
+            Btn_Refrescar.Enabled = true;
 
             actualizardatagriew();
             registros();
@@ -948,8 +993,9 @@ namespace CapaDeDiseno
 
                 }
             }
-            
 
+            //habilitar y deshabilitar según Usuario
+            botonesYPermisos();
         }
 
         private void Btn_Eliminar_Click(object sender, EventArgs e)
@@ -973,24 +1019,36 @@ namespace CapaDeDiseno
                 Btn_Ingresar.Enabled = true;
                 presionado = false;
             }
+
             registros();
+
+            //habilitar y deshabilitar según Usuario
+            botonesYPermisos();
         }
 
         private void Btn_Consultar_Click(object sender, EventArgs e)
         {
             //DLL DE CONSULTAS
+
+            //habilitar y deshabilitar según Usuario
+            botonesYPermisos();
         }
 
         private void Btn_Imprimir_Click(object sender, EventArgs e)
         {
             //DLL DE IMPRESION, FORATO DE REPORTES.
+
+            //habilitar y deshabilitar según Usuario
+            botonesYPermisos();
         }
 
         private void Btn_Refrescar_Click(object sender, EventArgs e)
-        {
-           
+        {           
             actualizardatagriew();
             registros();
+
+            //habilitar y deshabilitar según Usuario
+            botonesYPermisos();
         }
 
         private void Btn_Anterior_Click(object sender, EventArgs e)
@@ -1152,15 +1210,8 @@ namespace CapaDeDiseno
         }
 
         private void Btn_Ayuda_Click(object sender, EventArgs e)
-        {
-
-          
-          
-
-                Help.ShowHelp(this, AsRuta, AsIndice);//Abre el menu de ayuda HTML
-            
-
-
+        {                    
+            Help.ShowHelp(this, AsRuta, AsIndice);//Abre el menu de ayuda HTML            
         }
 
         private void Btn_Salir_Click(object sender, EventArgs e)
@@ -1177,6 +1228,7 @@ namespace CapaDeDiseno
                         if (Respuestagua == DialogResult.Yes)
                         {
                             guardadoforsozo();
+                            cerrar.Visible = false;
                         }
                         else if (Respuestagua == DialogResult.No)
                         {
@@ -1203,7 +1255,7 @@ namespace CapaDeDiseno
                     {
 
                         DialogResult Respuestamodieli;
-                        Respuestamodieli = MessageBox.Show("Se ha detectado una operacion de Modificado ¿Desea regresar? ", "Usted se enuentra abandonando el formulario " + tabla + "", MessageBoxButtons.YesNoCancel);
+                        Respuestamodieli = MessageBox.Show("Se ha detectado una operacion de Modificado ¿Desea regresar? ", "Usted se enuentra abandonando el formulario " + nomForm + "", MessageBoxButtons.YesNoCancel);
                         if (Respuestamodieli == DialogResult.Yes)
                         {
                             return;
@@ -1232,7 +1284,7 @@ namespace CapaDeDiseno
                     {
 
                         DialogResult Respuestamodieli;
-                        Respuestamodieli = MessageBox.Show("Se ha detectado una operacion de Eliminado ¿Desea regresar? ", "Usted se enuentra abandonando el formulario " + tabla + "", MessageBoxButtons.YesNoCancel);
+                        Respuestamodieli = MessageBox.Show("Se ha detectado una operacion de Eliminado ¿Desea regresar? ", "Usted se enuentra abandonando el formulario " + nomForm + "", MessageBoxButtons.YesNoCancel);
                         if (Respuestamodieli == DialogResult.Yes)
                         {
                             return;
@@ -1270,23 +1322,41 @@ namespace CapaDeDiseno
 
         private void Btn_Guardar_Click(object sender, EventArgs e)
         {
-
-            switch (activar)
+            bool lleno =true;
+            foreach (Control componente in Controls)
             {
-                case 1:
-                    logic.nuevoQuery(crearUpdate());
-                    break;
-                case 2:
-                    logic.nuevoQuery(crearInsert());
-                    Btn_Anterior.Enabled = true;
-                    Btn_Siguiente.Enabled = true;
-                    Btn_FlechaInicio.Enabled = true;
-                    Btn_FlechaFin.Enabled = true;
-                    Btn_Modificar.Enabled = true;
-                    break;
-                default:
-                    break;
+                if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
+                {
+                    if (componente.Text=="")
+                    {
+                        lleno = false;
+                    }
+                }
             }
+            if (lleno==true)
+            {
+                switch (activar)
+                {
+                    case 1:
+                        logic.nuevoQuery(crearUpdate());
+                        break;
+                    case 2:
+                        logic.nuevoQuery(crearInsert());
+                        Btn_Anterior.Enabled = true;
+                        Btn_Siguiente.Enabled = true;
+                        Btn_FlechaInicio.Enabled = true;
+                        Btn_FlechaFin.Enabled = true;
+                        Btn_Modificar.Enabled = true;
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor llene todos los campos...");
+            }
+           
             actualizardatagriew();
             registros();
             if (logic.TestRegistros(tabla)>0)
@@ -1309,8 +1379,12 @@ namespace CapaDeDiseno
             Btn_Cancelar.Enabled = false;
             Btn_Modificar.Enabled = true;
             Btn_Ingresar.Enabled = true;
+            Btn_Refrescar.Enabled = true;
 
             registros();
+
+            //habilitar y deshabilitar según Usuario
+            botonesYPermisos();
         }
 
         private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -1344,6 +1418,123 @@ namespace CapaDeDiseno
         private void Contenido_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+        public void botonesYPermisos()
+        {
+            //validamos con TRY CATCH por si llegará a existir un problema 
+            try
+            {
+                sentencia sen = new sentencia();
+                string[] permisosText = { "INGRESAR", "CONSULTAR", "MODIFICAR", "ELIMINAR", "IMPRIMIR" };
+                for (int i = 1; i < 6; i++)
+                {
+                    if (sen.consultarPermisos(idUsuario, idAplicacion, i) == true)
+                    {
+                        //mostramos un mensaje para indicar que si tiene permiso
+                        //MessageBox.Show("Tiene permiso para " + permisosText[i - 1]);
+                        //bloqueamos botones
+                        switch (permisosText[i - 1])
+                        {
+                            case "INGRESAR":
+                                Btn_Ingresar.Enabled = true; break;
+                            case "CONSULTAR":
+                                Btn_Consultar.Enabled = true; break;
+                            case "MODIFICAR":
+                                Btn_Modificar.Enabled = true; break;
+                            case "ELIMINAR":
+                                Btn_Eliminar.Enabled = true; break;
+                            case "IMPRIMIR":
+                                Btn_Imprimir.Enabled = true; break;
+                            default:
+                                MessageBox.Show("Entro al case default! TIENE PERMISO! Por favor hablar con Administrador!"); break;
+                        }
+                    }
+                    else
+                    {
+                        //MessageBox.Show("No tiene permiso para " + permisosText[i - 1]);
+                        switch (permisosText[i - 1])
+                        {
+                            case "INGRESAR":
+                                Btn_Ingresar.Enabled = false; break;
+                            case "CONSULTAR":
+                                Btn_Consultar.Enabled = false; break;
+                            case "MODIFICAR":
+                                Btn_Modificar.Enabled = false; break;
+                            case "ELIMINAR":
+                                Btn_Eliminar.Enabled = false; break;
+                            case "IMPRIMIR":
+                                Btn_Imprimir.Enabled = false; break;
+                            default:
+                                MessageBox.Show("Entro al case default! NO TIENE PERMISO! Por favor hablar con Administrador!"); break;
+                        }
+                    }
+                    /* 1 ingresar - 2 consultar - 3 modificar - 4 eliminar - 5 imprimir */
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Surgió el siguiente problema: " + ex);
+            }
+        }
+
+        public void botonesYPermisosInicial(string userActivo, string appActivo)
+        {
+            //validamos con TRY CATCH por si llegará a existir un problema 
+            try
+            {
+                sentencia sen = new sentencia();
+                string[] permisosText = { "INGRESAR", "CONSULTAR", "MODIFICAR", "ELIMINAR", "IMPRIMIR" };
+                for (int i = 1; i < 6; i++)
+                {
+                    if (sen.consultarPermisos(userActivo, appActivo, i) == true)
+                    {
+                        //mostramos un mensaje para indicar que si tiene permiso
+                        //MessageBox.Show("Tiene permiso para " + permisosText[i - 1]);
+                        //bloqueamos botones
+                        switch (permisosText[i - 1])
+                        {
+                            case "INGRESAR":
+                                Btn_Ingresar.Enabled = true; break;
+                            case "CONSULTAR":
+                                Btn_Consultar.Enabled = true; break;
+                            case "MODIFICAR":
+                                Btn_Modificar.Enabled = true; break;
+                            case "ELIMINAR":
+                                Btn_Eliminar.Enabled = true; break;
+                            case "IMPRIMIR":
+                                Btn_Imprimir.Enabled = true; break;
+                            default:
+                                MessageBox.Show("Entro al case default! TIENE PERMISO! Por favor hablar con Administrador!"); break;
+                        }
+                    }
+                    else
+                    {
+                        //MessageBox.Show("No tiene permiso para " + permisosText[i - 1]);
+                        switch (permisosText[i - 1])
+                        {
+                            case "INGRESAR":
+                                Btn_Ingresar.Enabled = false; break;
+                            case "CONSULTAR":
+                                Btn_Consultar.Enabled = false; break;
+                            case "MODIFICAR":
+                                Btn_Modificar.Enabled = false; break;
+                            case "ELIMINAR":
+                                Btn_Eliminar.Enabled = false; break;
+                            case "IMPRIMIR":
+                                Btn_Imprimir.Enabled = false; break;
+                            default:
+                                MessageBox.Show("Entro al case default! NO TIENE PERMISO! Por favor hablar con Administrador!"); break;
+                        }
+                    }
+                    /* 1 ingresar - 2 consultar - 3 modificar - 4 eliminar - 5 imprimir */
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Surgió el siguiente problema: " + ex);
+            }
         }
     }
 }
