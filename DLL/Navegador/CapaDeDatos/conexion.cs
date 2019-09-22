@@ -11,7 +11,7 @@ namespace CapaDeDatos
     {
         public OdbcConnection probarConexion()
         {
-            OdbcConnection conn = new OdbcConnection("Dsn=cine");// creacion de la conexion via ODBC
+            OdbcConnection conn = new OdbcConnection("Dsn=navegador");// creacion de la conexion via ODBC
 
             try
             {

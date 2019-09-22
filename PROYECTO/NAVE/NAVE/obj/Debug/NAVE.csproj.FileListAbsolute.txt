@@ -149,7 +149,6 @@ C:\Users\gganp\Desktop\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeLogica.dll
 C:\Users\gganp\Desktop\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDatos.dll
 C:\Users\gganp\Desktop\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDiseno.pdb
 C:\Users\gganp\Desktop\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeLogica.pdb
-C:\Users\gganp\Desktop\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDatos.pdb
 C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\NAVE.exe.config
 C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\NAVE.exe
 C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\NAVE.pdb

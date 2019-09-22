@@ -263,7 +263,7 @@ namespace CapaDeDiseno
                     AsIndice = logic.MIndice(idyuda);
                     if (AsRuta=="" || AsIndice=="" || AsRuta == null || AsIndice == null)
                     {
-                        DialogResult validacion = MessageBox.Show("La Ruta o indece de la ayuda es vacía", "Verificación de requisitos", MessageBoxButtons.OK);
+                        DialogResult validacion = MessageBox.Show("La Ruta o índice de la ayuda está vacía", "Verificación de requisitos", MessageBoxButtons.OK);
                         if (validacion == DialogResult.OK)
                         {
                             correcto = 1;
@@ -272,7 +272,7 @@ namespace CapaDeDiseno
                 }
                 else
                 {
-                    DialogResult validacion = MessageBox.Show("Por favor verifique el id de Ayuda asignado", "Verificación de requisitos", MessageBoxButtons.OK);
+                    DialogResult validacion = MessageBox.Show("Por favor verifique el id de Ayuda asignado al form", "Verificación de requisitos", MessageBoxButtons.OK);
                     if (validacion == DialogResult.OK)
                     {
                         correcto = 1;
@@ -282,7 +282,7 @@ namespace CapaDeDiseno
             }
             else
             {
-                DialogResult validacion = MessageBox.Show(AyudaOK + ", Por favor incluyala", "Verificación de requisitos", MessageBoxButtons.OK);
+                DialogResult validacion = MessageBox.Show(AyudaOK + ", Por favor incluirla", "Verificación de requisitos", MessageBoxButtons.OK);
                 if (validacion == DialogResult.OK)
                 {
                     correcto = 1;
@@ -431,8 +431,9 @@ namespace CapaDeDiseno
                     case "text":
                         tipoCampo[noCampos - 1] = "Text";
                         if (LLaves[i] != "MUL")
-                        {crearTextBoxtexto(Campos[i]);} else { crearComboBox(Campos[i]); }
-                break;
+                        { crearTextBoxvarchar(Campos[i]); }
+                        else { crearComboBox(Campos[i]); }
+                        break;
                     case "time":
                         tipoCampo[noCampos - 1] = "Text";
                         crearcampohora(Campos[i]);
@@ -1227,6 +1228,7 @@ namespace CapaDeDiseno
                         if (Respuestagua == DialogResult.Yes)
                         {
                             guardadoforsozo();
+                            cerrar.Visible = false;
                         }
                         else if (Respuestagua == DialogResult.No)
                         {
@@ -1253,7 +1255,7 @@ namespace CapaDeDiseno
                     {
 
                         DialogResult Respuestamodieli;
-                        Respuestamodieli = MessageBox.Show("Se ha detectado una operacion de Modificado ¿Desea regresar? ", "Usted se enuentra abandonando el formulario " + tabla + "", MessageBoxButtons.YesNoCancel);
+                        Respuestamodieli = MessageBox.Show("Se ha detectado una operacion de Modificado ¿Desea regresar? ", "Usted se enuentra abandonando el formulario " + nomForm + "", MessageBoxButtons.YesNoCancel);
                         if (Respuestamodieli == DialogResult.Yes)
                         {
                             return;
@@ -1282,7 +1284,7 @@ namespace CapaDeDiseno
                     {
 
                         DialogResult Respuestamodieli;
-                        Respuestamodieli = MessageBox.Show("Se ha detectado una operacion de Eliminado ¿Desea regresar? ", "Usted se enuentra abandonando el formulario " + tabla + "", MessageBoxButtons.YesNoCancel);
+                        Respuestamodieli = MessageBox.Show("Se ha detectado una operacion de Eliminado ¿Desea regresar? ", "Usted se enuentra abandonando el formulario " + nomForm + "", MessageBoxButtons.YesNoCancel);
                         if (Respuestamodieli == DialogResult.Yes)
                         {
                             return;
@@ -1320,23 +1322,41 @@ namespace CapaDeDiseno
 
         private void Btn_Guardar_Click(object sender, EventArgs e)
         {
-
-            switch (activar)
+            bool lleno =true;
+            foreach (Control componente in Controls)
             {
-                case 1:
-                    logic.nuevoQuery(crearUpdate());
-                    break;
-                case 2:
-                    logic.nuevoQuery(crearInsert());
-                    Btn_Anterior.Enabled = true;
-                    Btn_Siguiente.Enabled = true;
-                    Btn_FlechaInicio.Enabled = true;
-                    Btn_FlechaFin.Enabled = true;
-                    Btn_Modificar.Enabled = true;
-                    break;
-                default:
-                    break;
+                if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
+                {
+                    if (componente.Text=="")
+                    {
+                        lleno = false;
+                    }
+                }
             }
+            if (lleno==true)
+            {
+                switch (activar)
+                {
+                    case 1:
+                        logic.nuevoQuery(crearUpdate());
+                        break;
+                    case 2:
+                        logic.nuevoQuery(crearInsert());
+                        Btn_Anterior.Enabled = true;
+                        Btn_Siguiente.Enabled = true;
+                        Btn_FlechaInicio.Enabled = true;
+                        Btn_FlechaFin.Enabled = true;
+                        Btn_Modificar.Enabled = true;
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor llene todos los campos...");
+            }
+           
             actualizardatagriew();
             registros();
             if (logic.TestRegistros(tabla)>0)
