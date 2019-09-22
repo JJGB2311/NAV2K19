@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using CapaDeDatos;
 using System.Data;
 using System.Data.Odbc;
+using CapaDatos;
 
 namespace CapaDeLogica
 {

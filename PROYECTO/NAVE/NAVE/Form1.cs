@@ -12,7 +12,7 @@ using CapaDiseno;
 namespace NAVE
 {
     public partial class Form1 : Form
-    {
+    {   
         public Form1()
         {
             InitializeComponent();
@@ -35,9 +35,10 @@ namespace NAVE
         {
             frm_login login = new frm_login();
             login.ShowDialog();
+            string aplicacionActiva = "1";
             navegador1.ObtenerIdUsuario(login.obtenerNombreUsuario());
-            navegador1.ObtenerIdAplicacion("1");
-            // navegador1.ObtenerIdUsuario("MiUsuario");
+            navegador1.botonesYPermisosInicial(login.obtenerNombreUsuario(), aplicacionActiva);
+            navegador1.ObtenerIdAplicacion(aplicacionActiva);             
         }
 
         private void Navegador1_Load(object sender, EventArgs e)

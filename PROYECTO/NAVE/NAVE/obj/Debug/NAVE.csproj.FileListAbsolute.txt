@@ -188,7 +188,6 @@ C:\Users\Randy\Desktop\UMG\8.vo Semestre\Análisis de Sistemas II\2do Parcial\NA
 C:\Users\Randy\Desktop\UMG\8.vo Semestre\Análisis de Sistemas II\2do Parcial\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeDiseno.pdb
 C:\Users\Randy\Desktop\UMG\8.vo Semestre\Análisis de Sistemas II\2do Parcial\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDiseno.pdb
 C:\Users\Randy\Desktop\UMG\8.vo Semestre\Análisis de Sistemas II\2do Parcial\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeLogica.pdb
-C:\Users\Randy\Desktop\UMG\8.vo Semestre\Análisis de Sistemas II\2do Parcial\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDatos.pdb
 C:\Users\Randy\Desktop\UMG\8.vo Semestre\Análisis de Sistemas II\2do Parcial\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaLogica.pdb
 C:\Users\Randy\Desktop\UMG\8.vo Semestre\Análisis de Sistemas II\2do Parcial\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeDatos.pdb
 C:\Users\Randy\Desktop\UMG\8.vo Semestre\Análisis de Sistemas II\2do Parcial\NAV2K19\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.csprojAssemblyReference.cache

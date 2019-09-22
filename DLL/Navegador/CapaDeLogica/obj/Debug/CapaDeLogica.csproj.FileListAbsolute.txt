@@ -70,3 +70,4 @@ C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Edgar-
 C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Edgar-JoseValidaciones 2.0\NAV2K19\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.csproj.CopyComplete
 C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Edgar-JoseValidaciones 2.0\NAV2K19\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.dll
 C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Edgar-JoseValidaciones 2.0\NAV2K19\DLL\Navegador\CapaDeLogica\obj\Debug\CapaDeLogica.pdb
+C:\Users\Randy\Desktop\UMG\8.vo Semestre\Análisis de Sistemas II\2do Parcial\NAV2K19\DLL\Navegador\CapaDeLogica\bin\Debug\CapaDatos.dll
