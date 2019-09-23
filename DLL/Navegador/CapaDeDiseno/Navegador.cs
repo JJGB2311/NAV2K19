@@ -978,11 +978,16 @@ namespace CapaDeDiseno
             {
                 if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
                 {
+                    if (i==0)
+                    {
+                        componente.Enabled = false;
+                    }
                     componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
                     i++;
                 }
 
             }
+
                         
             //habilitar y deshabilitar según Usuario
             botonesYPermisos();

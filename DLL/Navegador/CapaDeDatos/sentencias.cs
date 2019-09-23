@@ -152,7 +152,7 @@ namespace CapaDeDatos
             catch (Exception err)
             {
 
-                error = "La tabla " + tabla.ToUpper() + " no exisite";
+                error = "La tabla " + tabla.ToUpper() + " no existe";
             }
 
 
