@@ -649,7 +649,26 @@ namespace CapaDeDiseno
                     if (noCombo > noComboAux) { noComboAux++; }
                 }
             }
+            int combols = 0;
+            bool comboVacio = true;
+            while (combols<items.Length)
+            {
+                if (items[combols]!="" && items[combols] !=null)
+                {
+                    comboVacio = false;
+                }
+                combols++;
+            }
 
+            if (comboVacio!=false)
+            {
+                DialogResult validacion = MessageBox.Show("La tabla " + tabla + "No tiene registros en el campo asociado al comboBox\n Solucione este problema...", "Verificación de requisitos", MessageBoxButtons.OK);
+                if (validacion == DialogResult.OK)
+                {
+                    Application.Exit();
+                }
+            }
+          
             ComboBox cb = new ComboBox();
             Point p = new Point(x + 125 + pos, y * pos);
             cb.Location = p;
