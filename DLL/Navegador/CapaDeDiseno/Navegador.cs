@@ -81,6 +81,12 @@ namespace CapaDeDiseno
                                 int i = 0;
                                 DataTable dt = logic.consultaLogica(tabla);
                                 dataGridView1.DataSource = dt;
+                                int head = 0;
+                                while (head< logic.contarCampos(tabla))
+                                {
+                                    dataGridView1.Columns[head].HeaderText = aliasC[head];
+                                    head++;
+                                }
                                 CreaComponentes();
                                 deshabilitarcampos_y_botones();
                                 
@@ -721,6 +727,12 @@ namespace CapaDeDiseno
         {
             DataTable dt = logic.consultaLogica(tabla);
             dataGridView1.DataSource = dt;
+            int head = 0;
+            while (head < logic.contarCampos(tabla))
+            {
+                dataGridView1.Columns[head].HeaderText = aliasC[head];
+                head++;
+            }
         }
 
         string crearDelete()// crea el query de delete
@@ -1262,7 +1274,7 @@ namespace CapaDeDiseno
                         }
                         else if (Respuestamodieli == DialogResult.No)
                         {
-                            Application.Exit();
+                            cerrar.Visible = false;
                         }
                         else if (Respuestamodieli == DialogResult.Cancel)
                         {
@@ -1291,7 +1303,7 @@ namespace CapaDeDiseno
                         }
                         else if (Respuestamodieli == DialogResult.No)
                         {
-                            Application.Exit();
+                            cerrar.Visible = false;
                         }
                         else if (Respuestamodieli == DialogResult.Cancel)
                         {
@@ -1309,7 +1321,7 @@ namespace CapaDeDiseno
             Respuestasimple = MessageBox.Show("Si desea salir presione el boton Aceptar de lo contrario presione Cancelar. ", "Usted se encuentra abandonando el formulario " + tabla + "", MessageBoxButtons.OKCancel);
             if (Respuestasimple == DialogResult.OK)
             {
-                Application.Exit();
+                cerrar.Visible = false;
             }
             else
             {

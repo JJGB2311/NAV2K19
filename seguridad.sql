@@ -261,7 +261,7 @@ CREATE TABLE `tbl_usuario` (
 --
 
 INSERT INTO `tbl_usuario` (`PK_id_usuario`, `nombre_usuario`, `apellido_usuarios`, `password_usuario`, `cambio_contrasena`, `ultima_conexion`, `estado_usuario`) VALUES
-('choc', 'choc', 'choc', '509424c905af58c81c60603b8acd70b6', NULL, NULL, 1),
+('usuario', 'choc', 'choc', '509424c905af58c81c60603b8acd70b6', NULL, NULL, 1),
 ('MiUsuario', 'Usuario', 'Prueba', 'e19d5cd5af0378da05f63f891c7467af', 0, NULL, 1),
 ('rchocm', 'randy', 'choc', '17d0234375b389906d21b70ba5db8cae', NULL, NULL, 1);
 
