@@ -134,7 +134,6 @@ C:\Users\Angel Solares\Desktop\Copia-Navegador\PROYECTO\NAVE\NAVE\bin\Debug\Capa
 C:\Users\Angel Solares\Desktop\Copia-Navegador\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeDiseno.pdb
 C:\Users\Angel Solares\Desktop\Copia-Navegador\PROYECTO\NAVE\NAVE\bin\Debug\CapaDiseno.pdb
 C:\Users\Angel Solares\Desktop\Copia-Navegador\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeLogica.pdb
-C:\Users\Angel Solares\Desktop\Copia-Navegador\PROYECTO\NAVE\NAVE\bin\Debug\CapaDatos.pdb
 C:\Users\Angel Solares\Desktop\Copia-Navegador\PROYECTO\NAVE\NAVE\bin\Debug\CapaLogica.pdb
 C:\Users\Angel Solares\Desktop\Copia-Navegador\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeDatos.pdb
 C:\Users\Angel Solares\Desktop\Copia-Navegador\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.csprojAssemblyReference.cache
@@ -220,3 +219,4 @@ C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Edgar-
 C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Edgar-JoseValidaciones 2.0\NAV2K19\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.exe
 C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Edgar-JoseValidaciones 2.0\NAV2K19\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.pdb
 C:\Users\gganp\Desktop\NAV2K19\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.Form2.resources
+C:\Users\Angel Solares\Desktop\Copia-Navegador\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.Form2.resources

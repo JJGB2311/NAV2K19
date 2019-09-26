@@ -17,7 +17,7 @@ namespace CapaDeDatos
 
             
 
-           string sql = "SELECT * FROM " + tabla + " where estado=0;";
+           string sql = "SELECT * FROM " + tabla + " where estado=1;";
             OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.probarConexion());
             return dataTable;
         }
@@ -182,7 +182,7 @@ namespace CapaDeDatos
             int registros =0;
             try
             {
-                OdbcCommand command = new OdbcCommand("SELECT * FROM " + tabla + " where estado=0;", cn.probarConexion());
+                OdbcCommand command = new OdbcCommand("SELECT * FROM " + tabla + " where estado=1;", cn.probarConexion());
                 OdbcDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {

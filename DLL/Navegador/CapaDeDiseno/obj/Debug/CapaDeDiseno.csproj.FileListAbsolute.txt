@@ -98,7 +98,6 @@ C:\Users\Angel Solares\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\bin\De
 C:\Users\Angel Solares\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDiseno.pdb
 C:\Users\Angel Solares\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeLogica.dll
 C:\Users\Angel Solares\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDatos.dll
-C:\Users\Angel Solares\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDatos.pdb
 C:\Users\Angel Solares\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeLogica.pdb
 C:\Users\Angel Solares\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDatos.pdb
 C:\Users\Angel Solares\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csprojAssemblyReference.cache
