@@ -20,7 +20,7 @@ namespace CapaDeDatos
             }
             catch (OdbcException ex)
             {
-                Console.WriteLine("no conecto");
+                Console.WriteLine("No conecto: " + ex);
             }
             return conn;
         }

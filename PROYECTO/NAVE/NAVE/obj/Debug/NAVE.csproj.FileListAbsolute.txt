@@ -242,3 +242,4 @@ C:\Users\Usuario\Desktop\Copia-Navegador\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.cspro
 C:\Users\Usuario\Desktop\Copia-Navegador\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.csproj.CopyComplete
 C:\Users\Usuario\Desktop\Copia-Navegador\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.exe
 C:\Users\Usuario\Desktop\Copia-Navegador\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.pdb
+C:\Users\Randy\Desktop\UMG\8.vo Semestre\Análisis de Sistemas II\2do Parcial\NAV2K19\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.Form2.resources

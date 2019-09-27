@@ -927,43 +927,49 @@ namespace CapaDeDiseno
         private void Btn_Ingresar_Click(object sender, EventArgs e)
         {
             string[] Tipos = logic.tipos(tabla);            
+            
+            //codigo para aplicar el autoincrementable             
+            string[] Extras = logic.extras(tabla);
+            bool tipoInt = false;
+            bool ExtraAI = false;
+            if (Tipos[0] == "int")
+            {
+                tipoInt = true;
+            }
+            if (Extras[0] == "auto_increment")
+            {
+                ExtraAI = true;
+            }
+            string auxId = (logic.lastID(tabla));
+            int auxLastId = Int32.Parse(auxId);            
+
+
             activar = 2;
             habilitarcampos_y_botones();
+            //consultar la siguiente linea con logic => Randy 
+            //logic.nuevoQuery(crearInsert());
+            
             foreach (Control componente in Controls)
             {
-                if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
+                if (componente is TextBox && tipoInt && ExtraAI)
+                {
+                    MessageBox.Show("El ID nuevo será: " + (auxLastId + 1));
+                    auxLastId += 1;                    
+                    componente.Text = auxLastId.ToString();
+                    componente.Enabled = false;
+                    tipoInt = false;
+                    ExtraAI = false;
+                }
+                else if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
                 {
                     componente.Enabled = true;
-                    componente.Text = "";
-                  
-
-                }
-                if(componente is Button)
-                {
-                    componente.Enabled = false;
+                    componente.Text = "";                  
                 }
 
                 Btn_Ingresar.Enabled = false;
                 Btn_Modificar.Enabled = false;
                 Btn_Eliminar.Enabled = false;
                 Btn_Cancelar.Enabled = true;                
-            }
-            if (Tipos[0] == "int")
-            {
-                int j = 0;
-                foreach (Control componente in Controls)
-                {
-                    if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
-                    {
-
-                        if (j == 0)
-                        {
-                            componente.Enabled = false;
-                            componente.Text = (logic.obtenerMaxId(tabla)+1).ToString();
-                        }
-                        j++;
-                    }
-                }
             }
             
             //habilitar y deshabilitar según Usuario

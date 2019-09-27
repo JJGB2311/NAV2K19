@@ -9,8 +9,7 @@ using System.Data.Odbc;
 using CapaDatos;
 
 namespace CapaDeLogica
-{
-  
+{  
     public class logicaNav
     {
         sentencias sn = new sentencias();
@@ -102,6 +101,19 @@ namespace CapaDeLogica
             sn.ejecutarQuery(query);
         }
 
+        //metodo para llamar la funcion obtenerID => Randy 
+        public string lastID(string tabla) //ver el ultimo ID
+        {
+            string lastId = sn.obtenerId(tabla);
+            //Console.WriteLine(lastId);
+            return lastId;
+        }
+        //metodo para obtener el arreglo con los datos de la columnda extra con DESCRIBE => Randy 
+        public string[] extras(string tabla)
+        {
+            string[] Extras = sn.obtenerExtra(tabla);
+            return Extras;
+        }
 
     }
 
