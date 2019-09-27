@@ -701,7 +701,7 @@ namespace CapaDeDiseno
             dtp.Location = p;
             dtp.Format = DateTimePickerFormat.Custom;
             dtp.CustomFormat = "yyyy-MM-dd";
-            dtp.Width = 98;
+            dtp.Width = 100;
             dtp.Name = nom;
             this.Controls.Add(dtp);
             pos++;
@@ -1051,7 +1051,7 @@ namespace CapaDeDiseno
             {
 
                 DialogResult Respuestamodieli;
-                Respuestamodieli = MessageBox.Show("Desea eliminar el registro", "Usted se enuentra abandonando el formulario " + nomForm + "", MessageBoxButtons.YesNo);
+                Respuestamodieli = MessageBox.Show("Desea eliminar el registro?", "Desea realizar la siguiente operación en el formulario  " + nomForm + "?", MessageBoxButtons.YesNo);
                 if (Respuestamodieli == DialogResult.Yes)
                 {
                     logic.nuevoQuery(crearDelete());
