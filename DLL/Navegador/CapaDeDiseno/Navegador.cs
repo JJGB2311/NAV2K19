@@ -92,8 +92,10 @@ namespace CapaDeDiseno
                                 
                                 Btn_Modificar.Enabled = true;
                                 Btn_Eliminar.Enabled = true;
+
                                 //habilitar y deshabilitar según Usuario FUNCION SOLO PARA INICIO                                                                                               
-                                botonesYPermisosInicial(userActivo, aplActivo);   
+                                botonesYPermisosInicial(userActivo, aplActivo);
+                                registros();
                                 if (logic.TestRegistros(tabla) > 0)
                                 {
                                     foreach (Control componente in Controls)
@@ -117,8 +119,10 @@ namespace CapaDeDiseno
                                                 componente.BackColor = Color.Green;
                                             }
                                             componente.Enabled = false;
+                                         
                                         }
                                     }
+                                    registros();
                                 }
                                 else
                                 {
@@ -172,6 +176,8 @@ namespace CapaDeDiseno
                     }
                 }
             }
+            botonesYPermisosInicial(userActivo, aplActivo);
+            registros();
         }
 
         //-----------------------------------------------Funciones-----------------------------------------------//
@@ -205,7 +211,7 @@ namespace CapaDeDiseno
             }
             return i;
             }
-        private void registros()
+        public void registros()
         {
             if (logic.TestRegistros(tabla)<=0)
             {
@@ -702,6 +708,7 @@ namespace CapaDeDiseno
             dtp.Location = p;
             dtp.Format = DateTimePickerFormat.Custom;
             dtp.CustomFormat = "yyyy-MM-dd";
+            dtp.Width = 100;
             dtp.Name = nom;
             this.Controls.Add(dtp);
             pos++;
@@ -968,6 +975,7 @@ namespace CapaDeDiseno
             Btn_Consultar.Enabled = false;
             Btn_Imprimir.Enabled = false;
             Btn_Refrescar.Enabled = false;
+            registros();
         }
 
         private void Btn_Modificar_Click(object sender, EventArgs e)
@@ -986,7 +994,7 @@ namespace CapaDeDiseno
                     componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
                     i++;
                 }
-
+                registros();
             }
 
                         
@@ -1033,6 +1041,7 @@ namespace CapaDeDiseno
 
             //habilitar y deshabilitar según Usuario
             botonesYPermisos();
+            registros();
         }
 
         private void Btn_Eliminar_Click(object sender, EventArgs e)
@@ -1048,19 +1057,38 @@ namespace CapaDeDiseno
             }
             else
             {
-                logic.nuevoQuery(crearDelete());
-                actualizardatagriew();
-                Btn_Modificar.Enabled = true;
-                Btn_Guardar.Enabled = false;
-                Btn_Cancelar.Enabled = false;
-                Btn_Ingresar.Enabled = true;
-                presionado = false;
+
+                DialogResult Respuestamodieli;
+                Respuestamodieli = MessageBox.Show("Desea eliminar el registro?", "Desea realizar la siguiente operación en el formulario  " + nomForm + "?", MessageBoxButtons.YesNo);
+                if (Respuestamodieli == DialogResult.Yes)
+                {
+                    logic.nuevoQuery(crearDelete());
+                    actualizardatagriew();
+                    Btn_Modificar.Enabled = true;
+                    Btn_Guardar.Enabled = false;
+                    Btn_Cancelar.Enabled = true;
+                    Btn_Eliminar.Enabled = true;
+                    Btn_Ingresar.Enabled = true;
+                    presionado = false;
+
+                }
+                else if (Respuestamodieli == DialogResult.No)
+                {
+                    Btn_Guardar.Enabled = false;
+                    Btn_Modificar.Enabled = false;
+                    Btn_Eliminar.Enabled = true;
+                    Btn_Cancelar.Enabled = true;
+                    Btn_Ingresar.Enabled = false;
+                    presionado = true;
+
+                }
+                // presionado = false;
             }
-
-            registros();
-
             //habilitar y deshabilitar según Usuario
             botonesYPermisos();
+            presionado = true;
+            registros();
+
         }
 
         private void Btn_Consultar_Click(object sender, EventArgs e)
@@ -1086,6 +1114,7 @@ namespace CapaDeDiseno
 
             //habilitar y deshabilitar según Usuario
             botonesYPermisos();
+            registros();
         }
 
         private void Btn_Anterior_Click(object sender, EventArgs e)
@@ -1123,6 +1152,7 @@ namespace CapaDeDiseno
                 }
                 
             }
+            registros();
         }
 
         private void Btn_Siguiente_Click(object sender, EventArgs e)
@@ -1313,13 +1343,10 @@ namespace CapaDeDiseno
             //Opcion cuando esta modificando o #eliminando# y queiere salir sin finalizar //
             if (Btn_Eliminar.Enabled == true && Btn_Cancelar.Enabled == true && Btn_Modificar.Enabled == false && Btn_Guardar.Enabled == false && Btn_Ingresar.Enabled == false)
             {
-
                 foreach (Control componente in Controls)
                 {
-
                     if (componente.Text != "" && componente is TextBox)
                     {
-
                         DialogResult Respuestamodieli;
                         Respuestamodieli = MessageBox.Show("Se ha detectado una operacion de Eliminado ¿Desea regresar? ", "Usted se enuentra abandonando el formulario " + nomForm + "", MessageBoxButtons.YesNoCancel);
                         if (Respuestamodieli == DialogResult.Yes)
@@ -1340,20 +1367,9 @@ namespace CapaDeDiseno
 
 
 
-            //------------------------------------------------------------------------------------------------------//
-            // opcion de salir basica, cuando alguien solo esta visualizando los datos de formularios.//  
-            DialogResult Respuestasimple;
-            Respuestasimple = MessageBox.Show("Si desea salir presione el boton Aceptar de lo contrario presione Cancelar. ", "Usted se encuentra abandonando el formulario " + tabla + "", MessageBoxButtons.OKCancel);
-            if (Respuestasimple == DialogResult.OK)
-            {
-                cerrar.Visible = false;
-            }
-            else
-            {
-                return;
-            }
-            //-----------------------------------------------------------------------------------------//
 
+            cerrar.Visible = false;
+            //---------------------------------------------------------------------------------//
 
         }
 

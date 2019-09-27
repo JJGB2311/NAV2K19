@@ -35,6 +35,7 @@ namespace NAVE
             string aplicacionActiva = "1";
             navegador1.ObtenerIdUsuario(login.obtenerNombreUsuario());
             navegador1.botonesYPermisosInicial(login.obtenerNombreUsuario(), aplicacionActiva);
+            navegador1.registros();
             navegador1.ObtenerIdAplicacion(aplicacionActiva);             
         }
 
