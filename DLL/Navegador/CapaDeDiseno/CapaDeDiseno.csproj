@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ayudas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ayudas.Designer.cs">
+      <DependentUpon>Ayudas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Navegador.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -64,6 +70,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Ayudas.resx">
+      <DependentUpon>Ayudas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Navegador.resx">
       <DependentUpon>Navegador.cs</DependentUpon>
     </EmbeddedResource>

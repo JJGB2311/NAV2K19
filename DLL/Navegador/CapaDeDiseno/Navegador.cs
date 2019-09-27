@@ -975,7 +975,7 @@ namespace CapaDeDiseno
             Btn_Consultar.Enabled = false;
             Btn_Imprimir.Enabled = false;
             Btn_Refrescar.Enabled = false;
-            registros();
+
         }
 
         private void Btn_Modificar_Click(object sender, EventArgs e)
@@ -1587,6 +1587,29 @@ namespace CapaDeDiseno
             catch (Exception ex)
             {
                 MessageBox.Show("Surgió el siguiente problema: " + ex);
+            }
+        }
+
+        private void Btn_Ayuda_Click_1(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, AsRuta, AsIndice);//Abre el menu de ayuda HTML     
+        }
+
+        private void Btn_MasAyuda_Click(object sender, EventArgs e)
+        {
+            string AyudaOK = logic.TestTabla("ayuda");
+            if (AyudaOK == "")
+            {
+                Ayudas nuevo = new Ayudas();
+                nuevo.Show();
+            }
+            else
+            {
+                DialogResult validacion = MessageBox.Show(AyudaOK +" \n Solucione este error para continuar...", "Verificación de requisitos", MessageBoxButtons.OK);
+                if (validacion == DialogResult.OK)
+                {
+                    
+                }
             }
         }
     }

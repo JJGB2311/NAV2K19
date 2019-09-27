@@ -187,3 +187,4 @@ C:\Users\Usuario\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\obj\Debug\Ca
 C:\Users\Usuario\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csproj.CopyComplete
 C:\Users\Usuario\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.dll
 C:\Users\Usuario\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.pdb
+C:\Users\gganp\Desktop\NAV2K19\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.Ayudas.resources
