@@ -98,7 +98,6 @@ C:\Users\Angel Solares\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\bin\De
 C:\Users\Angel Solares\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDiseno.pdb
 C:\Users\Angel Solares\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeLogica.dll
 C:\Users\Angel Solares\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDatos.dll
-C:\Users\Angel Solares\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDatos.pdb
 C:\Users\Angel Solares\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeLogica.pdb
 C:\Users\Angel Solares\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDatos.pdb
 C:\Users\Angel Solares\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csprojAssemblyReference.cache
@@ -174,17 +173,17 @@ C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Edgar-
 C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Edgar-JoseValidaciones 2.0\NAV2K19\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDatos.pdb
 C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Edgar-JoseValidaciones 2.0\NAV2K19\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csproj.CopyComplete
 C:\Users\Randy\Desktop\UMG\8.vo Semestre\Análisis de Sistemas II\2do Parcial\NAV2K19\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDatos.dll
-C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\JosValidaciones1.0\NAV2K19\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDiseno.dll
-C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\JosValidaciones1.0\NAV2K19\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDiseno.pdb
-C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\JosValidaciones1.0\NAV2K19\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeLogica.dll
-C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\JosValidaciones1.0\NAV2K19\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDatos.dll
-C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\JosValidaciones1.0\NAV2K19\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeLogica.pdb
-C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\JosValidaciones1.0\NAV2K19\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDatos.pdb
-C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\JosValidaciones1.0\NAV2K19\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csprojAssemblyReference.cache
-C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\JosValidaciones1.0\NAV2K19\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.Navegador.resources
-C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\JosValidaciones1.0\NAV2K19\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.Properties.Resources.resources
-C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\JosValidaciones1.0\NAV2K19\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csproj.GenerateResource.cache
-C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\JosValidaciones1.0\NAV2K19\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csproj.CoreCompileInputs.cache
-C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\JosValidaciones1.0\NAV2K19\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csproj.CopyComplete
-C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\JosValidaciones1.0\NAV2K19\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.dll
-C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\JosValidaciones1.0\NAV2K19\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.pdb
+C:\Users\Usuario\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDiseno.dll
+C:\Users\Usuario\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDiseno.pdb
+C:\Users\Usuario\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeLogica.dll
+C:\Users\Usuario\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDatos.dll
+C:\Users\Usuario\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeLogica.pdb
+C:\Users\Usuario\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDatos.pdb
+C:\Users\Usuario\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csprojAssemblyReference.cache
+C:\Users\Usuario\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.Navegador.resources
+C:\Users\Usuario\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.Properties.Resources.resources
+C:\Users\Usuario\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csproj.GenerateResource.cache
+C:\Users\Usuario\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csproj.CopyComplete
+C:\Users\Usuario\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.dll
+C:\Users\Usuario\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.pdb

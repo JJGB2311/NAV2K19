@@ -33,7 +33,7 @@ namespace CapaDeDiseno
         int posCombo = 10;
         int noCombo = 0;
         int noComboAux = 0;
-        int estado = 0;
+        int estado = 1;
         Color Cfuente = Color.White;
         Color nuevoColor = Color.White;
         bool presionado = false;
@@ -106,12 +106,12 @@ namespace CapaDeDiseno
                                         if (componente is Button)
                                         {
                                             string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
-                                            if (var1 == "1")
+                                            if (var1 == "0")
                                             {
                                                 componente.Text = "Desactivado";
                                                 componente.BackColor = Color.Red;
                                             }
-                                            if (var1 == "0")
+                                            if (var1 == "1")
                                             {
                                                 componente.Text = "Activado";
                                                 componente.BackColor = Color.Green;
@@ -494,12 +494,12 @@ namespace CapaDeDiseno
             {
                 if (componente is Button)
                 {
-                    if (estado == 1)
+                    if (estado == 0)
                     {
                         componente.Text = "Activado";
                         componente.BackColor = Color.Green;
                         //estado++;
-                        estado = 0;
+                        estado = 1;
                     }
                     else
                     {
@@ -521,6 +521,7 @@ namespace CapaDeDiseno
             btn.BackColor = Color.Green;
             btn.Click += new EventHandler(func_click);
             btn.Name = nom;
+            btn.Enabled = false;
             this.Controls.Add(btn);
             pos++;
         }
@@ -701,7 +702,6 @@ namespace CapaDeDiseno
             dtp.Location = p;
             dtp.Format = DateTimePickerFormat.Custom;
             dtp.CustomFormat = "yyyy-MM-dd";
-            dtp.Width = 100;
             dtp.Name = nom;
             this.Controls.Add(dtp);
             pos++;
@@ -758,7 +758,7 @@ namespace CapaDeDiseno
         string crearDelete()// crea el query de delete
         {
             //Cambiar el estadoPelicula por estado
-            string query = "UPDATE " + tabla + " SET estado=1";
+            string query = "UPDATE " + tabla + " SET estado=0";
             string whereQuery = " WHERE  ";
             int posCampo = 0;
             string campos = "";
@@ -933,7 +933,7 @@ namespace CapaDeDiseno
                 }
                 if(componente is Button)
                 {
-                    componente.Enabled = true;
+                    componente.Enabled = false;
                 }
 
                 Btn_Ingresar.Enabled = false;
@@ -1008,7 +1008,6 @@ namespace CapaDeDiseno
             Btn_Cancelar.Enabled = false;
             Btn_Ingresar.Enabled = true;
             Btn_Eliminar.Enabled = true;
-            presionado = false;
             Btn_Refrescar.Enabled = true;
 
             actualizardatagriew();
@@ -1049,37 +1048,19 @@ namespace CapaDeDiseno
             }
             else
             {
-
-                DialogResult Respuestamodieli;
-                Respuestamodieli = MessageBox.Show("Desea eliminar el registro?", "Desea realizar la siguiente operación en el formulario  " + nomForm + "?", MessageBoxButtons.YesNo);
-                if (Respuestamodieli == DialogResult.Yes)
-                {
-                    logic.nuevoQuery(crearDelete());
-                    actualizardatagriew();
-                    Btn_Modificar.Enabled = true;
-                    Btn_Guardar.Enabled = false;
-                    Btn_Cancelar.Enabled = true;
-                    Btn_Eliminar.Enabled = true;
-                    Btn_Ingresar.Enabled = true;
-                    presionado = false;
-
-                }
-                else if (Respuestamodieli == DialogResult.No)
-                {
-                    Btn_Guardar.Enabled = false;
-                    Btn_Modificar.Enabled = false;
-                    Btn_Eliminar.Enabled = true;
-                    Btn_Cancelar.Enabled = true;
-                    Btn_Ingresar.Enabled = false;
-                    presionado = true;
-
-                }
-                // presionado = false;
+                logic.nuevoQuery(crearDelete());
+                actualizardatagriew();
+                Btn_Modificar.Enabled = true;
+                Btn_Guardar.Enabled = false;
+                Btn_Cancelar.Enabled = false;
+                Btn_Ingresar.Enabled = true;
+                presionado = false;
             }
+
             registros();
+
             //habilitar y deshabilitar según Usuario
             botonesYPermisos();
-            presionado = true;
         }
 
         private void Btn_Consultar_Click(object sender, EventArgs e)
@@ -1128,12 +1109,12 @@ namespace CapaDeDiseno
                     if (componente is Button)
                     {
                         string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
-                        if (var1 == "1")
+                        if (var1 == "0")
                         {
                             componente.Text = "Desactivado";
                             componente.BackColor = Color.Red;
                         }
-                        if (var1 == "0")
+                        if (var1 == "1")
                         {
                             componente.Text = "Activado";
                             componente.BackColor = Color.Green;
@@ -1165,12 +1146,12 @@ namespace CapaDeDiseno
                     if (componente is Button)
                     {
                         string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
-                        if (var1 == "1")
+                        if (var1 == "0")
                         {
                             componente.Text = "Desactivado";
                             componente.BackColor = Color.Red;
                         }
-                        if (var1 == "0")
+                        if (var1 == "1")
                         {
                             componente.Text = "Activado";
                             componente.BackColor = Color.Green;
@@ -1205,12 +1186,12 @@ namespace CapaDeDiseno
                     if (componente is Button)
                     {
                         string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
-                        if (var1 == "1")
+                        if (var1 == "0")
                         {
                             componente.Text = "Desactivado";
                             componente.BackColor = Color.Red;
                         }
-                        if (var1 == "0")
+                        if (var1 == "1")
                         {
                             componente.Text = "Activado";
                             componente.BackColor = Color.Green;
@@ -1246,12 +1227,12 @@ namespace CapaDeDiseno
                     if (componente is Button)
                     {
                         string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
-                        if (var1 == "1")
+                        if (var1 == "0")
                         {
                             componente.Text = "Desactivado";
                             componente.BackColor = Color.Red;
                         }
-                        if (var1 == "0")
+                        if (var1 == "1")
                         {
                             componente.Text = "Activado";
                             componente.BackColor = Color.Green;
@@ -1332,10 +1313,13 @@ namespace CapaDeDiseno
             //Opcion cuando esta modificando o #eliminando# y queiere salir sin finalizar //
             if (Btn_Eliminar.Enabled == true && Btn_Cancelar.Enabled == true && Btn_Modificar.Enabled == false && Btn_Guardar.Enabled == false && Btn_Ingresar.Enabled == false)
             {
+
                 foreach (Control componente in Controls)
                 {
+
                     if (componente.Text != "" && componente is TextBox)
                     {
+
                         DialogResult Respuestamodieli;
                         Respuestamodieli = MessageBox.Show("Se ha detectado una operacion de Eliminado ¿Desea regresar? ", "Usted se enuentra abandonando el formulario " + nomForm + "", MessageBoxButtons.YesNoCancel);
                         if (Respuestamodieli == DialogResult.Yes)
@@ -1356,10 +1340,19 @@ namespace CapaDeDiseno
 
 
 
-
-            cerrar.Visible = false;
-            //---------------------------------------------------------------------------------//
-
+            //------------------------------------------------------------------------------------------------------//
+            // opcion de salir basica, cuando alguien solo esta visualizando los datos de formularios.//  
+            DialogResult Respuestasimple;
+            Respuestasimple = MessageBox.Show("Si desea salir presione el boton Aceptar de lo contrario presione Cancelar. ", "Usted se encuentra abandonando el formulario " + tabla + "", MessageBoxButtons.OKCancel);
+            if (Respuestasimple == DialogResult.OK)
+            {
+                cerrar.Visible = false;
+            }
+            else
+            {
+                return;
+            }
+            //-----------------------------------------------------------------------------------------//
 
 
         }
@@ -1444,12 +1437,12 @@ namespace CapaDeDiseno
                 if (componente is Button)
                 {
                     string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
-                    if (var1 == "1")
+                    if (var1 == "0")
                     {
                         componente.Text = "Desactivado";
                         componente.BackColor = Color.Red;
                     }
-                    if (var1 == "0")
+                    if (var1 == "1")
                     {
                         componente.Text = "Activado";
                         componente.BackColor = Color.Green;

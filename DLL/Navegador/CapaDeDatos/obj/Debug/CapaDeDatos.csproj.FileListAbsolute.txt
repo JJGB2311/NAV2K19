@@ -63,9 +63,3 @@ C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Edgar-
 C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Edgar-JoseValidaciones 2.0\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.CoreCompileInputs.cache
 C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Edgar-JoseValidaciones 2.0\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.dll
 C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Edgar-JoseValidaciones 2.0\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.pdb
-C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\JosValidaciones1.0\NAV2K19\DLL\Navegador\CapaDeDatos\bin\Debug\CapaDeDatos.dll
-C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\JosValidaciones1.0\NAV2K19\DLL\Navegador\CapaDeDatos\bin\Debug\CapaDeDatos.pdb
-C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\JosValidaciones1.0\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csprojAssemblyReference.cache
-C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\JosValidaciones1.0\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.CoreCompileInputs.cache
-C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\JosValidaciones1.0\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.dll
-C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\JosValidaciones1.0\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.pdb
