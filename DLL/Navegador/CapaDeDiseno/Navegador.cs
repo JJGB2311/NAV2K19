@@ -33,7 +33,7 @@ namespace CapaDeDiseno
         int posCombo = 10;
         int noCombo = 0;
         int noComboAux = 0;
-        int estado = 0;
+        int estado = 1;
         Color Cfuente = Color.White;
         Color nuevoColor = Color.White;
         bool presionado = false;
@@ -92,8 +92,10 @@ namespace CapaDeDiseno
                                 
                                 Btn_Modificar.Enabled = true;
                                 Btn_Eliminar.Enabled = true;
+
                                 //habilitar y deshabilitar según Usuario FUNCION SOLO PARA INICIO                                                                                               
-                                botonesYPermisosInicial(userActivo, aplActivo);   
+                                botonesYPermisosInicial(userActivo, aplActivo);
+                                registros();
                                 if (logic.TestRegistros(tabla) > 0)
                                 {
                                     foreach (Control componente in Controls)
@@ -106,19 +108,21 @@ namespace CapaDeDiseno
                                         if (componente is Button)
                                         {
                                             string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
-                                            if (var1 == "1")
+                                            if (var1 == "0")
                                             {
                                                 componente.Text = "Desactivado";
                                                 componente.BackColor = Color.Red;
                                             }
-                                            if (var1 == "0")
+                                            if (var1 == "1")
                                             {
                                                 componente.Text = "Activado";
                                                 componente.BackColor = Color.Green;
                                             }
                                             componente.Enabled = false;
+                                         
                                         }
                                     }
+                                    registros();
                                 }
                                 else
                                 {
@@ -172,6 +176,8 @@ namespace CapaDeDiseno
                     }
                 }
             }
+            botonesYPermisosInicial(userActivo, aplActivo);
+            registros();
         }
 
         //-----------------------------------------------Funciones-----------------------------------------------//
@@ -205,7 +211,7 @@ namespace CapaDeDiseno
             }
             return i;
             }
-        private void registros()
+        public void registros()
         {
             if (logic.TestRegistros(tabla)<=0)
             {
@@ -494,12 +500,12 @@ namespace CapaDeDiseno
             {
                 if (componente is Button)
                 {
-                    if (estado == 1)
+                    if (estado == 0)
                     {
                         componente.Text = "Activado";
                         componente.BackColor = Color.Green;
                         //estado++;
-                        estado = 0;
+                        estado = 1;
                     }
                     else
                     {
@@ -521,6 +527,7 @@ namespace CapaDeDiseno
             btn.BackColor = Color.Green;
             btn.Click += new EventHandler(func_click);
             btn.Name = nom;
+            btn.Enabled = false;
             this.Controls.Add(btn);
             pos++;
         }
@@ -758,7 +765,7 @@ namespace CapaDeDiseno
         string crearDelete()// crea el query de delete
         {
             //Cambiar el estadoPelicula por estado
-            string query = "UPDATE " + tabla + " SET estado=1";
+            string query = "UPDATE " + tabla + " SET estado=0";
             string whereQuery = " WHERE  ";
             int posCampo = 0;
             string campos = "";
@@ -933,7 +940,7 @@ namespace CapaDeDiseno
                 }
                 if(componente is Button)
                 {
-                    componente.Enabled = true;
+                    componente.Enabled = false;
                 }
 
                 Btn_Ingresar.Enabled = false;
@@ -968,6 +975,7 @@ namespace CapaDeDiseno
             Btn_Consultar.Enabled = false;
             Btn_Imprimir.Enabled = false;
             Btn_Refrescar.Enabled = false;
+            registros();
         }
 
         private void Btn_Modificar_Click(object sender, EventArgs e)
@@ -986,7 +994,7 @@ namespace CapaDeDiseno
                     componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
                     i++;
                 }
-
+                registros();
             }
 
                         
@@ -1008,7 +1016,6 @@ namespace CapaDeDiseno
             Btn_Cancelar.Enabled = false;
             Btn_Ingresar.Enabled = true;
             Btn_Eliminar.Enabled = true;
-            presionado = false;
             Btn_Refrescar.Enabled = true;
 
             actualizardatagriew();
@@ -1034,6 +1041,7 @@ namespace CapaDeDiseno
 
             //habilitar y deshabilitar según Usuario
             botonesYPermisos();
+            registros();
         }
 
         private void Btn_Eliminar_Click(object sender, EventArgs e)
@@ -1076,10 +1084,11 @@ namespace CapaDeDiseno
                 }
                 // presionado = false;
             }
-            registros();
             //habilitar y deshabilitar según Usuario
             botonesYPermisos();
             presionado = true;
+            registros();
+
         }
 
         private void Btn_Consultar_Click(object sender, EventArgs e)
@@ -1105,6 +1114,7 @@ namespace CapaDeDiseno
 
             //habilitar y deshabilitar según Usuario
             botonesYPermisos();
+            registros();
         }
 
         private void Btn_Anterior_Click(object sender, EventArgs e)
@@ -1128,12 +1138,12 @@ namespace CapaDeDiseno
                     if (componente is Button)
                     {
                         string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
-                        if (var1 == "1")
+                        if (var1 == "0")
                         {
                             componente.Text = "Desactivado";
                             componente.BackColor = Color.Red;
                         }
-                        if (var1 == "0")
+                        if (var1 == "1")
                         {
                             componente.Text = "Activado";
                             componente.BackColor = Color.Green;
@@ -1142,6 +1152,7 @@ namespace CapaDeDiseno
                 }
                 
             }
+            registros();
         }
 
         private void Btn_Siguiente_Click(object sender, EventArgs e)
@@ -1165,12 +1176,12 @@ namespace CapaDeDiseno
                     if (componente is Button)
                     {
                         string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
-                        if (var1 == "1")
+                        if (var1 == "0")
                         {
                             componente.Text = "Desactivado";
                             componente.BackColor = Color.Red;
                         }
-                        if (var1 == "0")
+                        if (var1 == "1")
                         {
                             componente.Text = "Activado";
                             componente.BackColor = Color.Green;
@@ -1205,12 +1216,12 @@ namespace CapaDeDiseno
                     if (componente is Button)
                     {
                         string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
-                        if (var1 == "1")
+                        if (var1 == "0")
                         {
                             componente.Text = "Desactivado";
                             componente.BackColor = Color.Red;
                         }
-                        if (var1 == "0")
+                        if (var1 == "1")
                         {
                             componente.Text = "Activado";
                             componente.BackColor = Color.Green;
@@ -1246,12 +1257,12 @@ namespace CapaDeDiseno
                     if (componente is Button)
                     {
                         string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
-                        if (var1 == "1")
+                        if (var1 == "0")
                         {
                             componente.Text = "Desactivado";
                             componente.BackColor = Color.Red;
                         }
-                        if (var1 == "0")
+                        if (var1 == "1")
                         {
                             componente.Text = "Activado";
                             componente.BackColor = Color.Green;
@@ -1360,8 +1371,6 @@ namespace CapaDeDiseno
             cerrar.Visible = false;
             //---------------------------------------------------------------------------------//
 
-
-
         }
 
         private void Btn_Guardar_Click(object sender, EventArgs e)
@@ -1444,12 +1453,12 @@ namespace CapaDeDiseno
                 if (componente is Button)
                 {
                     string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
-                    if (var1 == "1")
+                    if (var1 == "0")
                     {
                         componente.Text = "Desactivado";
                         componente.BackColor = Color.Red;
                     }
-                    if (var1 == "0")
+                    if (var1 == "1")
                     {
                         componente.Text = "Activado";
                         componente.BackColor = Color.Green;
