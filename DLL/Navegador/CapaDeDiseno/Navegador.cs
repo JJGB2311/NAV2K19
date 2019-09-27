@@ -701,6 +701,7 @@ namespace CapaDeDiseno
             dtp.Location = p;
             dtp.Format = DateTimePickerFormat.Custom;
             dtp.CustomFormat = "yyyy-MM-dd";
+            dtp.Width = 100;
             dtp.Name = nom;
             this.Controls.Add(dtp);
             pos++;
@@ -1007,6 +1008,7 @@ namespace CapaDeDiseno
             Btn_Cancelar.Enabled = false;
             Btn_Ingresar.Enabled = true;
             Btn_Eliminar.Enabled = true;
+            presionado = false;
             Btn_Refrescar.Enabled = true;
 
             actualizardatagriew();
@@ -1047,19 +1049,37 @@ namespace CapaDeDiseno
             }
             else
             {
-                logic.nuevoQuery(crearDelete());
-                actualizardatagriew();
-                Btn_Modificar.Enabled = true;
-                Btn_Guardar.Enabled = false;
-                Btn_Cancelar.Enabled = false;
-                Btn_Ingresar.Enabled = true;
-                presionado = false;
+
+                DialogResult Respuestamodieli;
+                Respuestamodieli = MessageBox.Show("Desea eliminar el registro?", "Desea realizar la siguiente operación en el formulario  " + nomForm + "?", MessageBoxButtons.YesNo);
+                if (Respuestamodieli == DialogResult.Yes)
+                {
+                    logic.nuevoQuery(crearDelete());
+                    actualizardatagriew();
+                    Btn_Modificar.Enabled = true;
+                    Btn_Guardar.Enabled = false;
+                    Btn_Cancelar.Enabled = true;
+                    Btn_Eliminar.Enabled = true;
+                    Btn_Ingresar.Enabled = true;
+                    presionado = false;
+
+                }
+                else if (Respuestamodieli == DialogResult.No)
+                {
+                    Btn_Guardar.Enabled = false;
+                    Btn_Modificar.Enabled = false;
+                    Btn_Eliminar.Enabled = true;
+                    Btn_Cancelar.Enabled = true;
+                    Btn_Ingresar.Enabled = false;
+                    presionado = true;
+
+                }
+                // presionado = false;
             }
-
             registros();
-
             //habilitar y deshabilitar según Usuario
             botonesYPermisos();
+            presionado = true;
         }
 
         private void Btn_Consultar_Click(object sender, EventArgs e)
@@ -1312,13 +1332,10 @@ namespace CapaDeDiseno
             //Opcion cuando esta modificando o #eliminando# y queiere salir sin finalizar //
             if (Btn_Eliminar.Enabled == true && Btn_Cancelar.Enabled == true && Btn_Modificar.Enabled == false && Btn_Guardar.Enabled == false && Btn_Ingresar.Enabled == false)
             {
-
                 foreach (Control componente in Controls)
                 {
-
                     if (componente.Text != "" && componente is TextBox)
                     {
-
                         DialogResult Respuestamodieli;
                         Respuestamodieli = MessageBox.Show("Se ha detectado una operacion de Eliminado ¿Desea regresar? ", "Usted se enuentra abandonando el formulario " + nomForm + "", MessageBoxButtons.YesNoCancel);
                         if (Respuestamodieli == DialogResult.Yes)
@@ -1339,19 +1356,10 @@ namespace CapaDeDiseno
 
 
 
-            //------------------------------------------------------------------------------------------------------//
-            // opcion de salir basica, cuando alguien solo esta visualizando los datos de formularios.//  
-            DialogResult Respuestasimple;
-            Respuestasimple = MessageBox.Show("Si desea salir presione el boton Aceptar de lo contrario presione Cancelar. ", "Usted se encuentra abandonando el formulario " + tabla + "", MessageBoxButtons.OKCancel);
-            if (Respuestasimple == DialogResult.OK)
-            {
-                cerrar.Visible = false;
-            }
-            else
-            {
-                return;
-            }
-            //-----------------------------------------------------------------------------------------//
+
+            cerrar.Visible = false;
+            //---------------------------------------------------------------------------------//
+
 
 
         }
