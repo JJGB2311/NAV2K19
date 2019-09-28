@@ -44,20 +44,20 @@
             this.Btn_Guardar = new System.Windows.Forms.Button();
             this.Btn_Modificar = new System.Windows.Forms.Button();
             this.Btn_Ingresar = new System.Windows.Forms.Button();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.Btn_Ayuda = new System.Windows.Forms.Button();
+            this.Btn_MasAyuda = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.colorDialog2 = new System.Windows.Forms.ColorDialog();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblTabla = new System.Windows.Forms.Label();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.Btn_MasAyuda = new System.Windows.Forms.Button();
-            this.Btn_Ayuda = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -72,6 +72,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(1133, 201);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
             // tableLayoutPanel2
             // 
@@ -360,36 +361,6 @@
             this.Btn_Ingresar.UseVisualStyleBackColor = false;
             this.Btn_Ingresar.Click += new System.EventHandler(this.Btn_Ingresar_Click);
             // 
-            // colorDialog1
-            // 
-            this.colorDialog1.Color = System.Drawing.Color.White;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.lblTabla, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(94, 139);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(973, 45);
-            this.tableLayoutPanel1.TabIndex = 9;
-            // 
-            // lblTabla
-            // 
-            this.lblTabla.AutoSize = true;
-            this.lblTabla.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTabla.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTabla.Location = new System.Drawing.Point(3, 0);
-            this.lblTabla.Name = "lblTabla";
-            this.lblTabla.Size = new System.Drawing.Size(967, 45);
-            this.lblTabla.TabIndex = 0;
-            this.lblTabla.Text = "Tabla";
-            this.lblTabla.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 1;
@@ -431,27 +402,9 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 69F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(81, 69);
             this.tableLayoutPanel4.TabIndex = 1;
-            // 
-            // Btn_MasAyuda
-            // 
-            this.Btn_MasAyuda.BackColor = System.Drawing.Color.White;
-            this.Btn_MasAyuda.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Btn_MasAyuda.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
-            this.Btn_MasAyuda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.Btn_MasAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_MasAyuda.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_MasAyuda.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.Btn_MasAyuda.Location = new System.Drawing.Point(0, 0);
-            this.Btn_MasAyuda.Margin = new System.Windows.Forms.Padding(0);
-            this.Btn_MasAyuda.Name = "Btn_MasAyuda";
-            this.Btn_MasAyuda.Size = new System.Drawing.Size(40, 69);
-            this.Btn_MasAyuda.TabIndex = 0;
-            this.Btn_MasAyuda.Text = "+";
-            this.Btn_MasAyuda.UseVisualStyleBackColor = false;
-            this.Btn_MasAyuda.Click += new System.EventHandler(this.Btn_MasAyuda_Click);
             // 
             // Btn_Ayuda
             // 
@@ -471,6 +424,54 @@
             this.Btn_Ayuda.UseVisualStyleBackColor = false;
             this.Btn_Ayuda.Click += new System.EventHandler(this.Btn_Ayuda_Click_1);
             // 
+            // Btn_MasAyuda
+            // 
+            this.Btn_MasAyuda.BackColor = System.Drawing.Color.White;
+            this.Btn_MasAyuda.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Btn_MasAyuda.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            this.Btn_MasAyuda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.Btn_MasAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_MasAyuda.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_MasAyuda.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.Btn_MasAyuda.Location = new System.Drawing.Point(0, 0);
+            this.Btn_MasAyuda.Margin = new System.Windows.Forms.Padding(0);
+            this.Btn_MasAyuda.Name = "Btn_MasAyuda";
+            this.Btn_MasAyuda.Size = new System.Drawing.Size(40, 69);
+            this.Btn_MasAyuda.TabIndex = 0;
+            this.Btn_MasAyuda.Text = "+";
+            this.Btn_MasAyuda.UseVisualStyleBackColor = false;
+            this.Btn_MasAyuda.Click += new System.EventHandler(this.Btn_MasAyuda_Click);
+            // 
+            // colorDialog1
+            // 
+            this.colorDialog1.Color = System.Drawing.Color.White;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.lblTabla, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(94, 139);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(973, 45);
+            this.tableLayoutPanel1.TabIndex = 9;
+            // 
+            // lblTabla
+            // 
+            this.lblTabla.AutoSize = true;
+            this.lblTabla.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTabla.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTabla.Location = new System.Drawing.Point(3, 0);
+            this.lblTabla.Name = "lblTabla";
+            this.lblTabla.Size = new System.Drawing.Size(967, 45);
+            this.lblTabla.TabIndex = 0;
+            this.lblTabla.Text = "Tabla";
+            this.lblTabla.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Navegador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -484,11 +485,11 @@
             this.Load += new System.EventHandler(this.Navegador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -141,7 +141,6 @@ C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fi
 C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.dll
 C:\Users\prueb\Desktop\Analisis De Sistemas II\Repositorio_Navegador\Rama Hot-fix\NAV2K19\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.pdb
 C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeLogica.dll
-C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDatos.pdb
 C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeLogica.pdb
 C:\Users\Randy\Desktop\UMG\8.vo Semestre\Análisis de Sistemas II\2do Parcial\NAV2K19\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDiseno.dll
 C:\Users\Randy\Desktop\UMG\8.vo Semestre\Análisis de Sistemas II\2do Parcial\NAV2K19\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDiseno.pdb
@@ -188,3 +187,4 @@ C:\Users\Usuario\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\obj\Debug\Ca
 C:\Users\Usuario\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.dll
 C:\Users\Usuario\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.pdb
 C:\Users\gganp\Desktop\NAV2K19\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.Ayudas.resources
+C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.Ayudas.resources

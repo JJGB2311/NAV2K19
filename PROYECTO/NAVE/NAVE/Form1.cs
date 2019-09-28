@@ -12,7 +12,8 @@ using CapaDiseno;
 namespace NAVE
 {
     public partial class Form1 : Form
-    {   
+    {
+        ToolTip ayuda_tp = new ToolTip();
         public Form1()
         {
             InitializeComponent();
@@ -27,6 +28,8 @@ namespace NAVE
             navegador1.asignarAyuda("1");
             navegador1.asignarTabla("tbl_producto");
             navegador1.asignarNombreForm("Productos");
+            ayuda_tp.IsBalloon = true;
+      
         }
 
         private void Form1_Load(object sender, EventArgs e)

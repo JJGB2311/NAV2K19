@@ -21,6 +21,18 @@ namespace CapaDeLogica
             dt.Fill(table);
             return table;
         }
+
+
+        /*eli*/
+       /* public DataTable consultaLogica2()  //obtener datos de la consulta
+        {
+            OdbcDataAdapter dt = sn.llenaTbl2();
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }*/
+
+        /**/
         public string MIndice(string Indice1)
         {
             string indice = sn.modIndice(Indice1);

@@ -49,10 +49,27 @@ namespace CapaDeDiseno
         string Asayuda;
         // string rutaa;
         Font fuente = new Font("Century Gothic", 13.0f, FontStyle.Regular, GraphicsUnit.Pixel); //objeto para definir el tipo y tamaño de fuente de los labels
+        ToolTip ayuda_tp = new ToolTip();
         public Navegador()
         {
             InitializeComponent();
             limpiarListaItems();
+            ayuda_tp.IsBalloon = true;
+            ayuda_tp.SetToolTip(Btn_Ingresar, "Boton de ingresar un registro ");
+            ayuda_tp.SetToolTip(Btn_Modificar, "Boton de modifica un registro  ");
+            ayuda_tp.SetToolTip(Btn_Guardar, "Boton de guardar un registro");
+            ayuda_tp.SetToolTip(Btn_Cancelar, "Boton de Cacelacion ");
+            ayuda_tp.SetToolTip(Btn_Eliminar, "Boton de eliminacion un registro");
+            ayuda_tp.SetToolTip(Btn_Consultar, "Boton de consultar un registro");
+            ayuda_tp.SetToolTip(Btn_Imprimir, "Boton de inprimir registros ");
+            ayuda_tp.SetToolTip(Btn_Refrescar, "Boton de actualizar ");
+            ayuda_tp.SetToolTip(Btn_FlechaInicio, "Se posiciona al inicio de la tabla ");
+            ayuda_tp.SetToolTip(Btn_Anterior, "Regresa una posicion en la tabla");
+            ayuda_tp.SetToolTip(Btn_Siguiente, "Abansa una posicion en la tabla ");
+            ayuda_tp.SetToolTip(Btn_FlechaFin, "Se posiciona al final de la tabla ");
+            ayuda_tp.SetToolTip(Btn_MasAyuda, "Registrar una nueva ayuda ");
+            ayuda_tp.SetToolTip(Btn_Ayuda, "Despliega la ayuda para mayor infromacion ");
+            ayuda_tp.SetToolTip(Btn_Salir, "Sale del formulario o del sistema ");
         }
 
         private void Navegador_Load(object sender, EventArgs e)
@@ -1611,6 +1628,11 @@ namespace CapaDeDiseno
                     
                 }
             }
+        }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
