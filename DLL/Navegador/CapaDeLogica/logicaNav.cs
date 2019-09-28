@@ -105,7 +105,7 @@ namespace CapaDeLogica
         public string lastID(string tabla) //ver el ultimo ID
         {
             string lastId = sn.obtenerId(tabla);
-            //Console.WriteLine(lastId);
+            Console.WriteLine(lastId);
             return lastId;
         }
         //metodo para obtener el arreglo con los datos de la columnda extra con DESCRIBE => Randy 

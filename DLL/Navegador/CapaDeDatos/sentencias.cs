@@ -33,13 +33,33 @@ namespace CapaDeDatos
         {
             string[] camposDesc = obtenerCampos(tabla); //string para almacenar los campos de OBTENERCAMPOS y utilizar el 1ro
             string sql = "SELECT MAX(" + camposDesc[0] + ") FROM " + tabla + ";"; //SELECT MAX(idFuncion) FROM `funciones`            
+            string sid = "";
             OdbcCommand command = new OdbcCommand(sql, cn.probarConexion());
             OdbcDataReader reader = command.ExecuteReader();
             if (reader.HasRows)
             {
-                reader.Read();
+                if (reader.Read())
+                {
+                    if (reader.GetValue(0).ToString() == null || reader.GetValue(0).ToString() == "")
+                    {
+                        sid = "1";
+                    }
+                    else
+                    {
+                        sid = reader.GetValue(0).ToString();
+                    }
+                }                
             }
-            return reader.GetInt32(0).ToString();
+            else
+            {
+                sid = "1";
+            }
+            /*
+            if (reader.GetInt32(0).ToString() == null || reader.GetInt32(0).ToString() == "")
+            {
+                return 
+            } */
+            return sid;
         }
         //obtener la columna extra de DESCRIBE => Randy 
         public string[] obtenerExtra(string tabla)//metodo que obtiene la lista de los valores EXTRA que tiene un campo

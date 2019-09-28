@@ -941,7 +941,7 @@ namespace CapaDeDiseno
                 ExtraAI = true;
             }
             string auxId = (logic.lastID(tabla));
-            int auxLastId = Int32.Parse(auxId);            
+            int auxLastId = Int32.Parse(auxId);                                  
 
 
             activar = 2;
@@ -953,7 +953,7 @@ namespace CapaDeDiseno
             {
                 if (componente is TextBox && tipoInt && ExtraAI)
                 {
-                    MessageBox.Show("El ID nuevo será: " + (auxLastId + 1));
+                    //MessageBox.Show("El ID nuevo será: " + (auxLastId + 1));
                     auxLastId += 1;                    
                     componente.Text = auxLastId.ToString();
                     componente.Enabled = false;
