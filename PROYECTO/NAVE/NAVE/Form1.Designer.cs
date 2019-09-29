@@ -28,18 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.navegador1 = new CapaDeDiseno.Navegador();
             this.button1 = new System.Windows.Forms.Button();
+            this.navegador1 = new CapaDeDiseno.Navegador();
             this.SuspendLayout();
-            // 
-            // navegador1
-            // 
-            this.navegador1.BackColor = System.Drawing.Color.White;
-            this.navegador1.Location = new System.Drawing.Point(0, 3);
-            this.navegador1.Name = "navegador1";
-            this.navegador1.Size = new System.Drawing.Size(1178, 657);
-            this.navegador1.TabIndex = 0;
-            this.navegador1.Load += new System.EventHandler(this.Navegador1_Load_1);
             // 
             // button1
             // 
@@ -51,6 +42,15 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
+            // navegador1
+            // 
+            this.navegador1.BackColor = System.Drawing.Color.White;
+            this.navegador1.Location = new System.Drawing.Point(0, 3);
+            this.navegador1.Name = "navegador1";
+            this.navegador1.Size = new System.Drawing.Size(1178, 657);
+            this.navegador1.TabIndex = 0;
+            this.navegador1.Load += new System.EventHandler(this.Navegador1_Load_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -58,6 +58,7 @@
             this.ClientSize = new System.Drawing.Size(1178, 690);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.navegador1);
+            this.HelpButton = true;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

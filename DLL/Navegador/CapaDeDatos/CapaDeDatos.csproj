@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CapaDeLogica">
+      <HintPath>..\..\..\..\..\..\..\Desktop\Universidad UMG Juan Jose Gamez Blanco\8vo Semestre\Analisis de Sistemas 2\Capacitacion y entrega naveg\CAPACITACION NAV\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeLogica.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

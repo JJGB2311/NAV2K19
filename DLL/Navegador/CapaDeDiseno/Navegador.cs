@@ -49,10 +49,27 @@ namespace CapaDeDiseno
         string Asayuda;
         // string rutaa;
         Font fuente = new Font("Century Gothic", 13.0f, FontStyle.Regular, GraphicsUnit.Pixel); //objeto para definir el tipo y tamaño de fuente de los labels
+        ToolTip ayuda_tp = new ToolTip();
         public Navegador()
         {
             InitializeComponent();
             limpiarListaItems();
+            ayuda_tp.IsBalloon = true;
+            ayuda_tp.SetToolTip(Btn_Ingresar, "Escribir nuevo registro");
+            ayuda_tp.SetToolTip(Btn_Modificar, "Cambiar un registro");
+            ayuda_tp.SetToolTip(Btn_Guardar, "Guardar cambios");
+            ayuda_tp.SetToolTip(Btn_Cancelar, "Cancelar Acciones");
+            ayuda_tp.SetToolTip(Btn_Eliminar, "Eliminar un registro");
+            ayuda_tp.SetToolTip(Btn_Consultar, "Ir a Consultas inteligentes");
+            ayuda_tp.SetToolTip(Btn_Imprimir, "Ir a Reporteador");
+            ayuda_tp.SetToolTip(Btn_Refrescar, "Actualizar tabla");
+            ayuda_tp.SetToolTip(Btn_FlechaInicio, "Primer registro");
+            ayuda_tp.SetToolTip(Btn_Anterior, "Posición superior en tabla");
+            ayuda_tp.SetToolTip(Btn_Siguiente, "Posición inferior en tabla");
+            ayuda_tp.SetToolTip(Btn_FlechaFin, "Fin de la tabla");
+            ayuda_tp.SetToolTip(Btn_MasAyuda, "Nueva Ayuda");
+            ayuda_tp.SetToolTip(Btn_Ayuda, "Ayuda del formulario");
+            ayuda_tp.SetToolTip(Btn_Salir, "Salir del formulario");
         }
 
         private void Navegador_Load(object sender, EventArgs e)
@@ -975,7 +992,7 @@ namespace CapaDeDiseno
             Btn_Consultar.Enabled = false;
             Btn_Imprimir.Enabled = false;
             Btn_Refrescar.Enabled = false;
-            registros();
+
         }
 
         private void Btn_Modificar_Click(object sender, EventArgs e)
@@ -1588,6 +1605,34 @@ namespace CapaDeDiseno
             {
                 MessageBox.Show("Surgió el siguiente problema: " + ex);
             }
+        }
+
+        private void Btn_Ayuda_Click_1(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, AsRuta, AsIndice);//Abre el menu de ayuda HTML     
+        }
+
+        private void Btn_MasAyuda_Click(object sender, EventArgs e)
+        {
+            string AyudaOK = logic.TestTabla("ayuda");
+            if (AyudaOK == "")
+            {
+                Ayudas nuevo = new Ayudas();
+                nuevo.Show();
+            }
+            else
+            {
+                DialogResult validacion = MessageBox.Show(AyudaOK +" \n Solucione este error para continuar...", "Verificación de requisitos", MessageBoxButtons.OK);
+                if (validacion == DialogResult.OK)
+                {
+                    
+                }
+            }
+        }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

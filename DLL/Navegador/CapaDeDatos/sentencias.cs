@@ -21,6 +21,19 @@ namespace CapaDeDatos
             OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.probarConexion());
             return dataTable;
         }
+
+        /**/
+        public OdbcDataAdapter llenaTbl2()// metodo  que obtinene el contenio de una tabla
+        {
+
+
+
+            string sql = "SELECT Id_ayuda, Ruta, indice FROM ayuda";
+            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.probarConexion());
+            return dataTable;
+        }
+        /**/
+
         public int contarAlias(string tabla)// metodo  que obtinene el contenio de una tabla
         {
            int Campos = 0;

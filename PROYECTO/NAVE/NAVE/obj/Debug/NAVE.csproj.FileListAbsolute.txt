@@ -174,7 +174,6 @@ C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debu
 C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDatos.dll
 C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDiseno.pdb
 C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDeLogica.pdb
-C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDatos.pdb
 C:\Users\Randy\Desktop\UMG\8.vo Semestre\Análisis de Sistemas II\2do Parcial\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\NAVE.exe.config
 C:\Users\Randy\Desktop\UMG\8.vo Semestre\Análisis de Sistemas II\2do Parcial\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\NAVE.exe
 C:\Users\Randy\Desktop\UMG\8.vo Semestre\Análisis de Sistemas II\2do Parcial\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\NAVE.pdb
@@ -242,3 +241,4 @@ C:\Users\Usuario\Desktop\Copia-Navegador\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.cspro
 C:\Users\Usuario\Desktop\Copia-Navegador\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.csproj.CopyComplete
 C:\Users\Usuario\Desktop\Copia-Navegador\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.exe
 C:\Users\Usuario\Desktop\Copia-Navegador\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.pdb
+C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.Form2.resources
