@@ -55,21 +55,21 @@ namespace CapaDeDiseno
             InitializeComponent();
             limpiarListaItems();
             ayuda_tp.IsBalloon = true;
-            ayuda_tp.SetToolTip(Btn_Ingresar, "Boton de ingresar un registro ");
-            ayuda_tp.SetToolTip(Btn_Modificar, "Boton de modifica un registro  ");
-            ayuda_tp.SetToolTip(Btn_Guardar, "Boton de guardar un registro");
-            ayuda_tp.SetToolTip(Btn_Cancelar, "Boton de Cacelacion ");
-            ayuda_tp.SetToolTip(Btn_Eliminar, "Boton de eliminacion un registro");
-            ayuda_tp.SetToolTip(Btn_Consultar, "Boton de consultar un registro");
-            ayuda_tp.SetToolTip(Btn_Imprimir, "Boton de inprimir registros ");
-            ayuda_tp.SetToolTip(Btn_Refrescar, "Boton de actualizar ");
-            ayuda_tp.SetToolTip(Btn_FlechaInicio, "Se posiciona al inicio de la tabla ");
-            ayuda_tp.SetToolTip(Btn_Anterior, "Regresa una posicion en la tabla");
-            ayuda_tp.SetToolTip(Btn_Siguiente, "Abansa una posicion en la tabla ");
-            ayuda_tp.SetToolTip(Btn_FlechaFin, "Se posiciona al final de la tabla ");
-            ayuda_tp.SetToolTip(Btn_MasAyuda, "Registrar una nueva ayuda ");
-            ayuda_tp.SetToolTip(Btn_Ayuda, "Despliega la ayuda para mayor infromacion ");
-            ayuda_tp.SetToolTip(Btn_Salir, "Sale del formulario o del sistema ");
+            ayuda_tp.SetToolTip(Btn_Ingresar, "Escribir nuevo registro");
+            ayuda_tp.SetToolTip(Btn_Modificar, "Cambiar un registro");
+            ayuda_tp.SetToolTip(Btn_Guardar, "Guardar cambios");
+            ayuda_tp.SetToolTip(Btn_Cancelar, "Cancelar Acciones");
+            ayuda_tp.SetToolTip(Btn_Eliminar, "Eliminar un registro");
+            ayuda_tp.SetToolTip(Btn_Consultar, "Ir a Consultas inteligentes");
+            ayuda_tp.SetToolTip(Btn_Imprimir, "Ir a Reporteador");
+            ayuda_tp.SetToolTip(Btn_Refrescar, "Actualizar tabla");
+            ayuda_tp.SetToolTip(Btn_FlechaInicio, "Primer registro");
+            ayuda_tp.SetToolTip(Btn_Anterior, "Posición superior en tabla");
+            ayuda_tp.SetToolTip(Btn_Siguiente, "Posición inferior en tabla");
+            ayuda_tp.SetToolTip(Btn_FlechaFin, "Fin de la tabla");
+            ayuda_tp.SetToolTip(Btn_MasAyuda, "Nueva Ayuda");
+            ayuda_tp.SetToolTip(Btn_Ayuda, "Ayuda del formulario");
+            ayuda_tp.SetToolTip(Btn_Salir, "Salir del formulario");
         }
 
         private void Navegador_Load(object sender, EventArgs e)

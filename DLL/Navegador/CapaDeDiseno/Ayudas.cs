@@ -113,7 +113,7 @@ namespace CapaDeDiseno
         {
             if (txtruta.Text == "" || txtindice.Text == "")
             {
-                MessageBox.Show("verificar que exita una ruta y un indice");
+                MessageBox.Show("Por favor, llene los campos de ruta e índice");
             }
             else
             {
@@ -121,7 +121,7 @@ namespace CapaDeDiseno
                
                 txtindice.Clear();
                 txtruta.Clear();
-                MessageBox.Show("Registro almaceno Correctamente");
+                MessageBox.Show("Ayuda agregada Correctamente!");
                 llenartabla();
             }
         }
@@ -145,7 +145,7 @@ namespace CapaDeDiseno
         {
             if (txtruta.Text == "" || txtindice.Text == "")
             {
-                MessageBox.Show("verificar que exita una ruta y un indice");
+                MessageBox.Show("Por favor, llene ambos campos para continuar...");
             }
             else
             {
@@ -153,7 +153,7 @@ namespace CapaDeDiseno
 
                 txtindice.Clear();
                 txtruta.Clear();
-                MessageBox.Show("Registro se modifico Correctamente");
+                MessageBox.Show("Ayuda modificada correctamente");
                 llenartabla();
             }
 
@@ -166,7 +166,7 @@ namespace CapaDeDiseno
         {
             if (txtruta.Text == "" || txtindice.Text == "")
             {
-                MessageBox.Show("verificar que exita una ruta y un indice");
+                MessageBox.Show("Hola");
             }
             else
             {
@@ -174,7 +174,7 @@ namespace CapaDeDiseno
 
                 txtindice.Clear();
                 txtruta.Clear();
-                MessageBox.Show("Registro Eliminado Correctamente");
+                MessageBox.Show("Ayuda eliminada Correctamente");
                 llenartabla();
             }
 
@@ -189,5 +189,17 @@ namespace CapaDeDiseno
         {
 
         }
-    }
+
+		private void Button2_Click_1(object sender, EventArgs e)
+		{
+			OpenFileDialog rutaFile = new OpenFileDialog();
+			rutaFile.InitialDirectory = "c:\\";
+			rutaFile.Filter = "chm files (*.html)|*.html";
+			if (rutaFile.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+			{
+
+				txtindice.Text = rutaFile.FileName;
+			}
+		}
+	}
 }
