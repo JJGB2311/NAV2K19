@@ -25,7 +25,7 @@ namespace NAVE
             navegador1.asignarComboConTabla("tbl_proveedor", "nombre");
             navegador1.asignarComboConLista(2, "Pequeña|Mediana|Grande|");
             navegador1.asignarComboConTabla("tbl_bodega", "nombre");
-            navegador1.asignarAyuda("1");
+            navegador1.asignarAyuda("13");
             navegador1.asignarTabla("tbl_producto");
             navegador1.asignarNombreForm("Productos");
             ayuda_tp.IsBalloon = true;
