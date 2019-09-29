@@ -83,12 +83,12 @@ namespace CapaDeDiseno
 
         string crearInsert()// crea el query de insert
         {
-          
 
-                string query = "INSERT INTO ayuda ( Ruta , indice, estado) VALUES  ('" + txtruta.Text
-                    + "', '" + txtindice.Text + "', '" + "1" + "')";
 
-            return query;
+			string query = "INSERT INTO ayuda ( Ruta , indice, estado) VALUES  ('" + txtruta.Text.Replace("\\", "/")
+				+ "', '" + txtindice.Text + "', '" + "1" + "')";
+
+			return query;
         
         }
 
@@ -102,11 +102,11 @@ namespace CapaDeDiseno
 
         string crearUpdate()// crea el query de update
         {
-            /* string query = "UPDATE ayuda SET Ruta = 'Página web ayuda/ayuda.chm.', indice = 'Menúboletos.html.' WHERE ayuda.Id_ayuda = " + dataGridView1.CurrentRow.Cells[0].Value.ToString();*/
-            string query = "UPDATE ayuda SET Ruta = '" + txtruta.Text+ "', indice = '" + txtindice.Text + "' WHERE ayuda.Id_ayuda = " + dataGridView1.CurrentRow.Cells[0].Value.ToString();
+			/* string query = "UPDATE ayuda SET Ruta = 'Página web ayuda/ayuda.chm.', indice = 'Menúboletos.html.' WHERE ayuda.Id_ayuda = " + dataGridView1.CurrentRow.Cells[0].Value.ToString();*/
+			string query = "UPDATE ayuda SET Ruta = '" + txtruta.Text.Replace("\\", "/") + "', indice = '" + txtindice.Text + "' WHERE ayuda.Id_ayuda = " + dataGridView1.CurrentRow.Cells[0].Value.ToString();
 
 
-            return query;
+			return query;
         }
 
         private void Button3_Click(object sender, EventArgs e)
@@ -198,7 +198,8 @@ namespace CapaDeDiseno
 			if (rutaFile.ShowDialog() == System.Windows.Forms.DialogResult.OK)
 			{
 
-				txtindice.Text = rutaFile.FileName;
+				txtindice.Text = rutaFile.SafeFileName;
+
 			}
 		}
 	}
