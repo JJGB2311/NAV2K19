@@ -12,18 +12,15 @@ namespace CapaDeDatos
         public OdbcConnection probarConexion()
         {
             OdbcConnection conn = new OdbcConnection("Dsn=navegador");// creacion de la conexion via ODBC
-
             try
-            {
-              
+            {              
                 conn.Open();
             }
-            catch (OdbcException ex)
+            catch (OdbcException)
             {
-                Console.WriteLine("no conecto");
+                Console.WriteLine("No Conectó");
             }
             return conn;
-        }
-       
+        }       
     }
 }

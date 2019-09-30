@@ -471,6 +471,7 @@
             this.lblTabla.TabIndex = 0;
             this.lblTabla.Text = "Tabla";
             this.lblTabla.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTabla.Click += new System.EventHandler(this.LblTabla_Click);
             // 
             // Navegador
             // 

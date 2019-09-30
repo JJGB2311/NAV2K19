@@ -71,3 +71,5 @@ C:\Users\gganp\Desktop\NAV2K19\DLL\Navegador\CapaDeDatos\bin\Debug\CapaDeLogica.
 C:\Users\gganp\Desktop\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.CopyComplete
 C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeDatos\bin\Debug\CapaDeLogica.pdb
 C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.CopyComplete
+C:\Users\Randy\Desktop\UMG\8.vo Semestre\Análisis de Sistemas II\2do Parcial\NAV2K19\DLL\Navegador\CapaDeDatos\bin\Debug\CapaDeLogica.pdb
+C:\Users\Randy\Desktop\UMG\8.vo Semestre\Análisis de Sistemas II\2do Parcial\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.CopyComplete

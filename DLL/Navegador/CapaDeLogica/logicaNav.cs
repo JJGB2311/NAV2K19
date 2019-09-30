@@ -14,6 +14,20 @@ namespace CapaDeLogica
     public class logicaNav
     {
         sentencias sn = new sentencias();
+        //metodo para llamar la funcion Obtener ID => Randy 
+        public string lastID(string tabla) //ver el ultimo ID
+        {
+            string lastId = sn.obtenerId(tabla);
+            Console.WriteLine(lastId);
+            return lastId;
+        }
+        //metodo para llamar la funcion Obtener Extra => Randy 
+        public string[] extras(string tabla)
+        {
+            string[] Extras = sn.obtenerExtra(tabla);
+
+            return Extras;
+        }
         public DataTable consultaLogica(string tabla)  //obtener datos de la consulta
         {
             OdbcDataAdapter dt = sn.llenaTbl(tabla);
@@ -39,27 +53,22 @@ namespace CapaDeLogica
 
             return indice;
         }
-
         public string MRuta(string Ruta1)
         {
             string ruta = sn.modRuta(Ruta1);
 
             return ruta;
         }
-
         public string verificacion(string valor)
         {
             string indice2 = sn.VerificacionR(valor);
 
             return indice2;
         }
-
-
         public string TestTabla(string tabla)
         {
             return sn.ProbarTabla(tabla);
         }
-
         public string TestEstado(string tabla)
         {
             return sn.ProbarEstado(tabla);
@@ -68,11 +77,11 @@ namespace CapaDeLogica
         {
             return sn.ProbarRegistros(tabla);
         }
-
+        /*
         public int obtenerMaxId(string tabla)
         {
             return sn.maxId(tabla);
-        }
+        } */
         public int contarCampos(string tabla)
         {
             return sn.contarAlias(tabla);
@@ -88,7 +97,6 @@ namespace CapaDeLogica
 
             return Campos;
         }
-
         public string[] tipos(string tabla)
         {
             string[] Tipos = sn.obtenerTipo(tabla);
@@ -113,8 +121,5 @@ namespace CapaDeLogica
         {
             sn.ejecutarQuery(query);
         }
-
-
     }
-
 }

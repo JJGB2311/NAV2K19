@@ -17,6 +17,7 @@ namespace NAVE
         public Form1()
         {
             InitializeComponent();
+            
             string[] alias = { "Cod Producto", "Producto", "Proveedor", "Presentación", "Fecha Compra", "Unidades Minimas", "Bodega", "Estado" };
             navegador1.asignarAlias(alias);
             navegador1.asignarSalida(this);
@@ -25,11 +26,21 @@ namespace NAVE
             navegador1.asignarComboConTabla("tbl_proveedor", "nombre");
             navegador1.asignarComboConLista(2, "Pequeña|Mediana|Grande|");
             navegador1.asignarComboConTabla("tbl_bodega", "nombre");
-            navegador1.asignarAyuda("13");
+            navegador1.asignarAyuda("1");
             navegador1.asignarTabla("tbl_producto");
             navegador1.asignarNombreForm("Productos");
             ayuda_tp.IsBalloon = true;
-      
+            
+            /*
+            string[] alias = { "Cod Asiento", "Cod Funcion", "Estado" };
+            navegador1.asignarAlias(alias);
+            navegador1.asignarSalida(this);
+            navegador1.asignarColorFondo(Color.LightBlue);
+            navegador1.asignarColorFuente(Color.BlueViolet);
+            navegador1.asignarAyuda("1");
+            navegador1.asignarTabla("pruebaai");
+            navegador1.asignarNombreForm("PruebaAI");     
+            */
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -39,7 +50,7 @@ namespace NAVE
             string aplicacionActiva = "1";
             navegador1.ObtenerIdUsuario(login.obtenerNombreUsuario());
             navegador1.botonesYPermisosInicial(login.obtenerNombreUsuario(), aplicacionActiva);
-            navegador1.registros();
+            //navegador1.registros();
             navegador1.ObtenerIdAplicacion(aplicacionActiva);             
         }
 

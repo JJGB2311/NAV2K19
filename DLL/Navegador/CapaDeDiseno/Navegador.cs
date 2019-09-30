@@ -111,8 +111,8 @@ namespace CapaDeDiseno
                                 Btn_Eliminar.Enabled = true;
 
                                 //habilitar y deshabilitar según Usuario FUNCION SOLO PARA INICIO                                                                                               
-                                botonesYPermisosInicial(userActivo, aplActivo);
-                                registros();
+                                //botonesYPermisosInicial(userActivo, aplActivo);
+                                //registros();
                                 if (logic.TestRegistros(tabla) > 0)
                                 {
                                     foreach (Control componente in Controls)
@@ -138,8 +138,7 @@ namespace CapaDeDiseno
                                             componente.Enabled = false;
                                          
                                         }
-                                    }
-                                    registros();
+                                    }                                    
                                 }
                                 else
                                 {
@@ -193,8 +192,8 @@ namespace CapaDeDiseno
                     }
                 }
             }
-            botonesYPermisosInicial(userActivo, aplActivo);
-            registros();
+            //botonesYPermisosInicial(userActivo, aplActivo);
+            //registros();
         }
 
         //-----------------------------------------------Funciones-----------------------------------------------//
@@ -227,28 +226,7 @@ namespace CapaDeDiseno
                 } 
             }
             return i;
-            }
-        public void registros()
-        {
-            if (logic.TestRegistros(tabla)<=0)
-            {
-                Btn_Anterior.Enabled = false;
-                Btn_Siguiente.Enabled = false;
-                Btn_FlechaInicio.Enabled = false;
-                Btn_FlechaFin.Enabled = false;
-                Btn_Modificar.Enabled = false;
-                Btn_Eliminar.Enabled = false;
-            }
-            else
-            {
-                Btn_Anterior.Enabled = true;
-                Btn_Siguiente.Enabled = true;
-                Btn_FlechaInicio.Enabled = true;
-                Btn_FlechaFin.Enabled = true;
-                Btn_Modificar.Enabled = true;
-                Btn_Eliminar.Enabled = true;
-            }
-        }
+            }       
 
         public string obtenerDatoTabla(int pos)
         {
@@ -943,55 +921,58 @@ namespace CapaDeDiseno
 
         private void Btn_Ingresar_Click(object sender, EventArgs e)
         {
-            string[] Tipos = logic.tipos(tabla);            
+            string[] Tipos = logic.tipos(tabla);
+
+            //codigo para aplicar el autoincrementable             
+            string[] Extras = logic.extras(tabla);
+            bool tipoInt = false;
+            bool ExtraAI = false;
+            if (Tipos[0] == "int")
+            {
+                tipoInt = true;
+            }
+            if (Extras[0] == "auto_increment")
+            {
+                ExtraAI = true;
+            }
+            string auxId = (logic.lastID(tabla));
+            int auxLastId = Int32.Parse(auxId);
+
             activar = 2;
-            habilitarcampos_y_botones();
+            habilitarcampos_y_botones();        
+
             foreach (Control componente in Controls)
             {
-                if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
+                if (componente is TextBox && tipoInt && ExtraAI)
+                {
+                    //MessageBox.Show("El ID nuevo será: " + (auxLastId + 1));
+                    auxLastId += 1;
+                    componente.Text = auxLastId.ToString();
+                    componente.Enabled = false;
+                    tipoInt = false;
+                    ExtraAI = false;
+                }
+                else if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
                 {
                     componente.Enabled = true;
                     componente.Text = "";
-                  
-
                 }
-                if(componente is Button)
-                {
-                    componente.Enabled = false;
-                }
-
                 Btn_Ingresar.Enabled = false;
                 Btn_Modificar.Enabled = false;
                 Btn_Eliminar.Enabled = false;
-                Btn_Cancelar.Enabled = true;                
+                Btn_Cancelar.Enabled = true;
             }
-            if (Tipos[0] == "int")
-            {
-                int j = 0;
-                foreach (Control componente in Controls)
-                {
-                    if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
-                    {
 
-                        if (j == 0)
-                        {
-                            componente.Enabled = false;
-                            componente.Text = (logic.obtenerMaxId(tabla)+1).ToString();
-                        }
-                        j++;
-                    }
-                }
-            }
-            
-            //habilitar y deshabilitar según Usuario
+            //habilitar y deshabilitar según Usuario => Randy
             botonesYPermisos();
             Btn_Ingresar.Enabled = false;
+            Btn_Guardar.Enabled = true;
             Btn_Modificar.Enabled = false;
-            Btn_Eliminar.Enabled = false;
+            Btn_Eliminar.Enabled = false;           
             Btn_Cancelar.Enabled = true;
             Btn_Consultar.Enabled = false;
             Btn_Imprimir.Enabled = false;
-            Btn_Refrescar.Enabled = false;
+            Btn_Refrescar.Enabled = false;            
 
         }
 
@@ -1010,8 +991,7 @@ namespace CapaDeDiseno
                     }
                     componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
                     i++;
-                }
-                registros();
+                }                
             }
 
                         
@@ -1035,8 +1015,7 @@ namespace CapaDeDiseno
             Btn_Eliminar.Enabled = true;
             Btn_Refrescar.Enabled = true;
 
-            actualizardatagriew();
-            registros();
+            actualizardatagriew();            
             if (logic.TestRegistros(tabla)>0)
             {
                 int i = 0;
@@ -1057,8 +1036,7 @@ namespace CapaDeDiseno
             }
 
             //habilitar y deshabilitar según Usuario
-            botonesYPermisos();
-            registros();
+            botonesYPermisos();            
         }
 
         private void Btn_Eliminar_Click(object sender, EventArgs e)
@@ -1103,9 +1081,7 @@ namespace CapaDeDiseno
             }
             //habilitar y deshabilitar según Usuario
             botonesYPermisos();
-            presionado = true;
-            registros();
-
+            presionado = true;            
         }
 
         private void Btn_Consultar_Click(object sender, EventArgs e)
@@ -1126,12 +1102,10 @@ namespace CapaDeDiseno
 
         private void Btn_Refrescar_Click(object sender, EventArgs e)
         {           
-            actualizardatagriew();
-            registros();
+            actualizardatagriew();            
 
             //habilitar y deshabilitar según Usuario
-            botonesYPermisos();
-            registros();
+            botonesYPermisos();            
         }
 
         private void Btn_Anterior_Click(object sender, EventArgs e)
@@ -1166,10 +1140,8 @@ namespace CapaDeDiseno
                             componente.BackColor = Color.Green;
                         }
                     }
-                }
-                
-            }
-            registros();
+                }                
+            }            
         }
 
         private void Btn_Siguiente_Click(object sender, EventArgs e)
@@ -1427,8 +1399,7 @@ namespace CapaDeDiseno
                 MessageBox.Show("Por favor llene todos los campos...");
             }
            
-            actualizardatagriew();
-            registros();
+            actualizardatagriew();            
             if (logic.TestRegistros(tabla)>0)
             {
                 int i = 0;
@@ -1449,9 +1420,7 @@ namespace CapaDeDiseno
             Btn_Cancelar.Enabled = false;
             Btn_Modificar.Enabled = true;
             Btn_Ingresar.Enabled = true;
-            Btn_Refrescar.Enabled = true;
-
-            registros();
+            Btn_Refrescar.Enabled = true;            
 
             //habilitar y deshabilitar según Usuario
             botonesYPermisos();
@@ -1490,121 +1459,244 @@ namespace CapaDeDiseno
 
         }
 
-
-        public void botonesYPermisos()
-        {
-            //validamos con TRY CATCH por si llegará a existir un problema 
-            try
-            {
-                sentencia sen = new sentencia();
-                string[] permisosText = { "INGRESAR", "CONSULTAR", "MODIFICAR", "ELIMINAR", "IMPRIMIR" };
-                for (int i = 1; i < 6; i++)
+         /*
+                try
                 {
-                    if (sen.consultarPermisos(idUsuario, idAplicacion, i) == true)
+                    sentencia sen = new sentencia();                                        
+                    if (sen.consultarPermisos(idUsuario, idAplicacion, 1) == true)
                     {
-                        //mostramos un mensaje para indicar que si tiene permiso
-                        //MessageBox.Show("Tiene permiso para " + permisosText[i - 1]);
-                        //bloqueamos botones
-                        switch (permisosText[i - 1])
-                        {
-                            case "INGRESAR":
-                                Btn_Ingresar.Enabled = true; break;
-                            case "CONSULTAR":
-                                Btn_Consultar.Enabled = true; break;
-                            case "MODIFICAR":
-                                Btn_Modificar.Enabled = true; break;
-                            case "ELIMINAR":
-                                Btn_Eliminar.Enabled = true; break;
-                            case "IMPRIMIR":
-                                Btn_Imprimir.Enabled = true; break;
-                            default:
-                                MessageBox.Show("Entro al case default! TIENE PERMISO! Por favor hablar con Administrador!"); break;
-                        }
+                        Btn_Ingresar.Enabled = true;
                     }
                     else
                     {
-                        //MessageBox.Show("No tiene permiso para " + permisosText[i - 1]);
-                        switch (permisosText[i - 1])
+                        Btn_Ingresar.Enabled = false;
+                    }
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Error en el Void Registros. Favor llamar Administrador. Error: " + ex);
+                } 
+            if (logic.TestRegistros(tabla)<=0)
+            {                
+                Btn_Anterior.Enabled = false;
+                Btn_Siguiente.Enabled = false;
+                Btn_FlechaInicio.Enabled = false;
+                Btn_FlechaFin.Enabled = false;
+                Btn_Ingresar.Enabled = false;
+                Btn_Modificar.Enabled = false;
+                Btn_Eliminar.Enabled = false; 
+            }
+            else
+            {
+                Btn_Anterior.Enabled = true;
+                Btn_Siguiente.Enabled = true;
+                Btn_FlechaInicio.Enabled = true;
+                Btn_FlechaFin.Enabled = true;
+                Btn_Modificar.Enabled = true;
+                Btn_Eliminar.Enabled = true;                
+            } */
+
+        public void botonesYPermisos()
+        {
+            try
+            {
+                if (logic.TestRegistros(tabla) <= 0)
+                {                    
+                    Btn_Ingresar.Enabled = false;
+                    Btn_Modificar.Enabled = false;
+                    Btn_Guardar.Enabled = false;
+                    Btn_Cancelar.Enabled = false;
+                    Btn_Eliminar.Enabled = false;
+                    Btn_Consultar.Enabled = false;
+                    Btn_Imprimir.Enabled = false;
+                    Btn_Refrescar.Enabled = false;
+                    Btn_FlechaInicio.Enabled = false;
+                    Btn_Anterior.Enabled = false;
+                    Btn_Siguiente.Enabled = false;                    
+                    Btn_FlechaFin.Enabled = false;
+                    MessageBox.Show("Tabla Vacía! Debe ingresar un registro!");
+                    try
+                    {
+                        sentencia sent = new sentencia();
+                        if (sent.consultarPermisos(idUsuario, idAplicacion, 1) == true)
                         {
-                            case "INGRESAR":
-                                Btn_Ingresar.Enabled = false; break;
-                            case "CONSULTAR":
-                                Btn_Consultar.Enabled = false; break;
-                            case "MODIFICAR":
-                                Btn_Modificar.Enabled = false; break;
-                            case "ELIMINAR":
-                                Btn_Eliminar.Enabled = false; break;
-                            case "IMPRIMIR":
-                                Btn_Imprimir.Enabled = false; break;
-                            default:
-                                MessageBox.Show("Entro al case default! NO TIENE PERMISO! Por favor hablar con Administrador!"); break;
+                            MessageBox.Show("Tabla Vacía! SI puede INGRESAR");
+                            Btn_Ingresar.Enabled = true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Tabla Vacía! NO puede INGRESAR");
                         }
                     }
-                    /* 1 ingresar - 2 consultar - 3 modificar - 4 eliminar - 5 imprimir */
+                    catch (Exception exx)
+                    {
+                        MessageBox.Show("Estamos en Tabla Vacía! Determinanos si el usuario Activo puede ingresar! ERROR: " + exx);
+                    }
+                }
+                else
+                {
+                    //validamos con TRY CATCH por si llegará a existir un problema 
+                    try
+                    {
+                        sentencia sen = new sentencia();
+                        string[] permisosText = { "INGRESAR", "CONSULTAR", "MODIFICAR", "ELIMINAR", "IMPRIMIR" };
+                        for (int i = 1; i < 6; i++)
+                        {
+                            if (sen.consultarPermisos(idUsuario, idAplicacion, i) == true)
+                            {
+                                //mostramos un mensaje para indicar que si tiene permiso
+                                //MessageBox.Show("Tiene permiso para " + permisosText[i - 1]);
+                                //bloqueamos botones
+                                switch (permisosText[i - 1])
+                                {
+                                    case "INGRESAR":
+                                        Btn_Ingresar.Enabled = true; break;
+                                    case "CONSULTAR":
+                                        Btn_Consultar.Enabled = true; break;
+                                    case "MODIFICAR":
+                                        Btn_Modificar.Enabled = true; break;
+                                    case "ELIMINAR":
+                                        Btn_Eliminar.Enabled = true; break;
+                                    case "IMPRIMIR":
+                                        Btn_Imprimir.Enabled = true; break;
+                                    default:
+                                        MessageBox.Show("Entro al case default! TIENE PERMISO! Por favor hablar con Administrador!"); break;
+                                }
+                            }
+                            else
+                            {
+                                //MessageBox.Show("No tiene permiso para " + permisosText[i - 1]);
+                                switch (permisosText[i - 1])
+                                {
+                                    case "INGRESAR":
+                                        Btn_Ingresar.Enabled = false; break;
+                                    case "CONSULTAR":
+                                        Btn_Consultar.Enabled = false; break;
+                                    case "MODIFICAR":
+                                        Btn_Modificar.Enabled = false; break;
+                                    case "ELIMINAR":
+                                        Btn_Eliminar.Enabled = false; break;
+                                    case "IMPRIMIR":
+                                        Btn_Imprimir.Enabled = false; break;
+                                    default:
+                                        MessageBox.Show("Entro al case default! NO TIENE PERMISO! Por favor hablar con Administrador!"); break;
+                                }
+                            }
+                            /* 1 ingresar - 2 consultar - 3 modificar - 4 eliminar - 5 imprimir */
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Surgió el siguiente problema: " + ex);
+                    }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Surgió el siguiente problema: " + ex);
+                MessageBox.Show("Error General en Botones y Permisos. ERROR: " + ex);
             }
         }
 
         public void botonesYPermisosInicial(string userActivo, string appActivo)
         {
-            //validamos con TRY CATCH por si llegará a existir un problema 
             try
             {
-                sentencia sen = new sentencia();
-                string[] permisosText = { "INGRESAR", "CONSULTAR", "MODIFICAR", "ELIMINAR", "IMPRIMIR" };
-                for (int i = 1; i < 6; i++)
+                if (logic.TestRegistros(tabla) <= 0)
                 {
-                    if (sen.consultarPermisos(userActivo, appActivo, i) == true)
+                    Btn_Ingresar.Enabled = false;
+                    Btn_Modificar.Enabled = false;
+                    Btn_Guardar.Enabled = false;
+                    Btn_Cancelar.Enabled = false;
+                    Btn_Eliminar.Enabled = false;
+                    Btn_Consultar.Enabled = false;
+                    Btn_Imprimir.Enabled = false;
+                    Btn_Refrescar.Enabled = false;
+                    Btn_FlechaInicio.Enabled = false;
+                    Btn_Anterior.Enabled = false;
+                    Btn_Siguiente.Enabled = false;
+                    Btn_FlechaFin.Enabled = false;
+                    MessageBox.Show("Tabla Vacía! Debe ingresar un registro!");
+                    try
                     {
-                        //mostramos un mensaje para indicar que si tiene permiso
-                        //MessageBox.Show("Tiene permiso para " + permisosText[i - 1]);
-                        //bloqueamos botones
-                        switch (permisosText[i - 1])
+                        sentencia sent = new sentencia();
+                        if (sent.consultarPermisos(userActivo, appActivo, 1) == true)
                         {
-                            case "INGRESAR":
-                                Btn_Ingresar.Enabled = true; break;
-                            case "CONSULTAR":
-                                Btn_Consultar.Enabled = true; break;
-                            case "MODIFICAR":
-                                Btn_Modificar.Enabled = true; break;
-                            case "ELIMINAR":
-                                Btn_Eliminar.Enabled = true; break;
-                            case "IMPRIMIR":
-                                Btn_Imprimir.Enabled = true; break;
-                            default:
-                                MessageBox.Show("Entro al case default! TIENE PERMISO! Por favor hablar con Administrador!"); break;
+                            MessageBox.Show("Tabla Vacía! SI puede INGRESAR");
+                            Btn_Ingresar.Enabled = true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Tabla Vacía! NO puede INGRESAR");
                         }
                     }
-                    else
+                    catch (Exception exx)
                     {
-                        //MessageBox.Show("No tiene permiso para " + permisosText[i - 1]);
-                        switch (permisosText[i - 1])
+                        MessageBox.Show("Estamos en Tabla Vacía! Determinanos si el usuario Activo puede ingresar! ERROR: " + exx);
+                    }
+                }
+                else
+                {
+                    //validamos con TRY CATCH por si llegará a existir un problema 
+                    try
+                    {
+                        sentencia sen = new sentencia();
+                        string[] permisosText = { "INGRESAR", "CONSULTAR", "MODIFICAR", "ELIMINAR", "IMPRIMIR" };
+                        for (int i = 1; i < 6; i++)
                         {
-                            case "INGRESAR":
-                                Btn_Ingresar.Enabled = false; break;
-                            case "CONSULTAR":
-                                Btn_Consultar.Enabled = false; break;
-                            case "MODIFICAR":
-                                Btn_Modificar.Enabled = false; break;
-                            case "ELIMINAR":
-                                Btn_Eliminar.Enabled = false; break;
-                            case "IMPRIMIR":
-                                Btn_Imprimir.Enabled = false; break;
-                            default:
-                                MessageBox.Show("Entro al case default! NO TIENE PERMISO! Por favor hablar con Administrador!"); break;
+                            if (sen.consultarPermisos(userActivo, appActivo, i) == true)
+                            {
+                                //mostramos un mensaje para indicar que si tiene permiso
+                                //MessageBox.Show("Tiene permiso para " + permisosText[i - 1]);
+                                //bloqueamos botones
+                                switch (permisosText[i - 1])
+                                {
+                                    case "INGRESAR":
+                                        Btn_Ingresar.Enabled = true; break;
+                                    case "CONSULTAR":
+                                        Btn_Consultar.Enabled = true; break;
+                                    case "MODIFICAR":
+                                        Btn_Modificar.Enabled = true; break;
+                                    case "ELIMINAR":
+                                        Btn_Eliminar.Enabled = true; break;
+                                    case "IMPRIMIR":
+                                        Btn_Imprimir.Enabled = true; break;
+                                    default:
+                                        MessageBox.Show("Entro al case default! TIENE PERMISO! Por favor hablar con Administrador!"); break;
+                                }
+                            }
+                            else
+                            {
+                                //MessageBox.Show("No tiene permiso para " + permisosText[i - 1]);
+                                switch (permisosText[i - 1])
+                                {
+                                    case "INGRESAR":
+                                        Btn_Ingresar.Enabled = false; break;
+                                    case "CONSULTAR":
+                                        Btn_Consultar.Enabled = false; break;
+                                    case "MODIFICAR":
+                                        Btn_Modificar.Enabled = false; break;
+                                    case "ELIMINAR":
+                                        Btn_Eliminar.Enabled = false; break;
+                                    case "IMPRIMIR":
+                                        Btn_Imprimir.Enabled = false; break;
+                                    default:
+                                        MessageBox.Show("Entro al case default! NO TIENE PERMISO! Por favor hablar con Administrador!"); break;
+                                }
+                            }
+                            /* 1 ingresar - 2 consultar - 3 modificar - 4 eliminar - 5 imprimir */
                         }
                     }
-                    /* 1 ingresar - 2 consultar - 3 modificar - 4 eliminar - 5 imprimir */
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Surgió el siguiente problema: " + ex);
+                    }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Surgió el siguiente problema: " + ex);
+                MessageBox.Show("Error General en Botones y Permisos Inicial. ERROR: " + ex);
             }
+
         }
 
         private void Btn_Ayuda_Click_1(object sender, EventArgs e)
@@ -1631,6 +1723,11 @@ namespace CapaDeDiseno
         }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void LblTabla_Click(object sender, EventArgs e)
         {
 
         }

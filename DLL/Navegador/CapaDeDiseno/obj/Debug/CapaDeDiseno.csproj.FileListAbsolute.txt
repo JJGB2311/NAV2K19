@@ -188,3 +188,4 @@ C:\Users\Usuario\Desktop\Copia-Navegador\DLL\Navegador\CapaDeDiseno\obj\Debug\Ca
 C:\Users\gganp\Desktop\NAV2K19\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.Ayudas.resources
 C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.Ayudas.resources
 C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.Ayudas.resources
+C:\Users\Randy\Desktop\UMG\8.vo Semestre\Análisis de Sistemas II\2do Parcial\NAV2K19\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.Ayudas.resources

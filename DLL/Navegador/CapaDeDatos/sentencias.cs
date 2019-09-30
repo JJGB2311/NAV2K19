@@ -11,23 +11,61 @@ namespace CapaDeDatos
     {
 
         conexion cn = new conexion();
-
+        //mostrar los datos en DataGridView de forma DESC y que tengan estado 1 =>Randy 
         public OdbcDataAdapter llenaTbl(string tabla)// metodo  que obtinene el contenio de una tabla
         {
-
-            
-
-           string sql = "SELECT * FROM " + tabla + " where estado=1;";
+            string[] camposDesc = obtenerCampos(tabla); //string para almacenar los campos de OBTENERCAMPOS y utilizar el 1ro
+            string sql = "SELECT * FROM " + tabla + " WHERE estado=1 ORDER BY " + camposDesc[0] + " DESC ;";
+            //SELECT * FROM tbl_bodega WHERE estado=1 ORDER BY kbodega DESC
             OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.probarConexion());
             return dataTable;
+        }
+        //obtener ID siguiente => Randy             
+        public string obtenerId(string tabla)
+        {
+            string[] camposDesc = obtenerCampos(tabla); //string para almacenar los campos de OBTENERCAMPOS y utilizar el 1ro
+            string sql = "SELECT MAX(" + camposDesc[0] + ") FROM " + tabla + ";"; //SELECT MAX(idFuncion) FROM `funciones`            
+            string sid = "";
+            OdbcCommand command = new OdbcCommand(sql, cn.probarConexion());
+            OdbcDataReader reader = command.ExecuteReader();
+            if (reader.HasRows)
+            {
+                if (reader.Read())
+                {
+                    if (reader.GetValue(0).ToString() == null || reader.GetValue(0).ToString() == "")
+                    {
+                        sid = "1";
+                    }
+                    else
+                    {
+                        sid = reader.GetValue(0).ToString();
+                    }
+                }
+            }
+            else
+            {
+                sid = "1";
+            }
+            return sid;
+        }
+        //obtener la ultima columna de la funcion DESCRIBE => Randy 
+        public string[] obtenerExtra(string tabla)//metodo que obtiene la lista de los valores EXTRA que tiene un campo
+        {
+            string[] Campos = new string[30];
+            int i = 0;
+            OdbcCommand command = new OdbcCommand("DESCRIBE " + tabla + "", cn.probarConexion());
+            OdbcDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                Campos[i] = reader.GetValue(5).ToString();
+                i++;
+            }
+            return Campos;// devuelve un arreglo con los valores EXTRA
         }
 
         /**/
         public OdbcDataAdapter llenaTbl2()// metodo  que obtinene el contenio de una tabla
         {
-
-
-
             string sql = "SELECT Id_ayuda, Ruta, indice FROM ayuda";
             OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.probarConexion());
             return dataTable;
@@ -84,20 +122,8 @@ namespace CapaDeDatos
             }
             catch (Exception ex) { Console.WriteLine(ex.Message.ToString() + " \nError en obtenerTipo, revise los parámetros de la tabla  \n -" + tabla.ToUpper() + "\n -"); }
             return Campos;// devuelve un arreglo con los tiposlos campos
-        }
-        public int maxId(string tabla)// metodo  que obtinene el contenio de una tabla
-        {
-            int Campos = 0;
-            try
-            {
-                OdbcCommand command = new OdbcCommand("SELECT * FROM " + tabla + " ORDER BY "+primerCampo(tabla)+" DESC;", cn.probarConexion());
-                OdbcDataReader reader = command.ExecuteReader();
-                reader.Read();
-                Campos = Convert.ToInt32(reader.GetValue(0));
-            }
-            catch (Exception ex) { Console.WriteLine(ex.Message.ToString() + " \nError en obtener Maximo Id, revise los parámetros de la tabla "); }
-            return Campos;
-        }
+        }       
+
         public string modRuta(string idindice)// metodo  que obtinene el contenio de una tabla
         {
 
@@ -162,14 +188,10 @@ namespace CapaDeDatos
                 OdbcDataReader reader = command.ExecuteReader();
                 reader.Read();
             }
-            catch (Exception err)
+            catch (Exception)
             {
-
-                error = "La tabla " + tabla.ToUpper() + " no existe";
+                error = "La tabla " + tabla.ToUpper() + " no existe.";
             }
-
-
-
             return error;
         }
 
@@ -182,7 +204,7 @@ namespace CapaDeDatos
                 OdbcDataReader reader = command.ExecuteReader();
                 reader.Read();
             }
-            catch (Exception err)
+            catch (Exception)
             {
 
                 error = "La tabla " + tabla.ToUpper() + " no contiene el campo de ESTADO";
@@ -202,7 +224,7 @@ namespace CapaDeDatos
                     registros++;
                 }
             }
-            catch (Exception err)
+            catch (Exception)
             {
 
             }
