@@ -638,7 +638,7 @@ namespace CapaDeDiseno
 
         private void Paravalidarvarchar_KeyPress(object sender, KeyPressEventArgs e)
         {
-            v.CamposNumerosYLetras(e);
+            v.CamposVchar(e);
         }
         private void Paravalidartexto_KeyPress(object sender, KeyPressEventArgs e)
         {

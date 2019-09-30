@@ -15,7 +15,8 @@ namespace CapaDeLogica
         char punto = (char)46;
         char bs = (char)8;
         char dosp = (char)58;
-        int contador= 0;
+        char arr = (char)64;
+        int contador;
         int contadordp = 0;
 
         public void CamposNumericos(KeyPressEventArgs e)
@@ -107,6 +108,20 @@ namespace CapaDeLogica
                 else
                 {
                     e.Handled = true;
+                }
+            }
+            catch
+            {
+
+            }
+        }
+        public void CamposVchar(KeyPressEventArgs e)
+        {
+            try
+            {
+                if (Char.IsLetter(e.KeyChar))
+                {
+                    e.Handled = false;
                 }
             }
             catch
