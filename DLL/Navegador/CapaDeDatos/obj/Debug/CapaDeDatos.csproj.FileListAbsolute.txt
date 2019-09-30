@@ -69,3 +69,5 @@ C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\DLL\Navegador\CapaDeDatos\b
 C:\Users\juan_\Documents\GitHub\Personal HCS\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.CopyComplete
 C:\Users\gganp\Desktop\NAV2K19\DLL\Navegador\CapaDeDatos\bin\Debug\CapaDeLogica.pdb
 C:\Users\gganp\Desktop\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.CopyComplete
+C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeDatos\bin\Debug\CapaDeLogica.pdb
+C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.CopyComplete
