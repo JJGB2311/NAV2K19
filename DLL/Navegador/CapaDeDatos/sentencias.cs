@@ -294,6 +294,7 @@ namespace CapaDeDatos
         }
         public string[] obtenerItems(string tabla, string campo)//metodo que obtiene la lista de los tipos de campos que requiere una tabla
         {
+
             string[] items = new string[300];
             int i = 0;
 
@@ -301,7 +302,7 @@ namespace CapaDeDatos
             try
             {
 
-                OdbcCommand command = new OdbcCommand("select  " + campo + " FROM " + tabla, cn.probarConexion());
+                OdbcCommand command = new OdbcCommand("select  " + campo + " FROM " + tabla + " WHERE estado = 1", cn.probarConexion());
                 OdbcDataReader reader = command.ExecuteReader();
 
                 while (reader.Read())
@@ -315,6 +316,7 @@ namespace CapaDeDatos
 
 
             return items;// devuelve un arreglo con los tipos
+
         }
         string limpiarTipo(string cadena)// elimina los parentesis y tama;o de campo del tipo de campo
         {
