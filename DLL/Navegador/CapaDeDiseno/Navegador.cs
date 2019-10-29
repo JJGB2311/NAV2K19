@@ -21,7 +21,9 @@ namespace CapaDeDiseno
         string tabla = "def";
         string nomForm;
         int pos = 8;
-        int noCampos = 1;
+		
+		int[] modoCampoCombo = new int[40];
+		int noCampos = 1;
         int x = 30;
         int y = 30;
         int activar = 0;    //Variable para reconocer que funcion realizara el boton de guardar (1. Ingresar, 2. Modificar, 3. Eliminar)
@@ -115,31 +117,50 @@ namespace CapaDeDiseno
                                 //registros();
                                 if (logic.TestRegistros(tabla) > 0)
                                 {
-                                    foreach (Control componente in Controls)
-                                    {
-                                        if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
-                                        {
-                                            componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
-                                            i++;
-                                        }
-                                        if (componente is Button)
-                                        {
-                                            string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
-                                            if (var1 == "0")
-                                            {
-                                                componente.Text = "Desactivado";
-                                                componente.BackColor = Color.Red;
-                                            }
-                                            if (var1 == "1")
-                                            {
-                                                componente.Text = "Activado";
-                                                componente.BackColor = Color.Green;
-                                            }
-                                            componente.Enabled = false;
-                                         
-                                        }
-                                    }                                    
-                                }
+									int numCombo = 0;
+									foreach (Control componente in Controls)
+									{
+										if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
+										{
+											if (componente is ComboBox)
+											{
+												if (modoCampoCombo[numCombo] == 1)
+												{
+													componente.Text = logic.llaveCampoRev(tablaCombo[numCombo], campoCombo[numCombo], dataGridView1.CurrentRow.Cells[i].Value.ToString());
+
+												}
+												else
+												{
+													componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+												}
+
+												numCombo++;
+											}
+											else
+											{
+												componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+											}
+
+											i++;
+										}
+										if (componente is Button)
+										{
+											string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+											if (var1 == "0")
+											{
+												componente.Text = "Desactivado";
+												componente.BackColor = Color.Red;
+											}
+											if (var1 == "1")
+											{
+												componente.Text = "Activado";
+												componente.BackColor = Color.Green;
+											}
+											componente.Enabled = false;
+
+										}
+									}
+								}
                                 else
                                 {
                                     Btn_Anterior.Enabled = false;
@@ -316,12 +337,14 @@ namespace CapaDeDiseno
             lblTabla.Text = nomForm;
         }
 
-        public void asignarComboConTabla(string tabla, string campo)
+        public void asignarComboConTabla(string tabla, string campo, int modo)
         {
+			
             string TablaOK = logic.TestTabla(tabla);
             if (TablaOK == "")
             {
-                tablaCombo[noCombo] = tabla;
+				modoCampoCombo[noCombo] = modo;
+				tablaCombo[noCombo] = tabla;
                 campoCombo[noCombo] = campo;
                 noCombo++;
             }
@@ -346,7 +369,8 @@ namespace CapaDeDiseno
         {
             posCombo = pos-1;
             limpiarLista(lista);
-            noCombo++;
+			modoCampoCombo[noCombo] = 0;
+			noCombo++;
         }
 
         void limpiarLista(string cadena)
@@ -763,6 +787,7 @@ namespace CapaDeDiseno
             string query = "UPDATE " + tabla + " SET estado=0";
             string whereQuery = " WHERE  ";
             int posCampo = 0;
+			int i = 0;
             string campos = "";
 
             foreach (Control componente in Controls)
@@ -774,10 +799,48 @@ namespace CapaDeDiseno
                         switch (tipoCampo[posCampo])
                         {
                             case "Text":
-                                whereQuery += componente.Name + " = '" + componente.Text;
+								if (componente is ComboBox)
+								{
+
+									if (modoCampoCombo[i] == 1)
+									{
+										whereQuery += componente.Name + " = '" + logic.llaveCampolo(tablaCombo[i], campoCombo[i], componente.Text) + "' , ";
+									}
+									else
+									{
+										whereQuery += componente.Name + " = '" + componente.Text + "' , ";
+									}
+
+									i++;
+								}
+								else
+								{
+									whereQuery += componente.Name + " = '" + componente.Text + "' , ";
+								}
+
+								whereQuery += componente.Name + " = '" + componente.Text;
                                 break;
                             case "Num":
-                                whereQuery += componente.Name + " = " + componente.Text;
+								if (componente is ComboBox)
+								{
+
+									if (modoCampoCombo[i] == 1)
+									{
+										whereQuery += componente.Name + " = " + logic.llaveCampolo(tablaCombo[i], campoCombo[i], componente.Text);
+										 
+									}
+									else
+									{
+										whereQuery += componente.Name + " = " + componente.Text;
+									}
+
+									i++;
+								}
+								else
+								{
+									whereQuery += componente.Name + " = " + componente.Text;
+								}
+								
                                 break;
                         }
 
@@ -799,6 +862,7 @@ namespace CapaDeDiseno
         {
             string query = "INSERT INTO " + tabla + " VALUES (";
             int posCampo = 0;
+			int i = 0;
             string campos = "";
             foreach (Control componente in Controls)
             {
@@ -808,10 +872,49 @@ namespace CapaDeDiseno
                     switch (tipoCampo[posCampo])
                     {
                         case "Text":
-                            campos += "'" + componente.Text + "' , ";
-                            break;
+							if (componente is ComboBox)
+							{
+
+								if (modoCampoCombo[i] == 1)
+								{
+									campos += "'" + logic.llaveCampolo(tablaCombo[i],campoCombo[i],componente.Text) + "' , ";
+								}
+								else
+								{
+									campos += "'" + componente.Text + "' , ";
+								}
+
+								i++;
+							}
+							else
+							{
+								campos += "'" + componente.Text + "' , ";
+							}
+						
+
+							break;
                         case "Num":
-                            campos += componente.Text + " , ";
+							if (componente is ComboBox)
+							{
+
+								if (modoCampoCombo[i] == 1)
+								{
+									campos +=  logic.llaveCampolo(tablaCombo[i], campoCombo[i], componente.Text) + " , ";
+								}
+								else
+								{
+									campos += componente.Text + " , ";
+								}
+
+								i++;
+							}
+							else
+							{
+								campos += componente.Text + " , ";
+							}
+						
+
+
                             break;
                     }
                     posCampo++;
@@ -844,6 +947,7 @@ namespace CapaDeDiseno
             string query = "UPDATE " + tabla + " SET ";
             string whereQuery = " WHERE  ";
             int posCampo = 0;
+			int i = 0;
             string campos = "";
             foreach (Control componente in Controls)
             {
@@ -855,10 +959,46 @@ namespace CapaDeDiseno
                         switch (tipoCampo[posCampo])
                         {
                             case "Text":
-                                campos += componente.Name + " = '" + componente.Text + "' , ";
+								if (componente is ComboBox)
+								{
+
+									if (modoCampoCombo[i] == 1)
+									{
+										campos += componente.Name + " = '" + logic.llaveCampolo(tablaCombo[i], campoCombo[i], componente.Text) + "' , ";
+									}
+									else
+									{
+										campos += componente.Name + " = '" + componente.Text + "' , ";
+									}
+
+									i++;
+								}
+								else
+								{
+									campos += componente.Name + " = '" + componente.Text + "' , ";
+								}
+							
                                 break;
                             case "Num":
-                                campos += componente.Name + " = " + componente.Text + " , ";
+								if (componente is ComboBox)
+								{
+
+									if (modoCampoCombo[i] == 1)
+									{
+										campos += componente.Name + " = " + logic.llaveCampolo(tablaCombo[i], campoCombo[i], componente.Text) + " , ";
+									}
+									else
+									{
+										campos += componente.Name + " = " + componente.Text + " , ";
+									}
+
+									i++;
+								}
+								else
+								{
+									campos += componente.Name + " = " + componente.Text + " , ";
+								}
+								
                                 break;
                         }
                     }
@@ -867,10 +1007,48 @@ namespace CapaDeDiseno
                         switch (tipoCampo[posCampo])
                         {
                             case "Text":
-                                whereQuery += componente.Name + " = '" + componente.Text;
+								if (componente is ComboBox)
+								{
+
+									if (modoCampoCombo[i] == 1)
+									{
+										whereQuery += componente.Name + " = '" + logic.llaveCampolo(tablaCombo[i], campoCombo[i], componente.Text) + "'";
+										 
+									}
+									else
+									{
+										whereQuery += componente.Name + " = '" + componente.Text + "'";
+									}
+
+									i++;
+								}
+								else
+								{
+									whereQuery += componente.Name + " = '" + componente.Text + "'";
+								}
+								
                                 break;
                             case "Num":
-                                whereQuery += componente.Name + " = " + componente.Text;
+								if (componente is ComboBox)
+								{
+
+									if (modoCampoCombo[i] == 1)
+									{
+										whereQuery += componente.Name + " = " + logic.llaveCampolo(tablaCombo[i], campoCombo[i], componente.Text);
+
+									}
+									else
+									{
+										whereQuery += componente.Name + " = " + componente.Text;
+									}
+
+									i++;
+								}
+								else
+								{
+									whereQuery += componente.Name + " = " + componente.Text;
+								}
+								
                                 break;
                         }
 
@@ -981,22 +1159,58 @@ namespace CapaDeDiseno
             habilitarcampos_y_botones();
             activar = 1;
             int i = 0;
-            foreach (Control componente in Controls)
-            {
-                if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
-                {
-                    if (i==0)
-                    {
-                        componente.Enabled = false;
-                    }
-                    componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
-                    i++;
-                }                
-            }
+           
+			int numCombo = 0;
+			foreach (Control componente in Controls)
+			{
+				if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
+				{
+					if (i == 0)
+					{
+						componente.Enabled = false;
+					}
+					if (componente is ComboBox)
+					{
+						if (modoCampoCombo[numCombo] == 1)
+						{
+							componente.Text = logic.llaveCampoRev(tablaCombo[numCombo], campoCombo[numCombo], dataGridView1.CurrentRow.Cells[i].Value.ToString());
 
-                        
-            //habilitar y deshabilitar según Usuario
-            botonesYPermisos();
+						}
+						else
+						{
+							componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+						}
+
+						numCombo++;
+					}
+					else
+					{
+						componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+					}
+
+					i++;
+				}
+				if (componente is Button)
+				{
+					string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+					if (var1 == "0")
+					{
+						componente.Text = "Desactivado";
+						componente.BackColor = Color.Red;
+					}
+					if (var1 == "1")
+					{
+						componente.Text = "Activado";
+						componente.BackColor = Color.Green;
+					}
+					componente.Enabled = false;
+
+				}
+			}
+
+
+			//habilitar y deshabilitar según Usuario
+			botonesYPermisos();
 
             Btn_Ingresar.Enabled = false;
             Btn_Eliminar.Enabled = false;
@@ -1019,21 +1233,50 @@ namespace CapaDeDiseno
             if (logic.TestRegistros(tabla)>0)
             {
                 int i = 0;
-                foreach (Control componente in Controls)
-                {
-                    if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
-                    {
-                        componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
-                        componente.Enabled = false;
-                        i++;
-                    }
-                    if (componente is Button)
-                    {
-                        componente.Enabled = false;
-                    }
+				int numCombo = 0;
+				foreach (Control componente in Controls)
+				{
+					if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
+					{
+						if (componente is ComboBox)
+						{
+							if (modoCampoCombo[numCombo] == 1)
+							{
+								componente.Text = logic.llaveCampoRev(tablaCombo[numCombo], campoCombo[numCombo], dataGridView1.CurrentRow.Cells[i].Value.ToString());
 
-                }
-            }
+							}
+							else
+							{
+								componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+							}
+
+							numCombo++;
+						}
+						else
+						{
+							componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+						}
+
+						i++;
+					}
+					if (componente is Button)
+					{
+						string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+						if (var1 == "0")
+						{
+							componente.Text = "Desactivado";
+							componente.BackColor = Color.Red;
+						}
+						if (var1 == "1")
+						{
+							componente.Text = "Activado";
+							componente.BackColor = Color.Green;
+						}
+						componente.Enabled = false;
+
+					}
+				}
+			}
 
             //habilitar y deshabilitar según Usuario
             botonesYPermisos();            
@@ -1102,10 +1345,53 @@ namespace CapaDeDiseno
 
         private void Btn_Refrescar_Click(object sender, EventArgs e)
         {           
-            actualizardatagriew();            
+            actualizardatagriew();
+			int i=0;
+			int numCombo = 0;
+			foreach (Control componente in Controls)
+			{
+				if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
+				{
+					if (componente is ComboBox)
+					{
+						if (modoCampoCombo[numCombo] == 1)
+						{
+							componente.Text = logic.llaveCampoRev(tablaCombo[numCombo], campoCombo[numCombo], dataGridView1.CurrentRow.Cells[i].Value.ToString());
 
-            //habilitar y deshabilitar según Usuario
-            botonesYPermisos();            
+						}
+						else
+						{
+							componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+						}
+						
+						numCombo++;
+					}
+					else
+					{
+						componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+					}
+					
+					i++;
+				}
+				if (componente is Button)
+				{
+					string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+					if (var1 == "0")
+					{
+						componente.Text = "Desactivado";
+						componente.BackColor = Color.Red;
+					}
+					if (var1 == "1")
+					{
+						componente.Text = "Activado";
+						componente.BackColor = Color.Green;
+					}
+					componente.Enabled = false;
+
+				}
+			}
+			//habilitar y deshabilitar según Usuario
+			botonesYPermisos();            
         }
 
         private void Btn_Anterior_Click(object sender, EventArgs e)
@@ -1118,30 +1404,51 @@ namespace CapaDeDiseno
             {
                 dataGridView1.Rows[fila - 1].Selected = true;
                 dataGridView1.CurrentCell = dataGridView1.Rows[fila - 1].Cells[0];
-                
-                    foreach (Control componente in Controls)
-                    {
-                        if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
-                        {
-                           componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
-                            i++;
-                        }
-                    if (componente is Button)
-                    {
-                        string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
-                        if (var1 == "0")
-                        {
-                            componente.Text = "Desactivado";
-                            componente.BackColor = Color.Red;
-                        }
-                        if (var1 == "1")
-                        {
-                            componente.Text = "Activado";
-                            componente.BackColor = Color.Green;
-                        }
-                    }
-                }                
-            }            
+
+				int numCombo = 0;
+				foreach (Control componente in Controls)
+				{
+					if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
+					{
+						if (componente is ComboBox)
+						{
+							if (modoCampoCombo[numCombo] == 1)
+							{
+								componente.Text = logic.llaveCampoRev(tablaCombo[numCombo], campoCombo[numCombo], dataGridView1.CurrentRow.Cells[i].Value.ToString());
+
+							}
+							else
+							{
+								componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+							}
+
+							numCombo++;
+						}
+						else
+						{
+							componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+						}
+
+						i++;
+					}
+					if (componente is Button)
+					{
+						string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+						if (var1 == "0")
+						{
+							componente.Text = "Desactivado";
+							componente.BackColor = Color.Red;
+						}
+						if (var1 == "1")
+						{
+							componente.Text = "Activado";
+							componente.BackColor = Color.Green;
+						}
+						componente.Enabled = false;
+
+					}
+				}
+			}            
         }
 
         private void Btn_Siguiente_Click(object sender, EventArgs e)
@@ -1154,31 +1461,52 @@ namespace CapaDeDiseno
                 {
                     dataGridView1.Rows[fila + 1].Selected = true;
                     dataGridView1.CurrentCell = dataGridView1.Rows[fila + 1].Cells[0];
-                    
-                        foreach (Control componente in Controls)
-                        {
-                            if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
-                            {
-                                componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
-                                i++;
-                            }
-                    if (componente is Button)
-                    {
-                        string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
-                        if (var1 == "0")
-                        {
-                            componente.Text = "Desactivado";
-                            componente.BackColor = Color.Red;
-                        }
-                        if (var1 == "1")
-                        {
-                            componente.Text = "Activado";
-                            componente.BackColor = Color.Green;
-                        }
-                    }
-                }
-                      
-                 }
+
+				int numCombo = 0;
+				foreach (Control componente in Controls)
+				{
+					if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
+					{
+						if (componente is ComboBox)
+						{
+							if (modoCampoCombo[numCombo] == 1)
+							{
+								componente.Text = logic.llaveCampoRev(tablaCombo[numCombo], campoCombo[numCombo], dataGridView1.CurrentRow.Cells[i].Value.ToString());
+
+							}
+							else
+							{
+								componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+							}
+
+							numCombo++;
+						}
+						else
+						{
+							componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+						}
+
+						i++;
+					}
+					if (componente is Button)
+					{
+						string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+						if (var1 == "0")
+						{
+							componente.Text = "Desactivado";
+							componente.BackColor = Color.Red;
+						}
+						if (var1 == "1")
+						{
+							componente.Text = "Activado";
+							componente.BackColor = Color.Green;
+						}
+						componente.Enabled = false;
+
+					}
+				}
+
+			}
         }
 
         private void Btn_FlechaFin_Click(object sender, EventArgs e)
@@ -1194,31 +1522,52 @@ namespace CapaDeDiseno
             {
                 dataGridView1.Rows[dataGridView1.Rows.Count - 2].Selected = true;
                 dataGridView1.CurrentCell = dataGridView1.Rows[dataGridView1.Rows.Count - 2].Cells[0];
-                
-                    foreach (Control componente in Controls)
-                    {
-                        if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
-                        {
-                            componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
-                            i++;
-                        }
-                    if (componente is Button)
-                    {
-                        string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
-                        if (var1 == "0")
-                        {
-                            componente.Text = "Desactivado";
-                            componente.BackColor = Color.Red;
-                        }
-                        if (var1 == "1")
-                        {
-                            componente.Text = "Activado";
-                            componente.BackColor = Color.Green;
-                        }
-                    }
-                }
-                
-            }
+
+				int numCombo = 0;
+				foreach (Control componente in Controls)
+				{
+					if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
+					{
+						if (componente is ComboBox)
+						{
+							if (modoCampoCombo[numCombo] == 1)
+							{
+								componente.Text = logic.llaveCampoRev(tablaCombo[numCombo], campoCombo[numCombo], dataGridView1.CurrentRow.Cells[i].Value.ToString());
+
+							}
+							else
+							{
+								componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+							}
+
+							numCombo++;
+						}
+						else
+						{
+							componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+						}
+
+						i++;
+					}
+					if (componente is Button)
+					{
+						string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+						if (var1 == "0")
+						{
+							componente.Text = "Desactivado";
+							componente.BackColor = Color.Red;
+						}
+						if (var1 == "1")
+						{
+							componente.Text = "Activado";
+							componente.BackColor = Color.Green;
+						}
+						componente.Enabled = false;
+
+					}
+				}
+
+			}
         }
 
         private void Btn_FlechaInicio_Click(object sender, EventArgs e)
@@ -1234,34 +1583,54 @@ namespace CapaDeDiseno
             {
                 dataGridView1.Rows[0].Selected = true;
                 dataGridView1.CurrentCell = dataGridView1.Rows[0].Cells[0];
-               
 
-                    foreach (Control componente in Controls)
-                    {
-                        if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
-                        {
-                            componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
-                            i++;
-                        }
-                    if (componente is Button)
-                    {
-                        string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
-                        if (var1 == "0")
-                        {
-                            componente.Text = "Desactivado";
-                            componente.BackColor = Color.Red;
-                        }
-                        if (var1 == "1")
-                        {
-                            componente.Text = "Activado";
-                            componente.BackColor = Color.Green;
-                        }
-                    }
 
-                }
+				int numCombo = 0;
+				foreach (Control componente in Controls)
+				{
+					if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
+					{
+						if (componente is ComboBox)
+						{
+							if (modoCampoCombo[numCombo] == 1)
+							{
+								componente.Text = logic.llaveCampoRev(tablaCombo[numCombo], campoCombo[numCombo], dataGridView1.CurrentRow.Cells[i].Value.ToString());
 
-                
-            }
+							}
+							else
+							{
+								componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+							}
+
+							numCombo++;
+						}
+						else
+						{
+							componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+						}
+
+						i++;
+					}
+					if (componente is Button)
+					{
+						string var1 = dataGridView1.CurrentRow.Cells[i].Value.ToString();
+						if (var1 == "0")
+						{
+							componente.Text = "Desactivado";
+							componente.BackColor = Color.Red;
+						}
+						if (var1 == "1")
+						{
+							componente.Text = "Activado";
+							componente.BackColor = Color.Green;
+						}
+						componente.Enabled = false;
+
+					}
+				}
+
+
+			}
 
         }
 

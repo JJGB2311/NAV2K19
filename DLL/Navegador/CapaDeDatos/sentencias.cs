@@ -350,7 +350,41 @@ namespace CapaDeDatos
             return nuevaCadena;// devuelve la cadena unicamente con el tipo
         }
 
-        public void ejecutarQuery(string query)// ejecuta un query en la BD
+		public string llaveCampo(string tabla, string campo, string valor)
+		{
+			string llave = "";
+			try
+			{
+				OdbcCommand command = new OdbcCommand("SELECT * FROM " + tabla + " where "+campo+" = '"+valor+"' ;", cn.probarConexion());
+				OdbcDataReader reader = command.ExecuteReader();
+				reader.Read();
+				llave = reader.GetValue(0).ToString();
+			}
+			catch (Exception)
+			{
+				
+			}
+			return llave;
+		}
+		public string llaveCampoReverso(string tabla, string campo, string valor)
+		{
+			string llave = "";
+			string[] Campos = obtenerCampos(tabla);
+			try
+			{
+				OdbcCommand command = new OdbcCommand("SELECT "+campo+" FROM " + tabla + " where " + Campos[0]+ " = " + valor + " ;", cn.probarConexion());
+				OdbcDataReader reader = command.ExecuteReader();
+				reader.Read();
+				llave = reader.GetValue(0).ToString();
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine("Dio errore " + "SELECT " + campo + " FROM " + tabla + " where " + campo + " = " + valor + " ;" + ex.ToString());
+			}
+			return llave;
+		}
+
+		public void ejecutarQuery(string query)// ejecuta un query en la BD
         {
             try
             {

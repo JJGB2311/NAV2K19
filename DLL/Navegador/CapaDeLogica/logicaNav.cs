@@ -117,9 +117,24 @@ namespace CapaDeLogica
 
             return Items;
         }
-        public void nuevoQuery(String query)//trasporta el query de la capa de disenio a Datos
+
+		public string llaveCampolo(string tabla, string campo, string valor)
+		{
+			string llave = sn.llaveCampo(tabla, campo, valor);
+			return llave;
+		}
+
+		public string llaveCampoRev(string tabla, string campo, string valor)
+		{
+			string llave = sn.llaveCampoReverso(tabla, campo, valor);
+			return llave;
+		}
+
+		public void nuevoQuery(String query)//trasporta el query de la capa de disenio a Datos
         {
             sn.ejecutarQuery(query);
         }
+
+
     }
 }

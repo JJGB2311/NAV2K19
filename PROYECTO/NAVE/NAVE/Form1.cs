@@ -23,9 +23,9 @@ namespace NAVE
             navegador1.asignarSalida(this);
             navegador1.asignarColorFondo(Color.LightBlue);
             navegador1.asignarColorFuente(Color.BlueViolet);
-            navegador1.asignarComboConTabla("tbl_proveedor", "nombre");
-            navegador1.asignarComboConLista(2, "Pequeña|Mediana|Grande|");
-            navegador1.asignarComboConTabla("tbl_bodega", "nombre");
+            navegador1.asignarComboConTabla("tbl_proveedor", "nombre",1);// modo cero guardado directo
+            navegador1.asignarComboConLista(2, "1|2|3|4|5|");
+            navegador1.asignarComboConTabla("tbl_bodega", "nombre",1);// modo 1 obtiene el id del registro asociado
             navegador1.asignarAyuda("1");
             navegador1.asignarTabla("tbl_producto");
             navegador1.asignarNombreForm("Productos");
