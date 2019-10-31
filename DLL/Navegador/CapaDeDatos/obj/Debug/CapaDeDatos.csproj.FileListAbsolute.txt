@@ -73,3 +73,11 @@ C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeDatos\bin\Debug\Capa
 C:\Users\edgar\Documents\GitHub\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.CopyComplete
 C:\Users\Randy\Desktop\UMG\8.vo Semestre\Análisis de Sistemas II\2do Parcial\NAV2K19\DLL\Navegador\CapaDeDatos\bin\Debug\CapaDeLogica.pdb
 C:\Users\Randy\Desktop\UMG\8.vo Semestre\Análisis de Sistemas II\2do Parcial\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.CopyComplete
+C:\Users\prueb\Desktop\Navegador-corregido\Version 3.0\NAV2K19\DLL\Navegador\CapaDeDatos\bin\Debug\CapaDeDatos.dll
+C:\Users\prueb\Desktop\Navegador-corregido\Version 3.0\NAV2K19\DLL\Navegador\CapaDeDatos\bin\Debug\CapaDeDatos.pdb
+C:\Users\prueb\Desktop\Navegador-corregido\Version 3.0\NAV2K19\DLL\Navegador\CapaDeDatos\bin\Debug\CapaDeLogica.pdb
+C:\Users\prueb\Desktop\Navegador-corregido\Version 3.0\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csprojAssemblyReference.cache
+C:\Users\prueb\Desktop\Navegador-corregido\Version 3.0\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.CoreCompileInputs.cache
+C:\Users\prueb\Desktop\Navegador-corregido\Version 3.0\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.CopyComplete
+C:\Users\prueb\Desktop\Navegador-corregido\Version 3.0\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.dll
+C:\Users\prueb\Desktop\Navegador-corregido\Version 3.0\NAV2K19\DLL\Navegador\CapaDeDatos\obj\Debug\CapaDeDatos.pdb
