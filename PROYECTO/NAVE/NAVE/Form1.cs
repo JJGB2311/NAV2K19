@@ -18,17 +18,17 @@ namespace NAVE
         {
             InitializeComponent();
             
-            string[] alias = { "Cod Producto", "Producto", "Proveedor", "Presentación", "Fecha Compra", "Unidades Minimas", "Bodega", "Estado" };
+            string[] alias = { "Cod area", "Nombre", "Estado" };
             navegador1.asignarAlias(alias);
             navegador1.asignarSalida(this);
             navegador1.asignarColorFondo(Color.LightBlue);
             navegador1.asignarColorFuente(Color.BlueViolet);
-            navegador1.asignarComboConTabla("tbl_proveedor", "nombre",1);// modo cero guardado directo
-            navegador1.asignarComboConLista(2, "1|2|3|4|5|");
-            navegador1.asignarComboConTabla("tbl_bodega", "nombre",1);// modo 1 obtiene el id del registro asociado
+          //  navegador1.asignarComboConTabla("tbl_proveedor", "nombre",1);// modo cero guardado directo
+         //   navegador1.asignarComboConLista(2, "1|2|3|4|5|");
+        //    navegador1.asignarComboConTabla("tbl_bodega", "nombre",1);// modo 1 obtiene el id del registro asociado
             navegador1.asignarAyuda("1");
-            navegador1.asignarTabla("tbl_producto");
-            navegador1.asignarNombreForm("Productos");
+            navegador1.asignarTabla("tbl_areas");
+            navegador1.asignarNombreForm("Areas");
             ayuda_tp.IsBalloon = true;
             
             /*
@@ -50,7 +50,8 @@ namespace NAVE
             string aplicacionActiva = "1";
             navegador1.ObtenerIdUsuario(login.obtenerNombreUsuario());
             navegador1.botonesYPermisosInicial(login.obtenerNombreUsuario(), aplicacionActiva);
-            //navegador1.registros();
+            //na
+           // navegador1.registros();
             navegador1.ObtenerIdAplicacion(aplicacionActiva);             
         }
 
