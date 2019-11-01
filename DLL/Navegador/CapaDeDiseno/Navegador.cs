@@ -69,8 +69,7 @@ namespace CapaDeDiseno
             ayuda_tp.SetToolTip(Btn_Anterior, "Posición superior en tabla");
             ayuda_tp.SetToolTip(Btn_Siguiente, "Posición inferior en tabla");
             ayuda_tp.SetToolTip(Btn_FlechaFin, "Fin de la tabla");
-            ayuda_tp.SetToolTip(Btn_MasAyuda, "Nueva Ayuda");
-            ayuda_tp.SetToolTip(Btn_Ayuda, "Ayuda del formulario");
+           ayuda_tp.SetToolTip(Btn_Ayuda, "Ayuda del formulario");
             ayuda_tp.SetToolTip(Btn_Salir, "Salir del formulario");
         }
 
