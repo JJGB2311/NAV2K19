@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using CapaDiseno;
 namespace NAVE
 {
     public partial class Form2 : Form
@@ -19,8 +19,8 @@ namespace NAVE
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Form1 nuevo = new Form1();
-            nuevo.Show();
+			CapaDeDiseno.Ayudas nuevo = new  CapaDeDiseno.Ayudas();
+			nuevo.Show();
         }
     }
 }

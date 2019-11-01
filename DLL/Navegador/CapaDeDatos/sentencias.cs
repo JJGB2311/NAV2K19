@@ -384,6 +384,23 @@ namespace CapaDeDatos
 			return llave;
 		}
 
+		public string IdModulo(string aplicacion)
+		{
+			string llave = "";
+			try
+			{
+				OdbcCommand command = new OdbcCommand("SELECT * FROM tbl_aplicacion" + " where" + " PK_id_aplicacion= " +aplicacion + " ;", cn.probarConexion());
+				OdbcDataReader reader = command.ExecuteReader();
+				reader.Read();
+				llave = reader.GetValue(0).ToString();
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine("Dio errore " + "SELECT * FROM tbl_aplicacion" + " where" + " PK_id_aplicacion= " + aplicacion + " ;" +ex.ToString());
+			}
+			return llave;
+		}
+
 		public void ejecutarQuery(string query)// ejecuta un query en la BD
         {
             try

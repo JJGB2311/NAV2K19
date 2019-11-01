@@ -130,6 +130,12 @@ namespace CapaDeLogica
 			return llave;
 		}
 
+		public string ObtenerIdModulo(string aplicacion)
+		{
+			string llave = sn.IdModulo(aplicacion);
+			return llave;
+		}
+
 		public void nuevoQuery(String query)//trasporta el query de la capa de disenio a Datos
         {
             sn.ejecutarQuery(query);

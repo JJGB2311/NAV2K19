@@ -864,7 +864,7 @@ namespace CapaDeDiseno
 								
                                 break;
                         }
-
+						
                     }
                     posCampo++;
                 }
@@ -1025,6 +1025,27 @@ namespace CapaDeDiseno
                     }
                     else
                     {
+						if (tipoCampo[0]=="Text")
+						{
+							if (componente is ComboBox)
+							{
+
+								if (modoCampoCombo[i] == 1)
+								{
+									campos += componente.Name + " = '" + logic.llaveCampolo(tablaCombo[i], campoCombo[i], componente.Text) + "' , ";
+								}
+								else
+								{
+									campos += componente.Name + " = '" + componente.Text + "' , ";
+								}
+
+								i++;
+							}
+							else
+							{
+								campos += componente.Name + " = '" + componente.Text + "' , ";
+							}
+						}
                         switch (tipoCampo[posCampo])
                         {
                             case "Text":
@@ -1033,19 +1054,19 @@ namespace CapaDeDiseno
 
 									if (modoCampoCombo[i] == 1)
 									{
-										whereQuery += componente.Name + " = '" + logic.llaveCampolo(tablaCombo[i], campoCombo[i], componente.Text) + "'";
+										whereQuery += componente.Name + " = '" + logic.llaveCampolo(tablaCombo[i], campoCombo[i], dataGridView1.CurrentRow.Cells[0].Value.ToString()) + "'";
 										 
 									}
 									else
 									{
-										whereQuery += componente.Name + " = '" + componente.Text + "'";
+										whereQuery += componente.Name + " = '" + dataGridView1.CurrentRow.Cells[0].Value.ToString()+ "'";
 									}
 
 									i++;
 								}
 								else
 								{
-									whereQuery += componente.Name + " = '" + componente.Text + "'";
+									whereQuery += componente.Name + " = '" + dataGridView1.CurrentRow.Cells[0].Value.ToString()+ "'";
 								}
 								
                                 break;
@@ -1143,16 +1164,21 @@ namespace CapaDeDiseno
             string[] Extras = logic.extras(tabla);
             bool tipoInt = false;
             bool ExtraAI = false;
-            if (Tipos[0] == "int")
+			string auxId = "";
+			int auxLastId = 0;
+
+			if (Tipos[0] == "int")
             {
                 tipoInt = true;
-            }
-            if (Extras[0] == "auto_increment")
-            {
-                ExtraAI = true;
-            }
-            string auxId = (logic.lastID(tabla));
-            int auxLastId = Int32.Parse(auxId);
+				if (Extras[0] == "auto_increment")
+				{
+					ExtraAI = true;
+					 auxId = (logic.lastID(tabla));
+					auxLastId = Int32.Parse(auxId);
+
+				}
+			}
+           
 
             activar = 2;
             habilitarcampos_y_botones();        
@@ -1161,8 +1187,8 @@ namespace CapaDeDiseno
             {
                 if (componente is TextBox && tipoInt && ExtraAI)
                 {
-                    //MessageBox.Show("El ID nuevo será: " + (auxLastId + 1));
-                    auxLastId += 1;
+					//MessageBox.Show("El ID nuevo será: " + (auxLastId + 1));
+					auxLastId += 1;
                     componente.Text = auxLastId.ToString();
                     componente.Enabled = false;
                     tipoInt = false;
@@ -1203,13 +1229,13 @@ namespace CapaDeDiseno
             habilitarcampos_y_botones();
             activar = 1;
             int i = 0;
-           
+			string[] Tipos = logic.tipos(tabla);
 			int numCombo = 0;
 			foreach (Control componente in Controls)
 			{
 				if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
 				{
-					if (i == 0)
+					if (i == 0 && Tipos[0]=="int")
 					{
 						componente.Enabled = false;
 					}
@@ -1304,7 +1330,7 @@ namespace CapaDeDiseno
 						{
 							componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
 						}
-
+						componente.Enabled = false;
 						i++;
 					}
 					if (componente is Button)
@@ -1352,7 +1378,7 @@ namespace CapaDeDiseno
                     actualizardatagriew();
                     Btn_Modificar.Enabled = true;
                     Btn_Guardar.Enabled = false;
-                    Btn_Cancelar.Enabled = true;
+                    Btn_Cancelar.Enabled = false;
                     Btn_Eliminar.Enabled = true;
                     Btn_Ingresar.Enabled = true;
                     presionado = false;
@@ -1394,6 +1420,7 @@ namespace CapaDeDiseno
         private void Btn_Refrescar_Click(object sender, EventArgs e)
         {           
             actualizardatagriew();
+			//MessageBox.Show(logic.ObtenerIdModulo(idAplicacion)); Obtener ID modulo prueba
 			int i=0;
 			int numCombo = 0;
 			foreach (Control componente in Controls)
@@ -1826,7 +1853,8 @@ namespace CapaDeDiseno
                     if (componente is TextBox || componente is DateTimePicker || componente is ComboBox)
                     {
                         componente.Text = dataGridView1.CurrentRow.Cells[i].Value.ToString();
-                        i++;
+						componente.Enabled = false;
+						i++;
                     }
 
                 }
@@ -1843,6 +1871,7 @@ namespace CapaDeDiseno
 
             //habilitar y deshabilitar según Usuario
             botonesYPermisos();
+
         }
 
         private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -1933,18 +1962,18 @@ namespace CapaDeDiseno
                     Btn_Anterior.Enabled = false;
                     Btn_Siguiente.Enabled = false;                    
                     Btn_FlechaFin.Enabled = false;
-                    MessageBox.Show("Tabla Vacía! Debe ingresar un registro!");
+                    MessageBox.Show("Tabla Vacía! Debe ingresa registros!");
                     try
                     {
                         sentencia sent = new sentencia();
                         if (sent.consultarPermisos(idUsuario, idAplicacion, 1) == true)
                         {
-                            MessageBox.Show("Tabla Vacía! SI puede INGRESAR");
+                            MessageBox.Show("Si tiene permisos para ingresar");
                             Btn_Ingresar.Enabled = true;
                         }
                         else
                         {
-                            MessageBox.Show("Tabla Vacía! NO puede INGRESAR");
+                            MessageBox.Show("NO tiene permisos paraINGRESAR");
                         }
                     }
                     catch (Exception exx)
