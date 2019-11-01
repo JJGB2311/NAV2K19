@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Navegador));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.Btn_Ayuda = new System.Windows.Forms.Button();
             this.Btn_Salir = new System.Windows.Forms.Button();
             this.Btn_FlechaFin = new System.Windows.Forms.Button();
             this.Btn_Siguiente = new System.Windows.Forms.Button();
@@ -48,7 +49,6 @@
             this.colorDialog2 = new System.Windows.Forms.ColorDialog();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblTabla = new System.Windows.Forms.Label();
-            this.Btn_Ayuda = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -106,6 +106,26 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1142, 92);
             this.tableLayoutPanel2.TabIndex = 8;
+            // 
+            // Btn_Ayuda
+            // 
+            this.Btn_Ayuda.BackColor = System.Drawing.Color.White;
+            this.Btn_Ayuda.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Btn_Ayuda.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            this.Btn_Ayuda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.Btn_Ayuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Ayuda.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Ayuda.ForeColor = System.Drawing.Color.Black;
+            this.Btn_Ayuda.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda.Image")));
+            this.Btn_Ayuda.Location = new System.Drawing.Point(972, 0);
+            this.Btn_Ayuda.Margin = new System.Windows.Forms.Padding(0);
+            this.Btn_Ayuda.Name = "Btn_Ayuda";
+            this.Btn_Ayuda.Size = new System.Drawing.Size(81, 92);
+            this.Btn_Ayuda.TabIndex = 1;
+            this.Btn_Ayuda.Text = "Ayuda";
+            this.Btn_Ayuda.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Btn_Ayuda.UseVisualStyleBackColor = false;
+            this.Btn_Ayuda.Click += new System.EventHandler(this.Btn_Ayuda_Click_1);
             // 
             // Btn_Salir
             // 
@@ -385,26 +405,6 @@
             this.lblTabla.Text = "Tabla";
             this.lblTabla.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTabla.Click += new System.EventHandler(this.LblTabla_Click);
-            // 
-            // Btn_Ayuda
-            // 
-            this.Btn_Ayuda.BackColor = System.Drawing.Color.White;
-            this.Btn_Ayuda.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Btn_Ayuda.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
-            this.Btn_Ayuda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.Btn_Ayuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Ayuda.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Ayuda.ForeColor = System.Drawing.Color.Black;
-            this.Btn_Ayuda.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ayuda.Image")));
-            this.Btn_Ayuda.Location = new System.Drawing.Point(972, 0);
-            this.Btn_Ayuda.Margin = new System.Windows.Forms.Padding(0);
-            this.Btn_Ayuda.Name = "Btn_Ayuda";
-            this.Btn_Ayuda.Size = new System.Drawing.Size(81, 92);
-            this.Btn_Ayuda.TabIndex = 1;
-            this.Btn_Ayuda.Text = "Ayuda";
-            this.Btn_Ayuda.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Btn_Ayuda.UseVisualStyleBackColor = false;
-            this.Btn_Ayuda.Click += new System.EventHandler(this.Btn_Ayuda_Click_1);
             // 
             // Navegador
             // 
