@@ -17,7 +17,7 @@ namespace NAVE
         public Form1()
         {
             InitializeComponent();
-			string[] alias = { "Cod Area", "Nombre Area", "Estado" };
+			string[] alias = { "Cod Area", "Nombre Area", "Estado"};
 			navegador1.asignarAlias(alias);
 			navegador1.asignarSalida(this);
 			Color Hotel = Color.FromArgb(171, 166, 191);
@@ -25,7 +25,7 @@ namespace NAVE
 			navegador1.asignarColorFuente(Color.Black);
 			navegador1.asignarAyuda("1");
 			navegador1.asignarTabla("tbl_areas");
-			navegador1.asignarNombreForm("Areas");
+			navegador1.asignarNombreForm("Areas Hotel");
 			ayuda_tp.IsBalloon = true;
             
             /*
