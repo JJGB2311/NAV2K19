@@ -839,7 +839,7 @@ namespace CapaDeDiseno
 									whereQuery += componente.Name + " = '" + componente.Text + "' , ";
 								}
 
-								whereQuery += componente.Name + " = '" + componente.Text;
+								
                                 break;
                             case "Num":
 								if (componente is ComboBox)
@@ -872,9 +872,11 @@ namespace CapaDeDiseno
             }
             campos = campos.TrimEnd(' ');
             campos = campos.TrimEnd(',');
-            //query += campos + whereQuery + ";";
-            query += whereQuery + ";";
-            Console.Write(query);
+			whereQuery = whereQuery.TrimEnd(' ');
+			whereQuery = whereQuery.TrimEnd(',');
+			//query += campos + whereQuery + ";";
+			query += whereQuery + ";";
+			Console.Write(query);
             sn.insertarBitacora(idUsuario, "Se eliminó un registro", tabla);
             return query;
         }
