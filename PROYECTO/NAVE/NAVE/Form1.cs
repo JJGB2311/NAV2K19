@@ -17,15 +17,16 @@ namespace NAVE
         public Form1()
         {
             InitializeComponent();
-			string[] alias = { "Cod Area", "Nombre Area", "Estado"};
+			string[] alias = { "Categoria", "Estado" };
 			navegador1.asignarAlias(alias);
 			navegador1.asignarSalida(this);
 			Color Hotel = Color.FromArgb(171, 166, 191);
 			navegador1.asignarColorFondo(Hotel);
 			navegador1.asignarColorFuente(Color.Black);
 			navegador1.asignarAyuda("1");
-			navegador1.asignarTabla("tbl_areas");
-			navegador1.asignarNombreForm("Areas Hotel");
+			navegador1.asignarTabla("tbl_categorias_habitacion");
+			navegador1.asignarComboConTabla("tbl_tipo_habitacion", "KidTipoHabitacion", 0);
+			navegador1.asignarNombreForm("Categorias Habitación");
 			ayuda_tp.IsBalloon = true;
             
             /*
