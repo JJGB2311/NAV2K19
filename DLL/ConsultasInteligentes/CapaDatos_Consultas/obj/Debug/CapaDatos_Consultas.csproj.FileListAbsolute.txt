@@ -28,3 +28,9 @@ C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\REDES DE COMPUTADORAS
 C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\REDES DE COMPUTADORAS 1\ConsultasInteligentes\CapaDatos_Consultas\obj\Debug\CapaDatos_Consultas.csproj.CoreCompileInputs.cache
 C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\REDES DE COMPUTADORAS 1\ConsultasInteligentes\CapaDatos_Consultas\obj\Debug\CapaDatos_Consultas.dll
 C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\REDES DE COMPUTADORAS 1\ConsultasInteligentes\CapaDatos_Consultas\obj\Debug\CapaDatos_Consultas.pdb
+C:\Users\gganp\Desktop\NAV2K19\DLL\ConsultasInteligentes\CapaDatos_Consultas\bin\Debug\CapaDatos_Consultas.dll
+C:\Users\gganp\Desktop\NAV2K19\DLL\ConsultasInteligentes\CapaDatos_Consultas\bin\Debug\CapaDatos_Consultas.pdb
+C:\Users\gganp\Desktop\NAV2K19\DLL\ConsultasInteligentes\CapaDatos_Consultas\obj\Debug\CapaDatos_Consultas.csprojAssemblyReference.cache
+C:\Users\gganp\Desktop\NAV2K19\DLL\ConsultasInteligentes\CapaDatos_Consultas\obj\Debug\CapaDatos_Consultas.csproj.CoreCompileInputs.cache
+C:\Users\gganp\Desktop\NAV2K19\DLL\ConsultasInteligentes\CapaDatos_Consultas\obj\Debug\CapaDatos_Consultas.dll
+C:\Users\gganp\Desktop\NAV2K19\DLL\ConsultasInteligentes\CapaDatos_Consultas\obj\Debug\CapaDatos_Consultas.pdb

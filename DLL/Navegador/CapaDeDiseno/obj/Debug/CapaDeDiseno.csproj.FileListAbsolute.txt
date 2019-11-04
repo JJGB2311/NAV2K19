@@ -219,3 +219,11 @@ C:\Users\juan_\Documents\GitHub\Correccion navegador\NAV2K19\DLL\Navegador\CapaD
 C:\Users\juan_\Documents\GitHub\Correccion navegador\NAV2K19\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeLogica.pdb
 C:\Users\juan_\Documents\GitHub\Correccion navegador\NAV2K19\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDeDatos.pdb
 C:\Users\juan_\Documents\GitHub\Correccion navegador\NAV2K19\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.csproj.CopyComplete
+C:\Users\gganp\Desktop\NAV2K19\DLL\Navegador\CapaDeDiseno\bin\Debug\ConsultasInteligentes.dll
+C:\Users\gganp\Desktop\NAV2K19\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaLogica_Consultas.dll
+C:\Users\gganp\Desktop\NAV2K19\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDatos_Consultas.dll
+C:\Users\gganp\Desktop\NAV2K19\DLL\Navegador\CapaDeDiseno\bin\Debug\ConsultasInteligentes.pdb
+C:\Users\gganp\Desktop\NAV2K19\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaLogica_Consultas.pdb
+C:\Users\gganp\Desktop\NAV2K19\DLL\Navegador\CapaDeDiseno\bin\Debug\CapaDatos_Consultas.pdb
+C:\Users\gganp\Desktop\NAV2K19\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.Compleja.resources
+C:\Users\gganp\Desktop\NAV2K19\DLL\Navegador\CapaDeDiseno\obj\Debug\CapaDeDiseno.Simple.resources

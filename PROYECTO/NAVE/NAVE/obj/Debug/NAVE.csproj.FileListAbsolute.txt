@@ -287,3 +287,9 @@ C:\Users\juan_\Documents\GitHub\Correccion navegador\NAV2K19\PROYECTO\NAVE\NAVE\
 C:\Users\juan_\Documents\GitHub\Correccion navegador\NAV2K19\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.csproj.CopyComplete
 C:\Users\juan_\Documents\GitHub\Correccion navegador\NAV2K19\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.exe
 C:\Users\juan_\Documents\GitHub\Correccion navegador\NAV2K19\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.pdb
+C:\Users\gganp\Desktop\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\ConsultasInteligentes.dll
+C:\Users\gganp\Desktop\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaLogica_Consultas.dll
+C:\Users\gganp\Desktop\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDatos_Consultas.dll
+C:\Users\gganp\Desktop\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\ConsultasInteligentes.pdb
+C:\Users\gganp\Desktop\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaLogica_Consultas.pdb
+C:\Users\gganp\Desktop\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CapaDatos_Consultas.pdb

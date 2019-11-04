@@ -38,6 +38,9 @@
     <Reference Include="CapaDeLogica">
       <HintPath>..\CapaDeLogica\bin\Debug\CapaDeLogica.dll</HintPath>
     </Reference>
+    <Reference Include="ConsultasInteligentes">
+      <HintPath>..\..\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\ConsultasInteligentes.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -56,6 +59,12 @@
     <Compile Include="Ayudas.Designer.cs">
       <DependentUpon>Ayudas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Compleja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compleja.Designer.cs">
+      <DependentUpon>Compleja.cs</DependentUpon>
+    </Compile>
     <Compile Include="Navegador.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -68,10 +77,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Simple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Simple.Designer.cs">
+      <DependentUpon>Simple.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Ayudas.resx">
       <DependentUpon>Ayudas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compleja.resx">
+      <DependentUpon>Compleja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Navegador.resx">
       <DependentUpon>Navegador.cs</DependentUpon>
@@ -79,6 +97,9 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Simple.resx">
+      <DependentUpon>Simple.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

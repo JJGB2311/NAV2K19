@@ -14,7 +14,7 @@ namespace CapaDatos_Consultas
 
         public OdbcConnection Conectar()
         {
-            OdbcConnection = new OdbcConnection("Dsn=comp");
+            OdbcConnection = new OdbcConnection("Dsn=HSC");
 
             try
             {
