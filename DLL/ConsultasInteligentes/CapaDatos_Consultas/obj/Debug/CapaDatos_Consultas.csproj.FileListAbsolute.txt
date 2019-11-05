@@ -1,0 +1,36 @@
+C:\Users\diego\Desktop\ConsultasInteligentes\CapaDatos_Consultas\bin\Debug\CapaDatos_Consultas.dll
+C:\Users\diego\Desktop\ConsultasInteligentes\CapaDatos_Consultas\bin\Debug\CapaDatos_Consultas.pdb
+C:\Users\diego\Desktop\ConsultasInteligentes\CapaDatos_Consultas\obj\Debug\CapaDatos_Consultas.csprojAssemblyReference.cache
+C:\Users\diego\Desktop\ConsultasInteligentes\CapaDatos_Consultas\obj\Debug\CapaDatos_Consultas.csproj.CoreCompileInputs.cache
+C:\Users\diego\Desktop\ConsultasInteligentes\CapaDatos_Consultas\obj\Debug\CapaDatos_Consultas.dll
+C:\Users\diego\Desktop\ConsultasInteligentes\CapaDatos_Consultas\obj\Debug\CapaDatos_Consultas.pdb
+C:\Users\diego\Documents\Universidad\Octavo Semestre\Analisis de Sistemas II\Archivos de Consultas\Capacitacion Consultas Inteligentes\DLLS\ConsultasInteligentes\CapaDatos_Consultas\bin\Debug\CapaDatos_Consultas.dll
+C:\Users\diego\Documents\Universidad\Octavo Semestre\Analisis de Sistemas II\Archivos de Consultas\Capacitacion Consultas Inteligentes\DLLS\ConsultasInteligentes\CapaDatos_Consultas\bin\Debug\CapaDatos_Consultas.pdb
+C:\Users\diego\Documents\Universidad\Octavo Semestre\Analisis de Sistemas II\Archivos de Consultas\Capacitacion Consultas Inteligentes\DLLS\ConsultasInteligentes\CapaDatos_Consultas\obj\Debug\CapaDatos_Consultas.csprojAssemblyReference.cache
+C:\Users\diego\Documents\Universidad\Octavo Semestre\Analisis de Sistemas II\Archivos de Consultas\Capacitacion Consultas Inteligentes\DLLS\ConsultasInteligentes\CapaDatos_Consultas\obj\Debug\CapaDatos_Consultas.csproj.CoreCompileInputs.cache
+C:\Users\diego\Documents\Universidad\Octavo Semestre\Analisis de Sistemas II\Archivos de Consultas\Capacitacion Consultas Inteligentes\DLLS\ConsultasInteligentes\CapaDatos_Consultas\obj\Debug\CapaDatos_Consultas.dll
+C:\Users\diego\Documents\Universidad\Octavo Semestre\Analisis de Sistemas II\Archivos de Consultas\Capacitacion Consultas Inteligentes\DLLS\ConsultasInteligentes\CapaDatos_Consultas\obj\Debug\CapaDatos_Consultas.pdb
+C:\Users\Paula V\Desktop\ConsultasInteligentes\CapaDatos_Consultas\bin\Debug\CapaDatos_Consultas.dll
+C:\Users\Paula V\Desktop\ConsultasInteligentes\CapaDatos_Consultas\bin\Debug\CapaDatos_Consultas.pdb
+C:\Users\Paula V\Desktop\ConsultasInteligentes\CapaDatos_Consultas\obj\Debug\CapaDatos_Consultas.csprojAssemblyReference.cache
+C:\Users\Paula V\Desktop\ConsultasInteligentes\CapaDatos_Consultas\obj\Debug\CapaDatos_Consultas.csproj.CoreCompileInputs.cache
+C:\Users\Paula V\Desktop\ConsultasInteligentes\CapaDatos_Consultas\obj\Debug\CapaDatos_Consultas.dll
+C:\Users\Paula V\Desktop\ConsultasInteligentes\CapaDatos_Consultas\obj\Debug\CapaDatos_Consultas.pdb
+C:\Users\ISIS\Downloads\ConsultasInteligentes\CapaDatos_Consultas\bin\Debug\CapaDatos_Consultas.dll
+C:\Users\ISIS\Downloads\ConsultasInteligentes\CapaDatos_Consultas\bin\Debug\CapaDatos_Consultas.pdb
+C:\Users\ISIS\Downloads\ConsultasInteligentes\CapaDatos_Consultas\obj\Debug\CapaDatos_Consultas.csprojAssemblyReference.cache
+C:\Users\ISIS\Downloads\ConsultasInteligentes\CapaDatos_Consultas\obj\Debug\CapaDatos_Consultas.csproj.CoreCompileInputs.cache
+C:\Users\ISIS\Downloads\ConsultasInteligentes\CapaDatos_Consultas\obj\Debug\CapaDatos_Consultas.dll
+C:\Users\ISIS\Downloads\ConsultasInteligentes\CapaDatos_Consultas\obj\Debug\CapaDatos_Consultas.pdb
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\REDES DE COMPUTADORAS 1\ConsultasInteligentes\CapaDatos_Consultas\bin\Debug\CapaDatos_Consultas.dll
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\REDES DE COMPUTADORAS 1\ConsultasInteligentes\CapaDatos_Consultas\bin\Debug\CapaDatos_Consultas.pdb
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\REDES DE COMPUTADORAS 1\ConsultasInteligentes\CapaDatos_Consultas\obj\Debug\CapaDatos_Consultas.csprojAssemblyReference.cache
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\REDES DE COMPUTADORAS 1\ConsultasInteligentes\CapaDatos_Consultas\obj\Debug\CapaDatos_Consultas.csproj.CoreCompileInputs.cache
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\REDES DE COMPUTADORAS 1\ConsultasInteligentes\CapaDatos_Consultas\obj\Debug\CapaDatos_Consultas.dll
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\REDES DE COMPUTADORAS 1\ConsultasInteligentes\CapaDatos_Consultas\obj\Debug\CapaDatos_Consultas.pdb
+C:\Users\gganp\Desktop\NAV2K19\DLL\ConsultasInteligentes\CapaDatos_Consultas\bin\Debug\CapaDatos_Consultas.dll
+C:\Users\gganp\Desktop\NAV2K19\DLL\ConsultasInteligentes\CapaDatos_Consultas\bin\Debug\CapaDatos_Consultas.pdb
+C:\Users\gganp\Desktop\NAV2K19\DLL\ConsultasInteligentes\CapaDatos_Consultas\obj\Debug\CapaDatos_Consultas.csprojAssemblyReference.cache
+C:\Users\gganp\Desktop\NAV2K19\DLL\ConsultasInteligentes\CapaDatos_Consultas\obj\Debug\CapaDatos_Consultas.csproj.CoreCompileInputs.cache
+C:\Users\gganp\Desktop\NAV2K19\DLL\ConsultasInteligentes\CapaDatos_Consultas\obj\Debug\CapaDatos_Consultas.dll
+C:\Users\gganp\Desktop\NAV2K19\DLL\ConsultasInteligentes\CapaDatos_Consultas\obj\Debug\CapaDatos_Consultas.pdb

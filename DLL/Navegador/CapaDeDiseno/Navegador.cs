@@ -1405,10 +1405,27 @@ namespace CapaDeDiseno
 
         private void Btn_Consultar_Click(object sender, EventArgs e)
         {
-            //DLL DE CONSULTAS
+			//DLL DE CONSULTAS
+			sentencia con = new sentencia();
+			bool per1 = con.consultarPermisos(idUsuario, idAplicacion, 1);
+			bool per2 = con.consultarPermisos(idUsuario, idAplicacion, 2);
+			bool per3 = con.consultarPermisos(idUsuario, idAplicacion, 3);
+			bool per4 = con.consultarPermisos(idUsuario, idAplicacion, 4);
+			bool per5 = con.consultarPermisos(idUsuario, idAplicacion, 5);
 
-            //habilitar y deshabilitar según Usuario
-            botonesYPermisos();
+			if (per1==true && per2 == true && per3 == true && per4 == true && per5 == true)
+			{
+				Compleja nuevo = new Compleja(idUsuario);
+				nuevo.Show();
+			}
+			else
+			{
+				 Simple nueva = new Simple(idUsuario);
+				nueva.Show();
+			}
+
+			//habilitar y deshabilitar según Usuario
+			botonesYPermisos();
         }
 
         private void Btn_Imprimir_Click(object sender, EventArgs e)

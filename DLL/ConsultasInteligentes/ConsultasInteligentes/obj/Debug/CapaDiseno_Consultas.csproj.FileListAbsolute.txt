@@ -1,0 +1,96 @@
+C:\Users\diego\Desktop\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\ConsultasInteligentes.ComponenteConsultas.resources
+C:\Users\diego\Desktop\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\ConsultasInteligentes.Properties.Resources.resources
+C:\Users\diego\Desktop\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\CapaDiseno_Consultas.csproj.GenerateResource.cache
+C:\Users\diego\Desktop\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\CapaDiseno_Consultas.csproj.CoreCompileInputs.cache
+C:\Users\diego\Desktop\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\ConsultasInteligentes.dll
+C:\Users\diego\Desktop\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\ConsultasInteligentes.pdb
+C:\Users\diego\Desktop\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\ConsultasInteligentes.dll
+C:\Users\diego\Desktop\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\ConsultasInteligentes.pdb
+C:\Users\diego\Desktop\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\CapaLogica_Consultas.dll
+C:\Users\diego\Desktop\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\CapaDatos.dll
+C:\Users\diego\Desktop\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\CapaDatos_Consultas.dll
+C:\Users\diego\Desktop\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\CapaLogica_Consultas.pdb
+C:\Users\diego\Desktop\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\CapaDatos_Consultas.pdb
+C:\Users\diego\Desktop\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\CapaDiseno_Consultas.csprojAssemblyReference.cache
+C:\Users\diego\Desktop\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\CapaDiseno_Consultas.csproj.CopyComplete
+C:\Users\diego\Documents\Universidad\Octavo Semestre\Analisis de Sistemas II\Archivos de Consultas\Capacitacion Consultas Inteligentes\DLLS\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\ConsultasInteligentes.dll
+C:\Users\diego\Documents\Universidad\Octavo Semestre\Analisis de Sistemas II\Archivos de Consultas\Capacitacion Consultas Inteligentes\DLLS\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\ConsultasInteligentes.pdb
+C:\Users\diego\Documents\Universidad\Octavo Semestre\Analisis de Sistemas II\Archivos de Consultas\Capacitacion Consultas Inteligentes\DLLS\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\CapaLogica_Consultas.dll
+C:\Users\diego\Documents\Universidad\Octavo Semestre\Analisis de Sistemas II\Archivos de Consultas\Capacitacion Consultas Inteligentes\DLLS\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\CapaDatos.dll
+C:\Users\diego\Documents\Universidad\Octavo Semestre\Analisis de Sistemas II\Archivos de Consultas\Capacitacion Consultas Inteligentes\DLLS\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\CapaDatos_Consultas.dll
+C:\Users\diego\Documents\Universidad\Octavo Semestre\Analisis de Sistemas II\Archivos de Consultas\Capacitacion Consultas Inteligentes\DLLS\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\CapaLogica_Consultas.pdb
+C:\Users\diego\Documents\Universidad\Octavo Semestre\Analisis de Sistemas II\Archivos de Consultas\Capacitacion Consultas Inteligentes\DLLS\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\CapaDatos_Consultas.pdb
+C:\Users\diego\Documents\Universidad\Octavo Semestre\Analisis de Sistemas II\Archivos de Consultas\Capacitacion Consultas Inteligentes\DLLS\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\CapaDiseno_Consultas.csprojAssemblyReference.cache
+C:\Users\diego\Documents\Universidad\Octavo Semestre\Analisis de Sistemas II\Archivos de Consultas\Capacitacion Consultas Inteligentes\DLLS\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\ConsultasInteligentes.ComponenteConsultas.resources
+C:\Users\diego\Documents\Universidad\Octavo Semestre\Analisis de Sistemas II\Archivos de Consultas\Capacitacion Consultas Inteligentes\DLLS\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\ConsultasInteligentes.ConsultaSencilla.resources
+C:\Users\diego\Documents\Universidad\Octavo Semestre\Analisis de Sistemas II\Archivos de Consultas\Capacitacion Consultas Inteligentes\DLLS\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\ConsultasInteligentes.Properties.Resources.resources
+C:\Users\diego\Documents\Universidad\Octavo Semestre\Analisis de Sistemas II\Archivos de Consultas\Capacitacion Consultas Inteligentes\DLLS\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\CapaDiseno_Consultas.csproj.GenerateResource.cache
+C:\Users\diego\Documents\Universidad\Octavo Semestre\Analisis de Sistemas II\Archivos de Consultas\Capacitacion Consultas Inteligentes\DLLS\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\CapaDiseno_Consultas.csproj.CoreCompileInputs.cache
+C:\Users\diego\Documents\Universidad\Octavo Semestre\Analisis de Sistemas II\Archivos de Consultas\Capacitacion Consultas Inteligentes\DLLS\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\CapaDiseno_Consultas.csproj.CopyComplete
+C:\Users\diego\Documents\Universidad\Octavo Semestre\Analisis de Sistemas II\Archivos de Consultas\Capacitacion Consultas Inteligentes\DLLS\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\ConsultasInteligentes.dll
+C:\Users\diego\Documents\Universidad\Octavo Semestre\Analisis de Sistemas II\Archivos de Consultas\Capacitacion Consultas Inteligentes\DLLS\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\ConsultasInteligentes.pdb
+C:\Users\Paula V\Desktop\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\ConsultasInteligentes.dll
+C:\Users\Paula V\Desktop\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\ConsultasInteligentes.pdb
+C:\Users\Paula V\Desktop\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\CapaLogica_Consultas.dll
+C:\Users\Paula V\Desktop\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\CapaDatos.dll
+C:\Users\Paula V\Desktop\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\CapaDatos_Consultas.dll
+C:\Users\Paula V\Desktop\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\CapaLogica_Consultas.pdb
+C:\Users\Paula V\Desktop\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\CapaDatos_Consultas.pdb
+C:\Users\Paula V\Desktop\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\CapaDiseno_Consultas.csprojAssemblyReference.cache
+C:\Users\Paula V\Desktop\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\ConsultasInteligentes.ComponenteConsultas.resources
+C:\Users\Paula V\Desktop\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\ConsultasInteligentes.ConsultaSencilla.resources
+C:\Users\Paula V\Desktop\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\ConsultasInteligentes.Properties.Resources.resources
+C:\Users\Paula V\Desktop\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\CapaDiseno_Consultas.csproj.GenerateResource.cache
+C:\Users\Paula V\Desktop\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\CapaDiseno_Consultas.csproj.CoreCompileInputs.cache
+C:\Users\Paula V\Desktop\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\CapaDiseno_Consultas.csproj.CopyComplete
+C:\Users\Paula V\Desktop\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\ConsultasInteligentes.dll
+C:\Users\Paula V\Desktop\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\ConsultasInteligentes.pdb
+C:\Users\ISIS\Downloads\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\ConsultasInteligentes.dll
+C:\Users\ISIS\Downloads\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\ConsultasInteligentes.pdb
+C:\Users\ISIS\Downloads\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\CapaLogica_Consultas.dll
+C:\Users\ISIS\Downloads\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\CapaDatos.dll
+C:\Users\ISIS\Downloads\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\CapaDatos_Consultas.dll
+C:\Users\ISIS\Downloads\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\CapaLogica_Consultas.pdb
+C:\Users\ISIS\Downloads\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\CapaDatos_Consultas.pdb
+C:\Users\ISIS\Downloads\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\CapaDiseno_Consultas.csprojAssemblyReference.cache
+C:\Users\ISIS\Downloads\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\ConsultasInteligentes.ComponenteConsultas.resources
+C:\Users\ISIS\Downloads\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\ConsultasInteligentes.ConsultaSencilla.resources
+C:\Users\ISIS\Downloads\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\ConsultasInteligentes.Properties.Resources.resources
+C:\Users\ISIS\Downloads\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\CapaDiseno_Consultas.csproj.GenerateResource.cache
+C:\Users\ISIS\Downloads\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\CapaDiseno_Consultas.csproj.CoreCompileInputs.cache
+C:\Users\ISIS\Downloads\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\CapaDiseno_Consultas.csproj.CopyComplete
+C:\Users\ISIS\Downloads\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\ConsultasInteligentes.dll
+C:\Users\ISIS\Downloads\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\ConsultasInteligentes.pdb
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\REDES DE COMPUTADORAS 1\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\ConsultasInteligentes.dll
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\REDES DE COMPUTADORAS 1\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\ConsultasInteligentes.pdb
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\REDES DE COMPUTADORAS 1\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\CapaLogica_Consultas.dll
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\REDES DE COMPUTADORAS 1\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\CapaDatos.dll
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\REDES DE COMPUTADORAS 1\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\CapaDatos_Consultas.dll
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\REDES DE COMPUTADORAS 1\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\CapaLogica_Consultas.pdb
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\REDES DE COMPUTADORAS 1\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\CapaDatos_Consultas.pdb
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\REDES DE COMPUTADORAS 1\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\CapaDiseno_Consultas.csprojAssemblyReference.cache
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\REDES DE COMPUTADORAS 1\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\ConsultasInteligentes.ComponenteConsultas.resources
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\REDES DE COMPUTADORAS 1\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\ConsultasInteligentes.ConsultaSencilla.resources
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\REDES DE COMPUTADORAS 1\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\ConsultasInteligentes.Properties.Resources.resources
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\REDES DE COMPUTADORAS 1\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\CapaDiseno_Consultas.csproj.GenerateResource.cache
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\REDES DE COMPUTADORAS 1\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\CapaDiseno_Consultas.csproj.CoreCompileInputs.cache
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\REDES DE COMPUTADORAS 1\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\CapaDiseno_Consultas.csproj.CopyComplete
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\REDES DE COMPUTADORAS 1\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\ConsultasInteligentes.dll
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\REDES DE COMPUTADORAS 1\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\ConsultasInteligentes.pdb
+C:\Users\diego\Desktop\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\ConsultasInteligentes.ConsultaSencilla.resources
+C:\Users\gganp\Desktop\NAV2K19\DLL\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\ConsultasInteligentes.dll
+C:\Users\gganp\Desktop\NAV2K19\DLL\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\ConsultasInteligentes.pdb
+C:\Users\gganp\Desktop\NAV2K19\DLL\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\CapaLogica_Consultas.dll
+C:\Users\gganp\Desktop\NAV2K19\DLL\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\CapaDatos.dll
+C:\Users\gganp\Desktop\NAV2K19\DLL\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\CapaDatos_Consultas.dll
+C:\Users\gganp\Desktop\NAV2K19\DLL\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\CapaLogica_Consultas.pdb
+C:\Users\gganp\Desktop\NAV2K19\DLL\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\CapaDatos_Consultas.pdb
+C:\Users\gganp\Desktop\NAV2K19\DLL\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\CapaDiseno_Consultas.csprojAssemblyReference.cache
+C:\Users\gganp\Desktop\NAV2K19\DLL\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\ConsultasInteligentes.ComponenteConsultas.resources
+C:\Users\gganp\Desktop\NAV2K19\DLL\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\ConsultasInteligentes.ConsultaSencilla.resources
+C:\Users\gganp\Desktop\NAV2K19\DLL\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\ConsultasInteligentes.Properties.Resources.resources
+C:\Users\gganp\Desktop\NAV2K19\DLL\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\CapaDiseno_Consultas.csproj.GenerateResource.cache
+C:\Users\gganp\Desktop\NAV2K19\DLL\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\CapaDiseno_Consultas.csproj.CoreCompileInputs.cache
+C:\Users\gganp\Desktop\NAV2K19\DLL\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\CapaDiseno_Consultas.csproj.CopyComplete
+C:\Users\gganp\Desktop\NAV2K19\DLL\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\ConsultasInteligentes.dll
+C:\Users\gganp\Desktop\NAV2K19\DLL\ConsultasInteligentes\ConsultasInteligentes\obj\Debug\ConsultasInteligentes.pdb
