@@ -21,6 +21,7 @@ namespace CapaDeDiseno
         string tabla = "def";
         string nomForm;
         int pos = 8;
+		string idRepo = "";
 		
 		int[] modoCampoCombo = new int[40];
 		int noCampos = 1;
@@ -316,8 +317,12 @@ namespace CapaDeDiseno
                 }
             }
         }
- 
-        public void asignarSalida(Form salida)
+
+		public void asignarReporte(string repo)
+		{
+			idRepo = repo;
+		}
+		public void asignarSalida(Form salida)
         {
             cerrar = salida;
         }
@@ -1430,8 +1435,28 @@ namespace CapaDeDiseno
 
         private void Btn_Imprimir_Click(object sender, EventArgs e)
         {
-            //DLL DE IMPRESION, FORATO DE REPORTES.
-
+			//DLL DE IMPRESION, FORATO DE REPORTES.
+			string llave = "";
+			if (idRepo!="")
+			{
+				llave= logic.ObtenerIdReporte(idRepo);
+				
+			}
+			else
+			{
+				MessageBox.Show("No se asigno ningun reporte....");
+			}
+			
+			if (llave!="")
+			{
+				Clientes cl = new Clientes(llave);
+				cl.Show();
+			}
+			else
+			{
+				MessageBox.Show("El Id Asignado es incorrecto");
+			}
+			
             //habilitar y deshabilitar según Usuario
             botonesYPermisos();
         }

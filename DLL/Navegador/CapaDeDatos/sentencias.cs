@@ -140,7 +140,23 @@ namespace CapaDeDatos
 
 
         }
-        public string modIndice(string idindice)// metodo  que obtinene el contenio de una tabla
+		public string rutaReporte(string idindice)// metodo  que obtinene el contenio de una tabla
+		{
+
+
+			string indice2 = " ";
+			OdbcCommand command = new OdbcCommand("SELECT * FROM reportes WHERE Id_reporte = " + idindice + " ;", cn.probarConexion());
+			OdbcDataReader reader = command.ExecuteReader();
+			while (reader.Read())
+			{
+				indice2 = reader.GetValue(1).ToString();
+
+			}
+			return indice2;// devuelve un arrgeglo con los campos
+
+
+		}
+		public string modIndice(string idindice)// metodo  que obtinene el contenio de una tabla
         {
 
 

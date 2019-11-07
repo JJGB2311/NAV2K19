@@ -136,6 +136,12 @@ namespace CapaDeLogica
 			return llave;
 		}
 
+		public string ObtenerIdReporte(string id)
+		{
+			string llave = sn.rutaReporte(id);
+			return llave;
+		}
+
 		public void nuevoQuery(String query)//trasporta el query de la capa de disenio a Datos
         {
             sn.ejecutarQuery(query);

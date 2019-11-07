@@ -24,6 +24,7 @@ namespace NAVE
 			navegador1.asignarColorFondo(Hotel);
 			navegador1.asignarColorFuente(Color.Black);
 			navegador1.asignarAyuda("1");
+			navegador1.asignarReporte("1");
 			navegador1.asignarTabla("tbl_categorias_habitacion");
 			navegador1.asignarComboConTabla("tbl_tipo_habitacion", "KidTipoHabitacion", 0);
 			navegador1.asignarNombreForm("Categorias Habitación");
@@ -65,10 +66,8 @@ namespace NAVE
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(navegador1.obtenerDatoTabla(3));
-            MessageBox.Show(navegador1.obtenerDatoCampos(2));
-			Form2 nuevo = new Form2();
-			nuevo.Show();
-        }
+		CapaDeDiseno.Reportes rt = new CapaDeDiseno.Reportes();
+			rt.Show();
+		}
     }
 }
