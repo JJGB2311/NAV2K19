@@ -38,6 +38,9 @@
     <Reference Include="CapaDeLogica">
       <HintPath>..\CapaDeLogica\bin\Debug\CapaDeLogica.dll</HintPath>
     </Reference>
+    <Reference Include="CapaDisenoRpt">
+      <HintPath>..\..\..\..\..\..\Reporteador\GestorDeReportes\proyecto\ModuloReporte\CapaDiseno\bin\Debug\CapaDisenoRpt.dll</HintPath>
+    </Reference>
     <Reference Include="ConsultasInteligentes">
       <HintPath>..\..\ConsultasInteligentes\ConsultasInteligentes\bin\Debug\ConsultasInteligentes.dll</HintPath>
     </Reference>

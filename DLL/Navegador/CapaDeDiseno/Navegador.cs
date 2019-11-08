@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaDeLogica;
 using CapaDatos;
+using CapaDisenoRpt;
 
 namespace CapaDeDiseno
 {
@@ -1430,8 +1431,13 @@ namespace CapaDeDiseno
 
         private void Btn_Imprimir_Click(object sender, EventArgs e)
         {
-            //DLL DE IMPRESION, FORATO DE REPORTES.
+            string modulo = logic.ObtenerIdModulo(idAplicacion);
+            int mdl = int.Parse(modulo);
+            int app = int.Parse(idAplicacion);
 
+            //DLL DE IMPRESION, FORATO DE REPORTES.
+            ImprimirReporte imprimir = new ImprimirReporte(idUsuario);
+            imprimir.imprimirReporteAplicacion(idUsuario, mdl, app);
             //habilitar y deshabilitar según Usuario
             botonesYPermisos();
         }
