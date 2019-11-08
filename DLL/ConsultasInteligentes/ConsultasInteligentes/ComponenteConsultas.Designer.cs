@@ -66,6 +66,8 @@
             this.cboOpLogico = new System.Windows.Forms.ComboBox();
             this.lblLogico = new System.Windows.Forms.Label();
             this.gbGeneral = new System.Windows.Forms.GroupBox();
+            this.txt_descri = new System.Windows.Forms.TextBox();
+            this.lbl_Descripcion = new System.Windows.Forms.Label();
             this.txtSeleccionados = new System.Windows.Forms.TextBox();
             this.cboOpciones = new System.Windows.Forms.CheckBox();
             this.lblCamposSelec = new System.Windows.Forms.Label();
@@ -155,10 +157,6 @@
             this.lblHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
-            this.lbl_Descripcion = new System.Windows.Forms.Label();
-            this.txt_descri = new System.Windows.Forms.TextBox();
-            this.btn_unir = new System.Windows.Forms.Button();
-            this.btn_generar = new System.Windows.Forms.Button();
             this.tbCreacionConsulta.SuspendLayout();
             this.TbCrecion.SuspendLayout();
             this.gbAgrupar.SuspendLayout();
@@ -199,8 +197,6 @@
             // 
             // TbCrecion
             // 
-            this.TbCrecion.Controls.Add(this.btn_generar);
-            this.TbCrecion.Controls.Add(this.btn_unir);
             this.TbCrecion.Controls.Add(this.lblCadena);
             this.TbCrecion.Controls.Add(this.txtCadena);
             this.TbCrecion.Controls.Add(this.btnBorrarProgreso);
@@ -241,7 +237,7 @@
             this.btnBorrarProgreso.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrarProgreso.Image = global::ConsultasInteligentes.Properties.Resources.decline__3_1;
             this.btnBorrarProgreso.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnBorrarProgreso.Location = new System.Drawing.Point(859, 493);
+            this.btnBorrarProgreso.Location = new System.Drawing.Point(859, 508);
             this.btnBorrarProgreso.Name = "btnBorrarProgreso";
             this.btnBorrarProgreso.Size = new System.Drawing.Size(75, 60);
             this.btnBorrarProgreso.TabIndex = 27;
@@ -255,7 +251,7 @@
             this.btnCrearConsulta.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrearConsulta.Image = global::ConsultasInteligentes.Properties.Resources.writing__2_1;
             this.btnCrearConsulta.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCrearConsulta.Location = new System.Drawing.Point(863, 572);
+            this.btnCrearConsulta.Location = new System.Drawing.Point(778, 508);
             this.btnCrearConsulta.Name = "btnCrearConsulta";
             this.btnCrearConsulta.Size = new System.Drawing.Size(75, 60);
             this.btnCrearConsulta.TabIndex = 27;
@@ -634,9 +630,27 @@
             this.gbGeneral.Text = "General/Consulta Simple";
             this.gbGeneral.Enter += new System.EventHandler(this.gbGeneral_Enter);
             // 
+            // txt_descri
+            // 
+            this.txt_descri.Location = new System.Drawing.Point(527, 56);
+            this.txt_descri.Multiline = true;
+            this.txt_descri.Name = "txt_descri";
+            this.txt_descri.Size = new System.Drawing.Size(469, 40);
+            this.txt_descri.TabIndex = 17;
+            // 
+            // lbl_Descripcion
+            // 
+            this.lbl_Descripcion.AutoSize = true;
+            this.lbl_Descripcion.Location = new System.Drawing.Point(524, 33);
+            this.lbl_Descripcion.Name = "lbl_Descripcion";
+            this.lbl_Descripcion.Size = new System.Drawing.Size(79, 17);
+            this.lbl_Descripcion.TabIndex = 16;
+            this.lbl_Descripcion.Text = "Descripcion";
+            // 
             // txtSeleccionados
             // 
-            this.txtSeleccionados.Location = new System.Drawing.Point(559, 111);
+            this.txtSeleccionados.Enabled = false;
+            this.txtSeleccionados.Location = new System.Drawing.Point(527, 125);
             this.txtSeleccionados.Multiline = true;
             this.txtSeleccionados.Name = "txtSeleccionados";
             this.txtSeleccionados.Size = new System.Drawing.Size(293, 57);
@@ -658,7 +672,7 @@
             // lblCamposSelec
             // 
             this.lblCamposSelec.AutoSize = true;
-            this.lblCamposSelec.Location = new System.Drawing.Point(556, 91);
+            this.lblCamposSelec.Location = new System.Drawing.Point(524, 105);
             this.lblCamposSelec.Name = "lblCamposSelec";
             this.lblCamposSelec.Size = new System.Drawing.Size(149, 17);
             this.lblCamposSelec.TabIndex = 12;
@@ -668,7 +682,7 @@
             // 
             this.btnAgregarGeneral.Image = global::ConsultasInteligentes.Properties.Resources.plus__4_1;
             this.btnAgregarGeneral.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAgregarGeneral.Location = new System.Drawing.Point(863, 84);
+            this.btnAgregarGeneral.Location = new System.Drawing.Point(839, 122);
             this.btnAgregarGeneral.Name = "btnAgregarGeneral";
             this.btnAgregarGeneral.Size = new System.Drawing.Size(75, 60);
             this.btnAgregarGeneral.TabIndex = 11;
@@ -681,7 +695,7 @@
             // 
             this.btnCancelarGeneral.Image = global::ConsultasInteligentes.Properties.Resources.cancel__1_1;
             this.btnCancelarGeneral.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCancelarGeneral.Location = new System.Drawing.Point(862, 150);
+            this.btnCancelarGeneral.Location = new System.Drawing.Point(920, 122);
             this.btnCancelarGeneral.Name = "btnCancelarGeneral";
             this.btnCancelarGeneral.Size = new System.Drawing.Size(76, 60);
             this.btnCancelarGeneral.TabIndex = 10;
@@ -708,7 +722,7 @@
             // 
             this.btnAgregarCampo.Image = global::ConsultasInteligentes.Properties.Resources.plus__4_1;
             this.btnAgregarCampo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAgregarCampo.Location = new System.Drawing.Point(423, 102);
+            this.btnAgregarCampo.Location = new System.Drawing.Point(402, 79);
             this.btnAgregarCampo.Name = "btnAgregarCampo";
             this.btnAgregarCampo.Size = new System.Drawing.Size(75, 60);
             this.btnAgregarCampo.TabIndex = 7;
@@ -1312,10 +1326,11 @@
             // 
             // TxtSeleccionados1
             // 
+            this.TxtSeleccionados1.Enabled = false;
             this.TxtSeleccionados1.Location = new System.Drawing.Point(609, 49);
             this.TxtSeleccionados1.Multiline = true;
             this.TxtSeleccionados1.Name = "TxtSeleccionados1";
-            this.TxtSeleccionados1.Size = new System.Drawing.Size(293, 103);
+            this.TxtSeleccionados1.Size = new System.Drawing.Size(342, 54);
             this.TxtSeleccionados1.TabIndex = 16;
             // 
             // chkedit
@@ -1333,7 +1348,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(640, 22);
+            this.label1.Location = new System.Drawing.Point(606, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(149, 17);
             this.label1.TabIndex = 12;
@@ -1343,7 +1358,7 @@
             // 
             this.BtnGeneralEdit2.Image = global::ConsultasInteligentes.Properties.Resources.plus__4_1;
             this.BtnGeneralEdit2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnGeneralEdit2.Location = new System.Drawing.Point(908, 35);
+            this.BtnGeneralEdit2.Location = new System.Drawing.Point(609, 112);
             this.BtnGeneralEdit2.Name = "BtnGeneralEdit2";
             this.BtnGeneralEdit2.Size = new System.Drawing.Size(75, 60);
             this.BtnGeneralEdit2.TabIndex = 11;
@@ -1356,7 +1371,7 @@
             // 
             this.BtnCancerlarE1.Image = global::ConsultasInteligentes.Properties.Resources.cancel__1_1;
             this.BtnCancerlarE1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnCancerlarE1.Location = new System.Drawing.Point(908, 101);
+            this.BtnCancerlarE1.Location = new System.Drawing.Point(690, 112);
             this.BtnCancerlarE1.Name = "BtnCancerlarE1";
             this.BtnCancerlarE1.Size = new System.Drawing.Size(76, 60);
             this.BtnCancerlarE1.TabIndex = 10;
@@ -1613,51 +1628,6 @@
             this.lblUsuario.TabIndex = 2;
             this.lblUsuario.Text = "Usuario";
             // 
-            // lbl_Descripcion
-            // 
-            this.lbl_Descripcion.AutoSize = true;
-            this.lbl_Descripcion.Location = new System.Drawing.Point(420, 33);
-            this.lbl_Descripcion.Name = "lbl_Descripcion";
-            this.lbl_Descripcion.Size = new System.Drawing.Size(79, 17);
-            this.lbl_Descripcion.TabIndex = 16;
-            this.lbl_Descripcion.Text = "Descripcion";
-            // 
-            // txt_descri
-            // 
-            this.txt_descri.Location = new System.Drawing.Point(547, 30);
-            this.txt_descri.Multiline = true;
-            this.txt_descri.Name = "txt_descri";
-            this.txt_descri.Size = new System.Drawing.Size(354, 40);
-            this.txt_descri.TabIndex = 17;
-            // 
-            // btn_unir
-            // 
-            this.btn_unir.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_unir.Image = global::ConsultasInteligentes.Properties.Resources.decline__3_1;
-            this.btn_unir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_unir.Location = new System.Drawing.Point(782, 572);
-            this.btn_unir.Name = "btn_unir";
-            this.btn_unir.Size = new System.Drawing.Size(75, 60);
-            this.btn_unir.TabIndex = 29;
-            this.btn_unir.Text = "Unir ";
-            this.btn_unir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_unir.UseVisualStyleBackColor = true;
-            this.btn_unir.Click += new System.EventHandler(this.btn_unir_Click);
-            // 
-            // btn_generar
-            // 
-            this.btn_generar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_generar.Image = global::ConsultasInteligentes.Properties.Resources.decline__3_1;
-            this.btn_generar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_generar.Location = new System.Drawing.Point(778, 493);
-            this.btn_generar.Name = "btn_generar";
-            this.btn_generar.Size = new System.Drawing.Size(75, 60);
-            this.btn_generar.TabIndex = 30;
-            this.btn_generar.Text = "Generar";
-            this.btn_generar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_generar.UseVisualStyleBackColor = true;
-            this.btn_generar.Click += new System.EventHandler(this.btn_generar_Click);
-            // 
             // ComponenteConsultas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1836,9 +1806,7 @@
         private System.Windows.Forms.TextBox TxtSeleccionados1;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox Txt_descripcion;
-        private System.Windows.Forms.Button btn_unir;
         private System.Windows.Forms.TextBox txt_descri;
         private System.Windows.Forms.Label lbl_Descripcion;
-        private System.Windows.Forms.Button btn_generar;
     }
 }
