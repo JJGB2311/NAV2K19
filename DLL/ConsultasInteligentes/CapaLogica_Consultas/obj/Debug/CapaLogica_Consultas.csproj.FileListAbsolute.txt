@@ -48,6 +48,16 @@ C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\REDES DE COMPUTADORAS
 C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\REDES DE COMPUTADORAS 1\ConsultasInteligentes\CapaLogica_Consultas\obj\Debug\CapaLogica_Consultas.csproj.CopyComplete
 C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\REDES DE COMPUTADORAS 1\ConsultasInteligentes\CapaLogica_Consultas\obj\Debug\CapaLogica_Consultas.dll
 C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\REDES DE COMPUTADORAS 1\ConsultasInteligentes\CapaLogica_Consultas\obj\Debug\CapaLogica_Consultas.pdb
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\ARQUITECTURA DE COMPUTADORAS 2\ConsultasInteligentes\CapaLogica_Consultas\bin\Debug\CapaLogica_Consultas.dll
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\ARQUITECTURA DE COMPUTADORAS 2\ConsultasInteligentes\CapaLogica_Consultas\bin\Debug\CapaLogica_Consultas.pdb
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\ARQUITECTURA DE COMPUTADORAS 2\ConsultasInteligentes\CapaLogica_Consultas\bin\Debug\CapaDatos.dll
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\ARQUITECTURA DE COMPUTADORAS 2\ConsultasInteligentes\CapaLogica_Consultas\bin\Debug\CapaDatos_Consultas.dll
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\ARQUITECTURA DE COMPUTADORAS 2\ConsultasInteligentes\CapaLogica_Consultas\bin\Debug\CapaDatos_Consultas.pdb
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\ARQUITECTURA DE COMPUTADORAS 2\ConsultasInteligentes\CapaLogica_Consultas\obj\Debug\CapaLogica_Consultas.csprojAssemblyReference.cache
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\ARQUITECTURA DE COMPUTADORAS 2\ConsultasInteligentes\CapaLogica_Consultas\obj\Debug\CapaLogica_Consultas.csproj.CoreCompileInputs.cache
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\ARQUITECTURA DE COMPUTADORAS 2\ConsultasInteligentes\CapaLogica_Consultas\obj\Debug\CapaLogica_Consultas.csproj.CopyComplete
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\ARQUITECTURA DE COMPUTADORAS 2\ConsultasInteligentes\CapaLogica_Consultas\obj\Debug\CapaLogica_Consultas.dll
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\ARQUITECTURA DE COMPUTADORAS 2\ConsultasInteligentes\CapaLogica_Consultas\obj\Debug\CapaLogica_Consultas.pdb
 C:\Users\gganp\Desktop\NAV2K19\DLL\ConsultasInteligentes\CapaLogica_Consultas\bin\Debug\CapaLogica_Consultas.dll
 C:\Users\gganp\Desktop\NAV2K19\DLL\ConsultasInteligentes\CapaLogica_Consultas\bin\Debug\CapaLogica_Consultas.pdb
 C:\Users\gganp\Desktop\NAV2K19\DLL\ConsultasInteligentes\CapaLogica_Consultas\bin\Debug\CapaDatos.dll

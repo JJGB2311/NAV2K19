@@ -22,32 +22,22 @@ namespace NAVE
 			navegador1.asignarSalida(this);
 			Color Hotel = Color.FromArgb(171, 166, 191);
 			navegador1.asignarColorFondo(Hotel);
-			navegador1.asignarColorFuente(Color.Black);
-			navegador1.asignarAyuda("1");
+			navegador1.asignarColorFuente(Color.Green);
+			navegador1.asignarAyuda("2");
+			navegador1.asignarReporte("4");
 			navegador1.asignarTabla("tbl_categorias_habitacion");
 			navegador1.asignarComboConTabla("tbl_tipo_habitacion", "KidTipoHabitacion", 0);
 			navegador1.asignarNombreForm("Categorias Habitación");
 			ayuda_tp.IsBalloon = true;
             
-            /*
-            string[] alias = { "Cod Asiento", "Cod Funcion", "Estado" };
-            navegador1.asignarAlias(alias);
-            navegador1.asignarSalida(this);
-            navegador1.asignarColorFondo(Color.LightBlue);
-            navegador1.asignarColorFuente(Color.BlueViolet);
-            navegador1.asignarAyuda("1");
-            navegador1.asignarTabla("pruebaai");
-            navegador1.asignarNombreForm("PruebaAI");     
-            */
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            frm_login login = new frm_login();
-            login.ShowDialog();
+           
             string aplicacionActiva = "1";
-            navegador1.ObtenerIdUsuario(login.obtenerNombreUsuario());
-            navegador1.botonesYPermisosInicial(login.obtenerNombreUsuario(), aplicacionActiva);
+            navegador1.ObtenerIdUsuario("MiUsuario");
+            navegador1.botonesYPermisosInicial("MiUsuario", aplicacionActiva);
             //na
            // navegador1.registros();
             navegador1.ObtenerIdAplicacion(aplicacionActiva);             
@@ -65,10 +55,8 @@ namespace NAVE
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(navegador1.obtenerDatoTabla(3));
-            MessageBox.Show(navegador1.obtenerDatoCampos(2));
-			Form2 nuevo = new Form2();
-			nuevo.Show();
-        }
+		CapaDeDiseno.Reportes rt = new CapaDeDiseno.Reportes();
+			rt.Show();
+		}
     }
 }

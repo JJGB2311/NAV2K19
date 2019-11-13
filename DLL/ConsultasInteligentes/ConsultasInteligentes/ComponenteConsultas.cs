@@ -185,7 +185,7 @@ namespace ConsultasInteligentes
         {
 
 
-            if (unirguardar == "" | QueryComplejoTotal == "")
+           /* if (unirguardar == "" | QueryComplejoTotal == "")
             {
                 MessageBox.Show("Debe generar una cadena antes");
             }
@@ -199,9 +199,9 @@ namespace ConsultasInteligentes
                 {
                     guardar = QueryComplejoTotal;
                 }
-            }
+            }*/
        
-            /*if (cbCondiciones.Checked == true)
+            if (cbCondiciones.Checked == true)
             {
                 if (QuerySimpleComplete == "" | QueryComplejoCondicional == "" | QueryComplejoComp == "" | QueryComplejoOrden == "")
                 {
@@ -226,17 +226,14 @@ namespace ConsultasInteligentes
 
 
                 }
-            }*/
-            txtCadena.Text = guardar;
+            }
 
-            log.InsertarCampos(guardar, txtNombreConsulta.Text, txt_descri.Text, sIddUsuario);
+            txtCadena.Text = QueryComplejoTotal;
+            log.InsertarCampos(QueryComplejoTotal, txtNombreConsulta.Text, txt_descri.Text, sIddUsuario);
             QuerySimpleComplete = "";
             QueryComplejoComp = "";
             QueryComplejoOrden = "";
             QueryComplejoTotal = "";
-            unir = "";
-            unirguardar = "";
-            guardar = "";
             MessageBox.Show("Consulta Creada con Exito!");
         }
 
@@ -946,7 +943,7 @@ namespace ConsultasInteligentes
 
         }
 
-        private void btn_generar_Click(object sender, EventArgs e)
+      /*  private void btn_generar_Click(object sender, EventArgs e)
         {
             if (cbCondiciones.Checked == true)
             {
@@ -957,7 +954,7 @@ namespace ConsultasInteligentes
                 else
                 {
                     QueryComplejoTotal = QuerySimpleComplete + " " + QueryComplejoComp + " " + QueryComplejoCondicional + " " + QueryComplejoOrden;
-                    unir = QueryComplejoTotal;
+                    //unir = QueryComplejoTotal;
                 }
             }
             else
@@ -971,8 +968,7 @@ namespace ConsultasInteligentes
                 {
 
                     QueryComplejoTotal = QuerySimpleComplete;
-                    unir = QuerySimpleComplete;
-
+                    //unir = QuerySimpleComplete;
 
                 }
             }
@@ -1017,14 +1013,15 @@ namespace ConsultasInteligentes
             rbDescendente.Checked = false;
             cboOpciones.Checked = false;
             cbCondiciones.Checked = false;
-        }
+        }*/
 
         private void gbGeneral_Enter(object sender, EventArgs e)
         {
 
         }
 
-        private void btn_unir_Click(object sender, EventArgs e)
+
+       /* private void btn_unir_Click(object sender, EventArgs e)
         {
             ContadorUnir++;
             if (unir == "")
@@ -1045,7 +1042,7 @@ namespace ConsultasInteligentes
 
             
         }
-
+        */
         private void TbCreacionConsulta_Selected(object sender, TabControlEventArgs e)
         {
             if (e.TabPage.Name == TbConsultas.Name)
