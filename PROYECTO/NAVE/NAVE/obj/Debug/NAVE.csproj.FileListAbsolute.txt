@@ -312,3 +312,4 @@ C:\Users\gganp\Desktop\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CrystalDecisions.Rep
 C:\Users\gganp\Desktop\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\ShockwaveFlashObjects.dll
 C:\Users\gganp\Desktop\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\gganp\Desktop\NAV2K19\PROYECTO\NAVE\NAVE\bin\Debug\stdole.dll
+C:\Users\gganp\Desktop\NAV2K19\PROYECTO\NAVE\NAVE\obj\Debug\NAVE.MDIParent1.resources

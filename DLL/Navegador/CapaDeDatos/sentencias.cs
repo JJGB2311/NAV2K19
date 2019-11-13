@@ -129,7 +129,7 @@ namespace CapaDeDatos
 
 
             string indice2 = " ";
-            OdbcCommand command = new OdbcCommand("SELECT * FROM ayuda WHERE id_ayuda = " + idindice + ";", cn.probarConexion());
+            OdbcCommand command = new OdbcCommand("SELECT * FROM ayuda ;", cn.probarConexion());
             OdbcDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {

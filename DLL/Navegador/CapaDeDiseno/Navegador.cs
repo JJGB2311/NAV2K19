@@ -107,6 +107,8 @@ namespace CapaDeDiseno
                                     head++;
                                 }
                                 CreaComponentes();
+								colorTitulo();
+								lblTabla.ForeColor = Cfuente;
                                 deshabilitarcampos_y_botones();
                                 
                                 Btn_Modificar.Enabled = true;
@@ -219,7 +221,17 @@ namespace CapaDeDiseno
 
         //-----------------------------------------------Funciones-----------------------------------------------//
         
+		void colorTitulo()
+		{
+			foreach (Control componente in Controls)
+			{
+				if (componente is Label)
+				{
 
+					componente.ForeColor = Cfuente;
+				}
+			}
+		}
         public void ObtenerIdUsuario(string idUsuario)
         {
             this.idUsuario = idUsuario;            
