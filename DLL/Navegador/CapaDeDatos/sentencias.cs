@@ -129,7 +129,7 @@ namespace CapaDeDatos
 
 
             string indice2 = " ";
-            OdbcCommand command = new OdbcCommand("SELECT * FROM ayuda ;", cn.probarConexion());
+            OdbcCommand command = new OdbcCommand("SELECT * FROM ayuda Where id_ayuda=" + idindice + ";", cn.probarConexion());
             OdbcDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
@@ -181,7 +181,7 @@ namespace CapaDeDatos
             /*ayuda*/
             string indice = " ";
 
-            OdbcCommand command = new OdbcCommand("SELECT COUNT(*) FROM ayuda WHERE Id_ayuda=1", cn.probarConexion());
+            OdbcCommand command = new OdbcCommand("SELECT COUNT(*) FROM ayuda", cn.probarConexion());
             OdbcDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {

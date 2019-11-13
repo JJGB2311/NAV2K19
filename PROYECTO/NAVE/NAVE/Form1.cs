@@ -23,7 +23,7 @@ namespace NAVE
 			Color Hotel = Color.FromArgb(171, 166, 191);
 			navegador1.asignarColorFondo(Hotel);
 			navegador1.asignarColorFuente(Color.Green);
-			navegador1.asignarAyuda("1");
+			navegador1.asignarAyuda("2");
 			navegador1.asignarReporte("4");
 			navegador1.asignarTabla("tbl_categorias_habitacion");
 			navegador1.asignarComboConTabla("tbl_tipo_habitacion", "KidTipoHabitacion", 0);
